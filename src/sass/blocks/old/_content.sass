@@ -1,0 +1,605 @@
+.page-wrap
+	background-color: #f8f9fd
+	position: relative
+	transition: 300ms ease-out
+
+	@media #{$mobile-above}
+		padding-top: 120px
+		padding-bottom: 60px
+
+	@media #{$tablet-above}
+		padding-left: 325px
+
+	@media #{$mobile}
+		padding-top: 72px
+		padding-bottom: 40px
+
+.page-container
+	padding: 50px 0 10px
+
+	@media #{$tablet}
+		padding: 80px 0 10px
+
+	@media #{$mobile}
+		padding: 30px 0 0
+
+.page-header
+	border-bottom: 1px solid #edeef1
+
+	@media #{$mobile-above}
+		padding-bottom: 25px
+		margin-bottom: 40px
+
+		@media #{$tablet}
+			margin-left: 60px
+			margin-bottom: 45px
+
+	@media #{$mobile}
+		margin: 0 20px 20px
+		padding-bottom: 20px
+
+.page_header_noborder
+	border: none
+	padding-bottom: 0
+
+	@media #{$mobile-above}
+		margin-bottom: 25px
+
+.page-content
+	@media #{$tablet-above}
+		margin-left: -35px
+
+.page-section
+	@media #{$mobile-above}
+		&:not(:last-child)
+			margin-bottom: 60px
+
+		@media #{$tablet}
+			&__header
+				margin-bottom: 30px
+
+	@media #{$tablet-above}
+		&__header
+			padding: 0 0 30px 35px
+
+	@media #{$mobile}
+		&:not(:last-child)
+			margin-bottom: 30px
+
+		&__header
+			padding: 0 20px 20px
+
+.page_section_detail
+	@media #{$tablet-above}
+		.product-group
+			margin-left: 0
+
+	@media #{$mobile-above}
+		@media #{$tablet}
+			padding-left: 60px
+
+			.product-group
+				margin: 0
+
+.small-title
+	color: #3a4051
+	font-size: 16px
+	font-weight: 500
+	text-transform: uppercase
+	letter-spacing: .6px
+
+.tag-list
+	display: flex
+	flex-wrap: wrap
+
+	&.style_small
+		.tag-elem
+			height: 42px
+			font-size: 14px
+			padding-left: 25px
+			padding-right: 25px
+
+.tag-elem
+	height: 60px
+	display: flex
+	align-items: center
+	color: #c1c3c9
+	font-size: 16px
+	padding-left: 35px
+	padding-right: 35px
+	background-color: #edeef1
+	border-radius: 30px
+
+	&.is-active
+		color: #3a4051
+		background-color: #dfe1e6
+		pointer-events: none
+
+	@media #{$tablet-above}
+		transition: 300ms ease-out
+
+		&:hover
+			color: #3a4051
+			background-color: #edeef1
+
+	@media #{$mobile}
+		height: 50px
+		padding-left: 22px
+		padding-right: 22px
+
+.filter-burger
+	display: flex
+	align-items: center
+	color: #3a4051
+	font-size: 16px
+	cursor: pointer
+
+	@media #{$tablet-above}
+		transition: 300ms ease-out
+
+		&:hover
+			opacity: .6
+
+		&:active
+			opacity: .3
+
+	@media #{$mobile-above}
+		margin-right: 30px
+
+		svg
+			margin-right: 10px
+
+	@media #{$mobile}
+		font-size: 14px
+
+		svg
+			display: none
+
+.discount
+	display: flex
+	flex-wrap: wrap
+
+	@media #{$mobile-above}
+		justify-content: flex-end
+
+	&-elem
+		width: 52px
+
+		img
+			width: 100%
+			display: block
+
+.product-rating
+	display: flex
+	justify-content: center
+
+	@media #{$mobile}
+		justify-content: flex-start
+		margin-left: -3px
+
+	&__elem
+		width: 13px
+		height: 2px
+		margin: 0 3px
+		border-radius: 1px
+		background-color: #dcdddf
+
+		&.style_red
+			background-color: #ff6b49
+
+		&.style_orange
+			background-color: #ff9e20
+
+		&.style_green
+			background-color: #81c341
+
+.product-price
+	position: relative
+	height: 40px
+	display: flex
+	align-items: center
+	justify-content: center
+
+	@media #{$mobile-above}
+		border-radius: 10px
+		border: 1px solid #edeef1
+
+	&__old
+		color: #cecfd3
+		position: absolute
+		top: -10px
+		left: 0
+		right: 0
+		margin: auto
+		font-size: 14px
+		line-height: 17px
+		text-decoration: line-through
+		display: flex
+		justify-content: center
+
+		span
+			padding: 0 15px
+			background: #fff
+			position: relative
+
+	&__default
+		color: #1b1e32
+		font-size: 17px
+		font-weight: 700
+
+	&__promo
+		position: absolute
+		bottom: -7px
+		left: 0
+		right: 0
+		margin: auto
+		color: #81c341
+		font-size: 12px
+		display: flex
+		justify-content: center
+
+		span
+			padding: 0 10px
+			background: #fff
+			position: relative
+
+.load-more
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-bottom: 60px
+
+	@media #{$mobile}
+		margin-bottom: 25px
+
+	&__button
+		color: #3a4051
+		font-size: 18px
+		font-weight: 500
+		text-transform: uppercase
+		letter-spacing: 1.8px
+		display: flex
+		align-items: center
+
+		@media #{$tablet-above}
+			transition: 300ms ease-out
+
+			&:hover
+				opacity: .6
+
+			&:active
+				opacity: .3
+
+		@media #{$mobile-above}
+			.icon-m-plus
+				display: none
+
+		@media #{$mobile}
+			font-size: 14px
+			letter-spacing: 1.4px
+
+			.icon-show-more-plus
+				display: none
+
+		svg
+			fill: currentColor
+			margin-right: 15px
+
+			@media #{$mobile}
+				margin-right: 10px
+				position: relative
+				top: -1px
+
+.pager
+	height: 100px
+	border-radius: 20px
+	border: 1px solid #edeef1
+	background-color: #ffffff
+	padding: 0 25px 0 35px
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+	@media #{$mobile}
+		height: 56px
+		padding: 0 40px
+		border-radius: 15px
+		position: relative
+
+		&.pager_with_return
+			padding: 0 20px
+
+			.pager-button
+				&.button_prev
+					left: auto
+					right: 30px
+
+.pager-return
+	&__link
+		color: #1b1e32
+		font-size: 16px
+		font-weight: 700
+		text-transform: uppercase
+
+		@media #{$mobile}
+			font-size: 14px
+			padding-top: 1px
+
+.pager-nav
+	display: flex
+	align-items: center
+
+	@media #{$mobile}
+		width: 100%
+		justify-content: center
+		padding-top: 1px
+
+	&__elem
+		color: #1b1e32
+		font-size: 16px
+		font-weight: 700
+		text-transform: uppercase
+		border-radius: 25px
+
+		@media #{$mobile-above}
+			&.is-active
+				background-color: #edeef1
+
+		@media #{$mobile}
+			opacity: 0.3
+			font-size: 14px
+
+			&.is-active
+				opacity: 1
+
+	&__link
+		width: 50px
+		height: 50px
+		display: flex
+		align-items: center
+		justify-content: center
+
+		@media #{$tablet-above}
+			transition: 300ms ease-out
+
+			&:hover
+				color: #767884
+
+		@media #{$mobile}
+			width: 30px
+			height: 30px
+
+.pager-buttons
+	display: flex
+
+.pager-button
+	width: 35px
+	height: 35px
+	position: relative
+
+	@media #{$tablet-above}
+		transition: 300ms ease-out
+
+		&:hover
+			opacity: .6
+
+		&:active
+			opacity: .3
+
+	@media #{$mobile}
+		position: absolute
+		top: 0
+		bottom: 0
+		margin: auto
+
+		&.button_prev
+			left: 10px
+
+		&.button_next
+			right: 10px
+
+	svg
+		+abscenter
+		fill: #1b1e32
+
+.breadcrumb
+	margin-bottom: 25px
+
+	@media #{$mobile}
+		display: none
+
+	&__list
+		display: flex
+
+	&__elem
+		position: relative
+
+		&:not(:last-child)
+			margin-right: 20px
+
+			&:before
+				content: ""
+				width: 4px
+				height: 7px
+				position: absolute
+				right: -12px
+				top: 0
+				bottom: 1px
+				margin: auto
+				background: url('../images/m-right-arrow.svg') no-repeat
+				background-size: 100%
+				opacity: 0.1
+
+	&__link
+		color: #444444
+		font-size: 14px
+		opacity: 0.3
+
+
+.city-select
+	padding: 30px 40px
+	cursor: pointer
+	display: block
+	border-bottom: 1px solid #edeef1
+
+	@media #{$mobile}
+		padding: 15px 20px
+
+	&__control
+		display: flex
+		align-items: center
+
+		svg
+			fill: #484d5d
+
+	&__title
+		color: #3a4051
+		font-size: 16px
+		font-weight: 500
+		line-height: 17px
+		text-transform: uppercase
+		letter-spacing: 1px
+		margin-right: 13px
+
+		@media #{$mobile}
+			font-size: 15px
+			margin-right: 10px
+
+
+
+.information-section
+	@media #{$tablet-above}
+		margin: 70px -20px
+		display: flex
+
+	@media #{$tablet}
+		margin: 40px 0
+
+	@media #{$mobile}
+		margin: 30px 0
+
+.information-box
+	padding: 30px 150px 35px 40px
+	position: relative
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	border-radius: 20px
+	background-color: #93dc4d
+
+	@media #{$tablet-above}
+		width: calc(50% - 40px)
+		height: 190px
+		margin: 0 20px
+
+		&.full_size
+			width: calc(100% - 40px)
+
+	@media #{$tablet}
+		height: 150px
+		padding: 25px 150px 25px 25px
+
+		&:not(:last-child)
+			margin-bottom: 10px
+
+	@media #{$mobile}
+		padding: 20px
+		height: auto
+		min-height: 150px
+
+	&.full_size
+		.information-box__desc
+			max-width: 480px
+
+	&.style_blue
+		background-color: #5dc0ff
+
+	&.style_golden
+		background-color: #ffcc72
+
+	&__title
+		color: #ffffff
+		font-size: 24px
+		font-weight: 500
+
+		@media #{$tablet-above}
+			@media (max-width: 1400px)
+				font-size: 22px
+
+		@media #{$mobile}
+			font-size: 19px
+			line-height: 19px
+			max-width: 140px
+			margin-bottom: 25px
+
+	&__desc
+		max-width: 275px
+		color: #1b1e32
+		font-size: 16px
+		line-height: 17px
+
+		@media #{$tablet-above}
+			@media (max-width: 1400px)
+				font-size: 15px
+
+		@media #{$tablet}
+			max-width: 290px
+
+		@media #{$mobile}
+			max-width: 250px
+			font-size: 14px
+			line-height: 16px
+
+			br
+				display: none
+
+	&__icon
+		width: 90px
+		height: 90px
+		position: absolute
+
+		@media #{$mobile-above}
+			top: 0
+			bottom: 0
+			right: 50px
+			margin: auto
+
+		@media #{$mobile}
+			width: 50px
+			height: 50px
+			top: 20px
+			right: 20px
+
+		img
+			width: 100%
+			position: relative
+
+			&:first-child
+				z-index: 2
+
+			&:nth-child(2)
+				position: absolute
+				top: 0
+				left: 20px
+				opacity: 0.2
+
+				@media #{$mobile}
+					display: none
+
+a.information-box
+	transition: 300ms ease
+
+	.information-box__title,
+	.information-box__desc,
+	.information-box__icon
+		transition: 300ms opacity ease
+
+	&.style_golden
+		&:hover
+			background-color: #ffc45c
+
+		&:active
+			.information-box__title,
+			.information-box__desc,
+			.information-box__icon
+				opacity: .6

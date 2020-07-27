@@ -1,0 +1,147 @@
+.is-menu-open
+	@media #{$mobile}
+		.menu
+			opacity: 1
+			pointer-events: all
+			transform: translate3d(0, 0, 0)
+
+		.aside-burger
+			.icon-m-menu
+				display: none
+
+			.icon-m-close
+				display: block
+
+.menu
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	color: #fff
+	padding: 72px 0 0
+	background: #351a5a
+	z-index: 9
+	overflow: auto
+	-webkit-overflow-scrolling: touch
+	opacity: 0
+	pointer-events: none
+	transform: translate3d(0, -10px, 0)
+	transition: .5s cubic-bezier(.165,.84,.44,1)
+
+	@media #{$mobile-above}
+		display: none
+
+.menu-container
+	height: 100%
+	min-height: 460px
+	padding: 20px 0
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+
+.menu-city
+	height: 50px
+	color: #ffffff
+	padding: 0 40px
+	position: relative
+	font-size: 14px
+	cursor: pointer
+	display: flex
+	align-items: center
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+	margin-bottom: 35px
+
+	&:before
+		content: ""
+		position: absolute
+		bottom: -1px
+		left: 40px
+		right: 40px
+		height: 1px
+		background: #fff
+
+	svg
+		fill: #a9b0b7
+		opacity: 0.4
+
+	.icon-location
+		margin-right: 10px
+
+	.icon-m-showmore
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 40px
+		margin: auto
+
+.menu-contact
+	padding: 0 40px
+	margin-bottom: 30px
+
+	&__elem
+		height: 47px
+		font-size: 21px
+		padding-right: 11px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+
+		&:first-child
+			border-top: 1px solid rgba(255, 255, 255, 0.1)
+
+		svg
+			fill: #fff
+			opacity: 0.1
+			position: relative
+
+		.icon-m-phone
+			right: 1px
+
+.menu-nav
+	display: flex
+	padding: 0 40px
+	margin-bottom: 30px
+
+	&__col
+		width: 50%
+		padding-right: 5px
+
+	&__link
+		opacity: 0.6
+		font-size: 14px
+		display: block
+
+		&:not(:last-child)
+			margin-bottom: 10px
+
+.menu-social
+	width: calc(100% - 40px)
+	height: 50px
+	padding: 0 30px
+	margin: 0 auto
+	display: flex
+	align-items: center
+	justify-content: space-between
+	border-radius: 25px
+	background-color: #2e1550
+
+	.icon-vk
+		width: 20px
+		height: 11px
+
+	.icon-youtube
+		width: 17px
+		height: 12px
+
+	.icon-facebook
+		width: 7px
+		height: 14px
+
+	.icon-instagram
+		width: 14px
+		height: 14px
+
+	svg
+		fill: #fff

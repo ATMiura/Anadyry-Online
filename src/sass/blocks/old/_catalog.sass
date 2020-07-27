@@ -1,0 +1,567 @@
+.catalog-header
+	position: relative
+
+	@media #{$mobile-above}
+		min-height: 300px
+		margin-bottom: 30px
+		display: flex
+		align-items: flex-end
+		justify-content: space-between
+
+		&:before
+			content: ""
+			position: absolute
+			bottom: 0
+			left: -100px
+			right: -40px
+			height: 1px
+			background: #edeef1
+
+			@media (min-width: 1401px)
+				left: -140px
+
+			@media #{$tablet}
+				right: -20px
+				left: -20px
+
+		&__top
+			width: calc(100% + 360px)
+			border-bottom: 1px solid #edeef1
+			padding-bottom: 20px
+			margin-bottom: 20px
+
+		&__tags
+			&.full_size
+				width: calc(100% + 360px)
+				max-width: unset
+
+		&__left
+			width: calc(100% - 360px)
+			max-width: 450px
+			padding-top: 50px
+			padding-bottom: 40px
+
+		&__right
+			width: 360px
+			display: flex
+			justify-content: flex-end
+			align-items: flex-end
+
+		@media #{$tablet}
+			padding-top: 0
+
+			&__left
+				width: 100%
+				max-width: 100%
+
+			&__right
+				position: absolute
+				top: 50px
+				right: 0
+				height: 370px
+
+			&__top
+				width: 100%
+				max-width: 100%
+				height: 370px
+				padding: 80px 0 60px 60px
+				margin-bottom: 25px
+				border: none
+				position: relative
+
+				&:before
+					content: ""
+					position: absolute
+					bottom: 0
+					left: -20px
+					right: -20px
+					height: 1px
+					background: #edeef1
+
+			&__title
+				max-width: 330px
+
+			&__label
+				padding: 0 40px
+
+	@media #{$mobile}
+		padding: 30px 0 0
+
+		&__left
+			padding: 0 20px
+			margin-bottom: 10px
+
+		&__top
+			margin-bottom: 20px
+
+	&__title
+		color: #3a4051
+		font-size: 40px
+		letter-spacing: -0.8px
+
+		@media #{$tablet-above}
+			width: calc(100% + 75px)
+
+		@media #{$mobile}
+			font-size: 30px
+
+	&__label
+		color: #3a4051
+		font-size: 16px
+		font-weight: 500
+		text-transform: uppercase
+		letter-spacing: 1.6px
+		margin-bottom: 25px
+
+		@media #{$mobile}
+			font-size: 14px
+
+	&__tags
+		@media #{$tablet-above}
+			max-width: 480px
+			margin-left: -35px
+
+		@media #{$mobile}
+			margin-left: -22px
+
+	&__product
+		position: relative
+		width: 100%
+		text-align: center
+
+	&__image
+		img
+			max-width: 100%
+			display: block
+			margin: auto
+
+	&__promo
+		width: 90px
+		height: 90px
+		position: absolute
+		top: 30px
+		right: 0
+
+		@media #{$mobile}
+			width: 70px
+			height: 70px
+			top: 15px
+			right: 15px
+
+		img
+			width: 100%
+
+	&__button
+		position: absolute
+		bottom: 40px
+		left: 0
+		right: 0
+
+		@media #{$mobile}
+			bottom: 45px
+
+		.button
+			width: 100%
+
+
+.catalog_header_nocover
+	@media #{$tablet}
+		min-height: auto
+
+		.catalog-header__top
+			height: auto
+			padding-top: 20px
+
+		.catalog-header__title
+			max-width: 100%
+
+		.catalog-header__right
+			height: 60px
+			top: auto
+			bottom: 0
+
+	@media #{$mobile}
+		.catalog-header__left
+			&:last-child
+				padding-bottom: 20px
+
+		.catalog-header__right
+			height: auto
+			padding: 0 0 20px
+
+		.catalog-header__button
+			position: static
+
+.catalog_header_smart
+	min-height: auto
+
+	.catalog-header__top
+		border: none
+
+		&:last-child
+			margin-bottom: 0
+			padding-bottom: 0
+
+	@media #{$tablet}
+		.catalog-header__top
+			height: auto
+			padding-top: 0
+
+			&:before
+				display: none
+
+.catalog-panel
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-bottom: 30px
+
+	@media #{$mobile}
+		height: 50px
+		border-top: 1px solid #edeef1
+		border-bottom: 1px solid #edeef1
+		background-color: #ffffff
+		margin: 0 -20px
+		padding: 0 20px
+
+	&__right
+		display: flex
+		align-items: center
+
+.catalog-sort
+	color: #3a4051
+	font-size: 16px
+	display: flex
+	align-items: center
+
+	@media #{$mobile}
+		display: none
+
+	&__elem
+		opacity: 0.3
+
+		@media #{$tablet-above}
+			transition: 300ms ease-out
+
+			&:hover
+				opacity: .6
+
+			&:active
+				opacity: .3
+
+		&:not(:last-child)
+			margin-right: 30px
+
+		&.is-active
+			opacity: 1
+
+		svg
+			fill: currentColor
+			margin-left: 10px
+
+.catalog-view
+	display: flex
+	align-items: center
+
+	@media #{$mobile}
+		display: none
+
+	&__label
+		font-size: 16px
+		color: #3a4051
+		opacity: 0.3
+		margin-right: 10px
+
+	&__controls
+		display: flex
+		align-items: center
+
+	&__control
+		width: 40px
+		height: 40px
+		border-radius: 10px
+		position: relative
+		display: block
+		margin-left: 10px
+
+		@media #{$tablet-above}
+			&:hover
+				svg
+					opacity: .6
+
+		&.is-active
+			background-color: #e2e3e8
+
+			svg
+				fill: #1b1e32
+				opacity: 1
+
+		svg
+			+abscenter
+			fill: #484d5d
+			opacity: 0.3
+			transition: 300ms ease-out
+
+.catalog-content
+	@media #{$mobile-above}
+		background-color: #ffffff
+		border: 1px solid #edeef1
+		overflow: hidden
+		border-radius: 20px
+		margin-bottom: 60px
+
+	@media #{$mobile}
+		margin: 0 -20px 25px
+
+.is_product_tile_grid
+	@media #{$mobile-above}
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: -1px
+
+		.catalog-product
+			width: 25%
+			height: 495px
+			text-align: center
+			padding-top: 45px
+
+			@media (max-width: 1400px)
+				width: 33.333%
+
+				&:not(:nth-child(3n))
+					border-right: 1px solid #edeef1
+
+	@media (min-width: 1401px)
+		.catalog-product
+			&:not(:nth-child(4n))
+				border-right: 1px solid #edeef1
+
+	@media #{$tablet-above}
+		.catalog-product__discounts
+			width: auto
+			position: absolute
+			top: 20px
+			left: 20px
+			right: 20px
+			display: flex
+
+		.discount
+			justify-content: flex-start
+
+.is_product_table_grid
+	@media #{$mobile-above}
+		.catalog-product
+			height: 135px
+			padding: 20px 445px 20px 120px
+
+			@media #{$tablet}
+				padding-right: 285px
+
+			&:last-child
+				border: none
+
+		.catalog-product__image
+			width: 100px
+			height: 100px
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 20px
+			margin: auto
+
+		.catalog-product__footer
+			width: 250px
+			position: absolute
+			top: 45px
+			right: 30px
+
+		.catalog-product__rating
+			width: 210px
+			position: absolute
+			bottom: 25px
+			right: 50px
+			margin: 0
+
+	@media #{$tablet-above}
+		.catalog-product__discounts
+			display: flex
+			align-items: center
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 280px
+
+.catalog-product
+	display: block
+	position: relative
+	background-color: #ffffff
+	border-bottom: 1px solid #edeef1
+
+	@media #{$tablet-above}
+		&:active
+			.catalog-product__image,
+			.catalog-product__info
+				opacity: .3
+
+	@media #{$mobile}
+		min-height: 245px
+		padding: 20px 20px 60px 50%
+		position: relative
+
+	&__image
+		width: 100%
+		max-width: 245px
+		height: 245px
+		margin: 0 auto 25px
+		transition: 300ms opacity ease-out
+
+		@media #{$mobile}
+			width: 95px
+			height: 95px
+			position: absolute
+			top: 15px
+			right: 50%
+			left: 0
+			margin: auto
+
+	&__cover
+		width: 100%
+		height: 100%
+		+backcover
+
+	&__info
+		transition: 300ms opacity ease-out
+
+		@media #{$mobile}
+			min-height: 150px
+
+	&__category
+		width: 100%
+		color: #33394a
+		padding: 0 20px
+		margin-bottom: 10px
+		opacity: 0.3
+		+to
+
+		@media #{$mobile}
+			padding: 0
+			margin-bottom: 7px
+
+	&__text
+		color: #1b1e32
+		font-size: 16px
+		line-height: 17px
+		overflow: hidden
+		margin-bottom: 15px
+
+		@media #{$mobile-above}
+			padding: 0 20px
+			height: 50px
+
+	&__rating
+		@media #{$mobile-above}
+			margin-bottom: 22px
+
+	&__footer
+		@media #{$mobile-above}
+			padding: 0 20px
+			position: relative
+
+	&__price
+		@media #{$mobile}
+			position: absolute
+			top: 125px
+			left: 0
+			right: 50%
+
+	&__cart
+		@media #{$mobile-above}
+			position: absolute
+			bottom: 0
+			right: 20px
+
+		@media #{$mobile}
+			position: absolute
+			bottom: 20px
+			left: 20px
+			right: 20px
+
+	&__discounts
+		@media #{$mobile-above}
+			width: 156px
+			display: none
+
+		@media #{$mobile}
+			margin-left: -100%
+			margin-top: 12px
+			margin-bottom: 12px
+
+.catalog-cart-button
+	width: 40px
+	height: 40px
+	position: relative
+	cursor: pointer
+	color: #fff
+	border-radius: 10px
+	background-color: #81c341
+
+	@media #{$tablet-above}
+		transition: 300ms ease-out
+
+		&:hover
+			background-color: #6fb728
+
+		&:active
+			svg
+				opacity: 0.3
+
+	@media #{$mobile-above}
+		&__title
+			display: none
+
+		svg
+			+abscenter
+			right: 2px
+			bottom: 2px
+
+		.icon-m-plus
+			display: none
+
+	@media #{$mobile}
+		width: 100%
+		padding: 0 20px
+		display: flex
+		align-items: center
+
+		&__title
+			font-size: 14px
+			font-weight: 500
+			line-height: 17px
+			text-transform: uppercase
+			letter-spacing: 1.4px
+
+		.icon-add-to-cart
+			display: none
+
+		svg
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 20px
+			margin: auto
+
+	svg
+		fill: currentColor
+		transition: 300ms ease-out
+
+.catalog-pager
+	&:not(:last-child)
+		margin-bottom: 70px
+
+		@media #{$mobile}
+			margin-bottom: 30px
+
+.catalog-desc
+	color: #3a4051
+	font-size: 16px
+	line-height: 20px

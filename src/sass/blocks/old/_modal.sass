@@ -1,0 +1,648 @@
+/*
+ * Modal
+ */
+
+.mfp-open
+	@media #{$mobile-above}
+		overflow: visible !important
+
+	body
+		overflow: hidden
+
+.mfp-ready
+	&:not(.mfp-removing)
+		.modal
+			opacity: 1
+			transform: scale(1)
+
+	&.mfp-removing
+		.modal
+			transform: scale(.95)
+
+.mfp-bg
+	background-color: rgba(248, 249, 253, 0.95)
+	opacity: 0
+	transition: 300ms ease-out
+
+	&.mfp-ready
+		opacity: 1
+
+	&.mfp-removing
+		opacity: 0
+
+.mfp-container
+	padding: 0
+
+.mfp-content
+	padding: 50px 20px
+
+	@media #{$mobile}
+		padding: 20px
+
+.mfp-wrap
+	top: 0 !important
+	position: fixed !important
+	overflow: auto
+	-webkit-overflow-scrolling: auto
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+	@media #{$mobile}
+		padding: 0
+
+[data-mfp-src]
+	outline: none
+
+.modal
+	width: 100%
+	max-width: 730px
+	box-shadow: 0 30px 120px rgba(200, 207, 222, 0.42)
+	margin: 0 auto
+	border-radius: 30px
+	opacity: 0
+	transition: 500ms cubic-bezier(.165,.84,.44,1), 300ms opacity ease-out
+	transform: scale(1.05)
+
+	&.style_green
+		color: #fff
+		box-shadow: 0 30px 120px rgba(200, 207, 222, 0.42)
+		background-color: #81c341
+
+		@media #{$mobile}
+			.modal-product__footer
+				border-bottom: none
+
+	&.style_border_green
+		color: #1b1e32
+		background: #fff
+		border: 8px solid #81c341
+
+		@media #{$mobile}
+			border-width: 6px
+
+	&.style_white
+		background: #fff
+
+.modal-header
+	color: #fff
+	height: 80px
+	display: flex
+	align-items: center
+	padding: 0 40px
+	border-radius: 30px 30px 0 0
+	background-color: #351a5a
+	position: relative
+
+	@media #{$mobile}
+		height: 60px
+		padding: 0 25px
+		border-radius: 20px 20px 0 0
+
+.modal-title
+	font-size: 18px
+	font-weight: 500
+	line-height: 22px
+	text-transform: uppercase
+	letter-spacing: 1px
+
+	@media #{$mobile}
+		font-size: 16px
+
+.modal-close
+	position: absolute
+	top: 0
+	bottom: 0
+	right: 25px
+	margin: auto
+	cursor: pointer
+	width: 40px
+	height: 40px
+	opacity: .6
+
+	@media #{$mobile}
+		right: 10px
+
+	svg
+		fill: currentColor
+		+abscenter
+
+.modal-content
+	border-radius: 0 0 30px 30px
+	background-color: #ffffff
+
+	@media #{$mobile}
+		border-radius: 0 0 20px 20px
+
+.modal-inner
+	padding: 35px 40px 50px
+	color: #3a4051
+
+	@media #{$mobile}
+		padding: 20px
+
+.modal-desc
+	max-width: 590px
+	color: #3a4051
+	font-size: 17px
+	line-height: 20px
+	margin-bottom: 30px
+
+	@media #{$mobile}
+		font-size: 15px
+		line-height: 17px
+		margin-bottom: 25px
+
+		br
+			display: none
+
+.modal-delivery
+	@media #{$mobile-above}
+		margin-bottom: 30px
+
+		&__elem
+			display: flex
+			align-items: center
+
+			&:not(:last-child)
+				margin-bottom: 15px
+
+		&__left
+			width: calc(100% - 200px)
+			padding-right: 20px
+			display: flex
+			align-items: center
+
+		&__right
+			width: 200px
+			display: flex
+			justify-content: flex-end
+
+	@media #{$mobile}
+		&__elem
+			margin: 0 -20px
+			padding: 0 20px 20px
+
+			&:not(:last-child)
+				border-bottom: 1px solid #edeef1
+				margin-bottom: 20px
+
+		.radio-button
+			width: 100%
+
+
+.modal-button
+	@media #{$mobile}
+		margin: 0 -20px
+		padding: 20px 20px 0
+		border-top: 1px solid #edeef1
+
+	.button
+		width: 100%
+
+		@media #{$mobile}
+			height: 40px
+			padding: 0 20px
+
+
+.modal-city
+	&__form
+		position: relative
+		height: 80px
+		background: #fff
+		border-radius: 30px 30px 0 0
+		border-bottom: 1px solid #eeeff2
+
+		@media #{$mobile}
+			height: 65px
+			border-radius: 20px 20px 0 0
+
+	&__inner
+		position: relative
+		background-color: #fff
+		border-bottom: 1px solid #eeeff2
+		margin-bottom: -20px
+		border-radius: 0 0 30px 30px
+
+		@media #{$mobile-above}
+			height: 425px
+			padding: 35px 40px 25px
+
+		@media #{$mobile}
+			padding: 20px 20px 10px
+			border-radius: 0 0 20px 20px
+
+	&__footer
+		height: 100px
+		padding-top: 20px
+		background-color: #f8f9fd
+		border-radius: 0 0 30px 30px
+
+		@media #{$mobile}
+			height: 70px
+			border-radius: 0 0 20px 20px
+
+	&__link
+		width: 100%
+		height: 100%
+		color: #3a4051
+		font-size: 18px
+		font-weight: 500
+		letter-spacing: 1px
+		display: flex
+		align-items: center
+		justify-content: center
+		text-transform: uppercase
+
+		@media #{$mobile}
+			font-size: 14px
+
+	&__input
+		width: 100%
+		height: 100%
+		font-size: 16px
+		color: #444444
+		padding: 0 75px
+		background: transparent
+
+		@media #{$mobile}
+			padding: 0 55px
+
+	&__submit
+		width: 18px
+		height: 18px
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 40px
+		margin: auto
+
+		@media #{$mobile}
+			left: 20px
+
+		svg
+			fill: #a9b0b7
+
+	&__radios
+		margin-bottom: 35px
+
+		@media #{$mobile}
+			margin-bottom: 10px
+
+	.modal-close
+		opacity: .5
+
+
+
+.modal-filter
+	&__inner
+		position: relative
+		padding: 40px
+		background-color: #fff
+		border-bottom: 1px solid #eeeff2
+		margin-bottom: -20px
+		border-radius: 0 0 30px 30px
+
+		@media #{$mobile}
+			padding: 20px
+			border-radius: 0 0 20px 20px
+
+	&__footer
+		height: 100px
+		padding-top: 20px
+		background-color: #f8f9fd
+		border-radius: 0 0 30px 30px
+
+		@media #{$mobile}
+			height: 70px
+			border-radius: 0 0 20px 20px
+
+	&__reset
+		width: 100%
+		height: 100%
+		color: #3a4051
+		font-size: 18px
+		font-weight: 500
+		letter-spacing: 1px
+		display: flex
+		align-items: center
+		justify-content: center
+		text-transform: uppercase
+		cursor: pointer
+		background: transparent
+
+		@media #{$mobile}
+			font-size: 14px
+
+.modal-box
+	padding: 40px
+	position: relative
+
+	.modal-close
+		top: 40px
+		right: 45px
+		bottom: auto
+
+	@media #{$mobile}
+		padding: 20px 20px 10px
+
+		.modal-close
+			top: 10px
+			right: 10px
+
+	&.modal_style_text
+		text-align: center
+
+		.modal-footer
+			display: flex
+			justify-content: center
+
+		@media #{$mobile-above}
+			.button
+				width: auto
+				min-width: 260px
+
+		@media #{$mobile}
+			.modal-caption
+				width: 100%
+				
+			.button
+				width: auto
+				height: 40px
+
+.modal-caption
+	margin-bottom: 35px
+
+	@media #{$mobile}
+		width: calc(100% - 60px)
+		margin-bottom: 20px
+
+		&.text_center
+			width: 100%
+
+.medium-title
+	font-size: 30px
+	font-weight: 500
+
+	@media #{$mobile}
+		font-size: 20px
+
+.modal-products
+	margin-bottom: 40px
+
+	@media #{$mobile}
+		margin-bottom: 20px
+
+.modal-product
+	color: #1b1e32
+	background-color: #ffffff
+	border-radius: 20px
+
+	@media #{$mobile-above}
+		border: 1px solid #edeef1
+
+		&__top
+			min-height: 140px
+			padding: 25px 25px 0 140px
+			position: relative
+
+		&__image
+			position: absolute
+			top: 20px
+			left: 20px
+			width: 100px
+			height: 100px
+
+		&__info
+			max-width: calc(100% - 200px)
+
+		&__price
+			width: 160px
+			position: absolute
+			top: 45px
+			right: 25px
+			height: 41px
+			font-size: 19px
+			display: flex
+			align-items: center
+			justify-content: center
+			border-radius: 10px
+			border: 1px solid #edeef1
+			background-color: #ffffff
+
+		&__footer
+			height: 41px
+			margin: 0 -1px -1px
+			display: flex
+			align-items: center
+			justify-content: space-between
+			border-radius: 20px
+			border: 1px solid #edeef1
+
+		&__count
+			width: 140px
+			height: 100%
+			color: #444444
+			font-size: 16px
+			display: flex
+			align-items: center
+			justify-content: center
+			border-radius: 20px
+			background-color: #f0f1f5
+
+		&__total
+			padding-right: 65px
+
+	@media #{$mobile}
+		padding: 20px 15px 0
+
+	&:not(:last-child)
+		margin-bottom: 10px
+
+	&__image
+		@media #{$mobile}
+			width: 90px
+			height: 90px
+			margin: 0 auto 15px
+
+	&__cover
+		width: 100%
+		height: 100%
+		+backcover
+
+	&__info
+		@media #{$mobile}
+			margin-bottom: 20px
+
+	&__category
+		opacity: 0.3
+		color: #33394a
+		font-size: 16px
+		margin: 0 0 10px
+
+		@media #{$mobile}
+			display: none
+
+	&__title
+		font-size: 19px
+		line-height: 20px
+
+		@media #{$mobile}
+			font-size: 14px
+			line-height: 17px
+			text-align: center
+			padding: 0 15px
+
+	&__price
+		font-weight: 700
+
+		@media #{$mobile}
+			font-size: 15px
+
+	&__footer
+		@media #{$mobile}
+			position: relative
+			margin-top: 10px
+
+	&__count
+		@media #{$mobile}
+			position: absolute
+			top: -25px
+			right: 0
+
+	&__total
+		display: flex
+		align-items: center
+
+		@media #{$mobile}
+			height: 40px
+			justify-content: space-between
+			border-top: 1px solid #edeef1
+			border-bottom: 1px solid #edeef1
+
+		&-label
+			color: #444444
+			font-size: 16px
+			margin-right: 15px
+
+			@media #{$mobile}
+				font-size: 14px
+
+		&-value
+			font-size: 19px
+			font-weight: 700
+
+			@media #{$mobile}
+				font-size: 15px
+
+.modal-buttons
+	@media #{$mobile-above}
+		display: flex
+
+		.button
+			width: 50%
+
+	@media #{$mobile}
+		.button
+			width: 100%
+			height: 40px
+			font-size: 13px
+
+			&:not(:last-child)
+				margin-bottom: 10px
+
+.modal-footer
+	@media #{$mobile}
+		padding-bottom: 10px
+
+	.button
+		width: 100%
+
+.modal-order
+	@media #{$mobile-above}
+		&__icon
+			position: absolute
+			top: 0
+			left: 0
+
+		&__info
+			&:not(:last-child)
+				margin-bottom: 35px
+
+	@media #{$mobile}
+		&__icon
+			margin-bottom: 10px
+
+			img
+				display: block
+
+		&__info
+			&:not(:last-child)
+				margin-bottom: 25px
+
+	&__elem
+		position: relative
+
+		@media #{$mobile-above}
+			padding-left: 65px
+
+		&:not(:last-child)
+			margin-bottom: 20px
+
+	&__text
+		color: #3a4051
+		font-size: 17px
+		line-height: 21px
+
+		@media #{$mobile}
+			font-size: 14px
+			line-height: 17px
+
+			br
+				display: none
+
+	&__bonus
+		color: #444444
+		position: relative
+
+		@media #{$mobile-above}
+			font-size: 16px
+			padding: 10px 0 10px 65px
+			display: flex
+			border-top: 1px solid #edeef1
+			border-bottom: 1px solid #edeef1
+			margin-bottom: 35px
+
+			img
+				position: absolute
+				top: 10px
+				left: 15px
+
+		@media #{$mobile}
+			font-size: 14px
+			margin-bottom: 25px
+
+			&-number
+				position: relative
+				padding: 10px 30px 10px 0
+				border-top: 1px solid #edeef1
+				border-bottom: 1px solid #edeef1
+				margin-bottom: 10px
+
+			img
+				position: absolute
+				top: 9px
+				right: 0
+
+		b
+			color: #1b1e32
+			margin-right: 25px
+
+.modal-text
+	max-width: 550px
+	font-size: 17px
+	line-height: 21px
+	margin: 0 auto 40px
+
+	@media #{$mobile}
+		font-size: 14px
+		line-height: 17px
+		margin: 0 auto 25px

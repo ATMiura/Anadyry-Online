@@ -1,0 +1,353 @@
+.payment
+	@media #{$tablet-above}
+		display: flex
+		margin-left: -35px
+		border-radius: 30px
+		background-color: #ffffff
+		box-shadow: 0 30px 120px rgba(200, 207, 222, 0.42)
+
+	@media #{$mobile}
+		margin: 0 -20px
+		border-top: 1px solid #edeef1
+
+.payment-section
+	@media #{$tablet-above}
+		width: calc(100% - 305px)
+		padding: 55px 40px 55px 55px
+
+	@media #{$mobile-above}
+		@media #{$tablet}
+			margin-bottom: 10px
+			border-radius: 30px
+			box-shadow: 0 30px 120px rgba(200, 207, 222, 0.42)
+
+	@media #{$tablet}
+		padding: 50px 35px
+		background-color: #ffffff
+
+	@media #{$mobile}
+		padding: 25px 20px
+
+.payment-aside
+	@media #{$tablet-above}
+		width: 305px
+		padding: 40px 45px
+		border-left: 1px solid #edeef1
+
+		&__title
+			display: none
+
+	@media #{$mobile-above}
+		@media #{$tablet}
+			padding: 50px 35px 35px
+			border-radius: 30px
+			box-shadow: 0 30px 120px rgba(200, 207, 222, 0.42)
+
+			&__title
+				color: #3a4051
+				font-size: 18px
+				font-weight: 500
+				text-transform: uppercase
+				letter-spacing: 1px
+				margin: 0 0 30px
+
+	@media #{$tablet}
+		background-color: #ffffff
+
+	@media #{$mobile}
+		border-top: 1px solid #edeef1
+		border-bottom: 1px solid #edeef1
+		border-radius: 0 0 20px 20px
+		padding: 30px 40px
+
+		&__title
+			display: none
+
+	&__products
+		margin-bottom: 20px
+
+		@media #{$mobile-above}
+			@media #{$tablet}
+				margin-bottom: 35px
+
+	&__info
+		position: relative
+
+		@media #{$mobile-above}
+			@media #{$tablet}
+				display: flex
+				align-items: center
+				justify-content: space-between
+				padding: 20px 0 10px
+				border-top: 1px solid #edeef1
+
+	&__bonus
+		margin-bottom: 20px
+
+		&-label
+			width: 80px
+			text-align: center
+
+		&-value
+			width: calc(100% - 80px)
+			padding-left: 15px
+
+		@media #{$mobile-above}
+			@media #{$tablet}
+				width: 50%
+
+				&-elem
+					&:nth-child(2)
+						position: absolute
+						top: 20px
+						left: 50%
+						transform: translate3d(-50%, 0, 0)
+
+				&-label
+					width: auto
+					text-align: left
+
+				&-value
+					width: auto
+					padding-left: 5px
+
+		&-elem
+			display: flex
+			color: #81c341
+			font-size: 15px
+			font-weight: 700
+
+			@media #{$mobile}
+				font-size: 14px
+
+			&:not(:last-child)
+				margin-bottom: 3px
+
+	&__total
+		display: flex
+		color: #1b1e32
+		font-size: 15px
+		font-weight: 700
+		margin-bottom: 20px
+
+		&-label
+			width: 80px
+			text-align: center
+
+		&-value
+			width: calc(100% - 80px)
+			padding-left: 15px
+
+		@media #{$mobile-above}
+			@media #{$tablet}
+				&-label
+					width: auto
+					text-align: left
+
+				&-value
+					width: auto
+					padding-left: 5px
+
+	&__button
+		margin-bottom: 20px
+
+		.button
+			width: 100%
+			border-radius: 10px
+
+			@media #{$mobile}
+				height: 45px
+				border-radius: 5px
+
+	&__points
+		color: #81c341
+		font-size: 16px
+		text-align: center
+
+		@media #{$mobile}
+			font-size: 14px
+
+.payment-radios
+	.delivery-radio
+		width: 100%
+
+		&:not(:last-child)
+			margin-bottom: 10px
+
+.payment-bonus
+	color: #1b1e32
+	margin-bottom: 45px
+
+	@media #{$mobile}
+		padding: 0 20px
+		margin-bottom: 30px
+
+	&__desc
+		margin-bottom: 35px
+
+		@media #{$mobile}
+			margin-bottom: 25px
+
+	&__title
+		color: #3a4051
+		font-size: 18px
+		font-weight: 500
+		line-height: 17px
+		text-transform: uppercase
+		letter-spacing: 1px
+		margin: 0 0 25px
+
+		@media #{$mobile}
+			font-size: 15px
+			margin: 0 0 20px
+
+	&__form
+		@media #{$mobile-above}
+			display: flex
+			align-items: center
+
+	&__label
+		width: 190px
+		font-size: 17px
+
+		@media #{$mobile}
+			display: none
+
+	&__field
+		@media #{$mobile-above}
+			width: calc(100% - 190px)
+			max-width: 410px
+			display: flex
+
+	&__input
+		color: #1b1e32
+		border: 1px solid #d7d8da
+
+		@media #{$mobile-above}
+			width: 50%
+			height: 60px
+			padding: 0 35px
+			font-size: 17px
+			border-radius: 30px 0 0 30px
+
+		@media #{$mobile}
+			width: 100%
+			height: 40px
+			padding: 0 15px
+			border-radius: 5px
+			margin-bottom: 7px
+
+	&__button
+		cursor: pointer
+		color: #3a4051
+		font-size: 16px
+		font-weight: 500
+		text-transform: uppercase
+		letter-spacing: .5px
+		background: transparent
+
+		@media #{$mobile-above}
+			width: 50%
+			height: 60px
+			border-radius: 0 30px 30px 0
+			margin-left: -1px
+			border: 3px solid #81c341
+
+		@media #{$mobile}
+			width: 100%
+			height: 40px
+			font-size: 14px
+			border-radius: 5px
+			border: 2px solid #81c341
+
+	p
+		font-size: 16px
+		line-height: 17px
+
+		@media #{$mobile}
+			font-size: 14px
+
+
+.payment-product
+	position: relative
+
+	@media #{$tablet-above}
+		&:not(:last-child)
+			margin-bottom: 25px
+
+	@media #{$mobile-above}
+		@media #{$tablet}
+			padding-left: 95px
+
+			&:not(:last-child)
+				margin-bottom: 30px
+
+	@media #{$mobile}
+		&:not(:last-child)
+			margin-bottom: 25px
+
+	&__top
+		padding-top: 6px
+		padding-bottom: 10px
+		border-bottom: 1px solid #edeef1
+
+		@media #{$tablet-above}
+			padding-left: 95px
+			min-height: 110px
+			position: relative
+
+		@media #{$mobile-above}
+			@media #{$tablet}
+				height: 55px
+
+		@media #{$mobile}
+			padding-left: 95px
+			min-height: 110px
+			position: relative
+
+	&__image
+		width: 90px
+		height: 90px
+		position: absolute
+		top: 0
+		left: -10px
+
+	&__cover
+		width: 100%
+		height: 100%
+		display: block
+		+backcover
+
+	&__title
+		color: #1b1e32
+		font-size: 14px
+		line-height: 16px
+		max-height: 128px
+		overflow: hidden
+
+		@media #{$mobile-above}
+			@media #{$tablet}
+				max-height: 30px
+
+	&__bottom
+		display: flex
+		color: #1b1e32
+		font-size: 14px
+		padding-top: 15px
+
+	&__count
+		@media #{$tablet-above}
+			width: 80px
+			text-align: center
+
+		@media #{$mobile-above}
+			@media #{$tablet}
+				width: 60px
+
+		@media #{$mobile}
+			width: 80px
+			text-align: center
+
+	&__price
+		width: calc(100% - 80px)
+		padding-left: 15px

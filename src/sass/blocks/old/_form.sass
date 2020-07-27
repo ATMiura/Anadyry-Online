@@ -1,0 +1,606 @@
+.form-page
+	@media #{$mobile-above}
+		@media #{$tablet}
+			.page-header
+				margin-bottom: 35px
+
+	@media #{$tablet-above}
+		.page-header
+			margin-bottom: 25px
+
+	@media #{$mobile}
+		.page-header
+			margin-bottom: 10px
+
+.form-container
+	color: #3a4051
+
+	@media #{$mobile-above}
+		@media #{$tablet}
+			padding-left: 60px
+			padding-right: 30px
+
+	@media #{$tablet-above}
+		max-width: 950px
+
+	@media #{$mobile}
+		padding: 25px 40px 0
+		margin: 0 -20px
+		background: #fff
+		border-top: 1px solid #edeef1
+		box-shadow: 0 50px 0 #fff
+
+.form-block
+	@media #{$tablet-above}
+		width: calc(100% - 300px)
+
+.form-nav
+	position: relative
+	display: flex
+	margin-bottom: 40px
+	border-bottom: 1px solid #edeef1
+
+	@media #{$mobile-above}
+		@media #{$tablet}
+			margin-left: 60px
+
+	@media #{$mobile}
+		margin: 0 20px 30px
+
+	&__elem
+		color: #3a4051
+		font-size: 16px
+		font-weight: 500
+		letter-spacing: 1px
+		text-transform: uppercase
+		position: relative
+		padding-bottom: 25px
+
+		@media #{$mobile-above}
+			&:not(:last-child)
+				margin-right: 35px
+
+		@media #{$tablet}
+			padding-bottom: 35px
+
+		@media #{$mobile}
+			font-size: 14px
+			padding-bottom: 10px
+
+			&:not(:last-child)
+				margin-right: 15px
+
+		&.is-active
+			.form-nav__link
+				opacity: 1
+
+			&:before
+				opacity: 1
+
+		&:before
+			content: ""
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 1px
+			opacity: 0
+			background: #3a4051
+			transition: 300ms ease-out
+
+	&__link
+		display: block
+		opacity: 0.3
+		transition: 300ms ease-out
+
+.form-logout
+	position: absolute
+	top: 0
+	right: 0
+	display: flex
+	align-items: center
+
+	@media #{$mobile}
+		height: 30px
+		width: 30px
+		right: -11px
+		top: -8px
+
+	&__title
+		font-size: 16px
+		font-weight: 500
+		opacity: .6
+		letter-spacing: 1px
+		text-transform: uppercase
+
+		@media #{$mobile}
+			display: none
+
+	&__icon
+		@media #{$mobile-above}
+			margin-left: 18px
+
+		@media #{$mobile}
+			width: 10px
+			height: 11px
+			+abscenter
+
+		svg
+			fill: none
+			stroke-width: 2px
+			stroke: #a9b0b7
+			display: block
+
+			@media #{$mobile}
+				width: 10px
+				height: 11px
+
+.field-group
+	margin-bottom: 40px
+
+	@media #{$mobile}
+		margin-bottom: 20px
+
+.field-flex
+	@media #{$mobile-above}
+		display: flex
+		align-items: center
+
+		&:not(:last-child)
+			margin-bottom: 10px
+
+		&__label
+			width: 195px
+			font-size: 17px
+			padding-right: 10px
+
+		&__input
+			width: calc(100% - 195px)
+
+	@media #{$mobile}
+		&__label
+			font-size: 15px
+			font-weight: 500
+			letter-spacing: 1px
+			text-transform: uppercase
+			margin-bottom: 10px
+
+		&:not(:last-child)
+			margin-bottom: 20px
+
+.form-field
+	position: relative
+
+	&.is-success
+		.form-field__icon
+			opacity: 1
+
+	&__icon
+		height: 60px
+		position: absolute
+		top: 0
+		right: 25px
+		display: flex
+		align-items: center
+		opacity: 0
+		transition: 300ms ease-out
+
+		@media #{$mobile}
+			height: 40px
+			right: 15px
+
+			img
+				width: 12px
+
+.form-input
+	width: 100%
+	height: 60px
+	color: #1b1e32
+	font-size: 17px
+	padding: 0 50px 0 30px
+	border-radius: 30px
+	background-color: #fff
+	border: 1px solid #edeef1
+	transition: 300ms ease-out
+
+	@media #{$mobile}
+		height: 40px
+		padding: 0 35px 0 15px
+		color: #1b1e32
+		font-size: 15px
+		border-radius: 7px
+
+	&:focus
+		border-color: #d7d8da
+
+textarea.form-input
+	padding-top: 20px
+	padding-bottom: 20px
+	resize: none
+
+	@media #{$mobile}
+		height: 125px
+		padding: 15px 30px 15px 15px
+
+.form-checkboxs
+	&:not(:first-child)
+		margin-top: 30px
+
+		@media #{$mobile}
+			margin-top: 25px
+
+.form-checkbox
+	&:not(:last-child)
+		margin-bottom: 20px
+
+.form-data
+	padding-bottom: 40px
+	margin-bottom: 40px
+	position: relative
+
+	&:last-child
+		padding-bottom: 0
+
+	&:not(:last-child)
+		border-bottom: 1px solid #edeef1
+
+	@media #{$mobile-above}
+		@media #{$tablet}
+			.field-text
+				padding: 0 0 40px
+
+	@media #{$mobile}
+		padding-bottom: 25px
+		margin-bottom: 25px
+
+		.field-text
+			padding-bottom: 25px
+			margin-bottom: 25px
+			border-bottom: 1px solid #edeef1
+
+		&.form_last_data
+			padding-bottom: 0
+			margin-bottom: 0
+			border: none
+
+.form-bonus
+	@media #{$tablet-above}
+		width: 250px
+		position: absolute
+		top: 0
+		left: 100%
+		margin-left: 40px
+
+	@media #{$mobile-above}
+		@media #{$tablet}
+			display: flex
+			margin-bottom: 40px
+
+	@media #{$mobile}
+		margin-bottom: 25px
+
+	&__top
+		@media #{$tablet-above}
+			margin-bottom: 30px
+
+		@media #{$mobile-above}
+			@media #{$tablet}
+				width: 200px
+				padding-right: 30px
+
+		@media #{$mobile}
+			margin-bottom: 20px
+
+	&__number
+		color: #1b1e32
+		font-size: 30px
+		font-weight: 700
+		margin: 0 0 10px
+
+		@media #{$mobile}
+			font-size: 20px
+			margin: 0 0 5px
+
+	&__label
+		color: #1b1e32
+		font-size: 17px
+
+		@media #{$mobile}
+			font-size: 14px
+
+	&__text
+		color: #3a4051
+		font-size: 16px
+		line-height: 20px
+
+		@media #{$mobile-above}
+			@media #{$tablet}
+				width: calc(100% - 200px)
+
+		@media #{$mobile}
+			font-size: 14px
+			line-height: 17px
+
+			br
+				display: none
+
+
+.form-auth
+	position: relative
+
+	@media #{$mobile-above}
+		margin-left: -35px
+
+.field
+	@media #{$mobile-above}
+		&:not(:last-child)
+			margin-bottom: 10px
+
+	@media #{$mobile}
+		&:not(:last-child)
+			margin-bottom: 25px
+
+.field-area
+	position: relative
+
+	@media #{$mobile-above}
+		display: flex
+		align-items: center
+		height: 60px
+		border-radius: 30px
+		background-color: #edeef1
+
+.field-label
+	color: #1b1e32
+
+	@media #{$mobile-above}
+		width: 140px
+		font-size: 17px
+		padding-left: 35px
+
+.field-elem
+	@media #{$mobile-above}
+		width: calc(100% - 140px)
+
+.field-input
+	width: 100%
+	color: #1b1e32
+	transition: 300ms ease-out
+
+	@media #{$mobile-above}
+		height: 60px
+		font-size: 17px
+		padding: 0 50px 0 30px
+		border: 1px solid #edeef1
+		background-color: #ffffff
+		border-radius: 30px
+
+	@media #{$mobile}
+		height: 40px
+		font-size: 14px
+		border: none
+		background: transparent
+		border-bottom: 1px solid #d7d8da
+
+	&:focus
+		border-color: #d7d8da
+
+.form-submit
+	@media #{$mobile-above}
+		margin-top: 40px
+
+		@media #{$tablet}
+			margin-top: 35px
+
+	@media #{$mobile}
+		margin-top: 30px
+
+		.button
+			padding: 0 10px
+			border-radius: 5px
+
+	.button
+		width: 100%
+
+.field-link
+	color: #3a4051
+
+	@media #{$mobile-above}
+		font-size: 16px
+
+		@media #{$tablet}
+			padding: 30px 30px 0
+
+	@media #{$tablet-above}
+		width: 250px
+		position: absolute
+		top: 20px
+		left: 100%
+		margin-left: 40px
+
+	@media #{$mobile}
+		padding-top: 30px
+
+.field-agree
+	@media #{$mobile-above}
+		padding: 30px 35px 0
+
+	@media #{$mobile}
+		display: flex
+		flex-direction: column-reverse
+
+		.field-text
+			margin-bottom: 20px
+
+.field-text
+	color: #3a4051
+
+	@media #{$mobile-above}
+		font-size: 16px
+		line-height: 20px
+
+		@media #{$tablet}
+			padding-top: 30px
+
+		p
+			&:not(:last-child)
+				margin-bottom: 25px
+
+	@media #{$tablet-above}
+		width: 250px
+		position: absolute
+		top: 0
+		left: 100%
+		margin-left: 40px
+
+	@media #{$mobile}
+		font-size: 14px
+		line-height: 17px
+
+		p
+			&:not(:last-child)
+				margin-bottom: 20px
+
+.field_city_select
+	@media #{$mobile}
+		display: flex
+		align-items: center
+		margin: -10px 0
+
+		.field-flex__label
+			width: 70px
+			margin: 0
+
+		.field-flex__input
+			width: calc(100% - 70px)
+
+.form-select-control
+	display: flex
+	align-items: center
+	cursor: pointer
+	position: relative
+	z-index: 2
+
+	@media #{$mobile-above}
+		width: 100%
+		height: 60px
+		font-size: 17px
+		cursor: pointer
+		color: #1b1e32
+		border: 1px solid #edeef1
+		background-color: #ffffff
+		padding-left: 30px
+		border-radius: 30px
+
+	@media #{$mobile}
+		color: #3a4051
+		font-size: 15px
+		font-weight: 500
+		letter-spacing: 1px
+		padding: 10px 0
+		text-transform: uppercase
+
+	&__title
+		width: calc(100% - 50px)
+		+to
+
+		@media #{$mobile}
+			width: calc(100% - 30px)
+
+	svg
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 30px
+		margin: auto
+		fill: #484d5d
+
+		@media #{$mobile}
+			right: 0
+
+.form-select
+	width: 100%
+
+	.jq-selectbox
+		width: 100%
+
+		&.opened
+			z-index: 4 !important
+
+			.jq-selectbox__trigger
+				transform: rotate(180deg)
+
+	.jq-selectbox__select
+		width: 100%
+		height: 60px
+		cursor: pointer
+		color: #1b1e32
+		border: 1px solid #edeef1
+		background-color: #ffffff
+		font-size: 17px
+		position: relative
+		z-index: 2
+		display: flex
+		align-items: center
+		padding-left: 30px
+		border-radius: 30px
+
+		@media #{$mobile}
+			height: 40px
+			font-size: 15px
+			padding-left: 15px
+			border-radius: 7px
+			border: 1px solid #d7d8da
+
+	.jq-selectbox__select-text
+		width: calc(100% - 50px) !important
+		+to
+
+		@media #{$mobile}
+			width: calc(100% - 40px) !important
+
+	.jq-selectbox__trigger
+		position: absolute
+		right: 30px
+		top: -1px
+		bottom: 0
+		margin: auto
+		width: 11px
+		height: 6px
+		background: url('../images/arrow-down.svg') no-repeat
+		background-size: 100%
+		transition: 200ms cubic-bezier(.165,.84,.44,1)
+		display: block
+
+		@media #{$mobile}
+			right: 15px
+
+		.jq-selectbox__trigger-arrow
+			display: none
+
+	.jq-selectbox__dropdown
+		width: 100% !important
+		top: 100% !important
+		left: 0
+		right: 0
+		font-size: 17px
+		margin: 0
+		padding: 10px 0
+		border: 1px solid #edeef1
+		background-color: #ffffff
+		margin-top: 10px
+		border-radius: 10px
+
+		@media #{$mobile}
+			font-size: 15px
+			border-radius: 7px
+			border-color: #d7d8da
+
+		li
+			color: #1b1e32
+			padding: 12px 20px
+			cursor: pointer
+			transition: 200ms ease-out
+
+			@media #{$mobile}
+				padding: 5px 15px

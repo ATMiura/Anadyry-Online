@@ -1,0 +1,114 @@
+.user
+	display: flex
+	align-items: flex-start
+	&-avatar
+		border-radius: 100%
+		padding: 3px
+		border: 1px solid #EEEEEE
+		background: #fff
+
+		display: flex
+		align-items: center
+		justify-content: center
+
+		&-name
+			display: flex
+			align-items: center
+			justify-content: center
+			text-transform: uppercase
+			text-align: center
+			border-radius: 100%
+			height: 100%
+			width: 100%
+		&-photo
+			img
+				max-width: 100%
+				height: auto
+				border-radius: 100%
+		&-portal
+			font-size: 12px
+			line-height: 18px
+		&-post-date
+			font-size: 12px
+			line-height: 15px
+			color: #848484
+	&-dots
+		margin-left: 20px
+
+
+.sidebar
+	.user
+		&-avatar
+			width: 45px
+			height: 45px
+			&-photo
+
+
+		&-info
+			padding-left: 15px
+		&-name
+			margin-bottom: 2px
+		&-tag
+			font-size: 0.875rem
+			line-height: 0.938rem
+			font-weight: 100
+			color: var(--color-10)
+		&-follow
+			margin-top: 15px
+
+.post
+	&__item
+		.user
+			&-avatar
+				width: 40px
+				height: 40px
+			&-info
+				padding-left: 7px
+			&-portal
+				font-size: .75rem
+				line-height: 1.125rem
+				color: var(--color-7)
+				margin-bottom: 2px
+			&-post-date
+				font-size: .75rem
+				line-height: 0.938rem
+				color: var(--color-15)
+	&__btns
+		.user
+			&-info ~ .user-follow
+				margin-left: 10px
+
+
+.post
+	&__reply__list
+		.user
+			&-info ~ .user-follow
+				margin-left: 10px
+
+
+.like
+	&_box
+		display: flex
+	&__user__list
+		display: flex
+		.user
+			position: relative
+			&:nth-child(1)
+				z-index: 4
+			&:nth-child(2)
+				z-index: 3
+			&:nth-child(3)
+				z-index: 2
+			&:nth-child(4)
+				z-index: 1
+			&:not(:first-child)
+				margin-left: -11px
+			&-avatar
+				padding: 0
+				width: 22px
+				height: 22px
+				&-photo
+
+				&-name
+					font-size: .5rem
+					line-height: 0.625rem

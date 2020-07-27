@@ -1,0 +1,148 @@
+.category-grid
+	@media #{$mobile-above}
+		display: flex
+		flex-wrap: wrap
+
+		@media #{$tablet}
+			margin: 0 -10px -20px
+
+			&__col
+				width: calc(50% - 20px)
+				margin: 0 10px 20px
+
+	@media #{$tablet-above}
+		margin: 0 -20px -40px
+
+		&__col
+			width: calc(33.333% - 40px)
+			margin: 0 20px 40px
+
+	@media #{$mobile}
+		&__col
+			&:not(:last-child)
+				margin-bottom: 10px
+
+
+.category-tile
+	height: 100%
+	position: relative
+	display: block
+	border-radius: 20px
+	border: 1px solid #edeef1
+	background-color: #ffffff
+
+	&__image
+		position: relative
+		border-radius: 20px 20px 0 0
+		padding-bottom: 100%
+		+backcover
+
+	&__cover
+		position: absolute
+		bottom: 10px
+		+backcover
+
+		@media #{$mobile-above}
+			top: 40px
+			bottom: 10px
+			left: 30px
+			right: 30px
+			
+			@media #{$tablet}
+				top: 35px
+				left: 50px
+				right: 50px
+
+		@media #{$mobile}
+			top: 30px
+			left: 20px
+			right: 20px
+
+	&__box
+		@media #{$mobile-above}
+			padding: 30px
+
+		@media #{$mobile}
+			padding: 20px
+
+	&__title
+		color: #3a4051
+		font-size: 18px
+		font-weight: 500
+		line-height: 21px
+		text-transform: uppercase
+		letter-spacing: 1px
+
+		@media #{$mobile}
+			font-size: 15px
+			line-height: 17px
+
+.category-list
+	display: flex
+
+	@media #{$mobile-above}
+		justify-content: space-between
+		margin-bottom: 60px
+
+		@media #{$tablet}
+			margin-bottom: 40px
+
+	@media #{$mobile}
+		margin: 0 -8px -20px
+		flex-wrap: wrap
+
+.category-elem
+	width: 132px
+	text-align: center
+
+	@media #{$tablet}
+		width: 105px
+
+	@media #{$mobile}
+		width: calc(33.333% - 16px)
+		margin: 0 8px 20px
+
+	&__icon
+		width: 132px
+		height: 132px
+		border-radius: 20px
+		background-color: #edeef1
+		position: relative
+		margin-bottom: 15px
+
+		@media #{$tablet}
+			width: 105px
+			height: 105px
+
+			img
+				width: 100% !important
+
+		@media #{$mobile}
+			width: 100%
+			height: auto
+			padding-bottom: 100%
+			border-radius: 10px
+			margin-bottom: 10px
+
+			img
+				+abscenter
+
+	&__title
+		min-height: 35px
+		color: #1b1e32
+		font-size: 17px
+		font-weight: 700
+		line-height: 17px
+		margin-bottom: 15px
+
+		@media #{$mobile}
+			font-size: 14px
+			min-height: 35px
+			margin-bottom: 5px
+
+	&__price
+		color: #444444
+		font-size: 15px
+
+		@media #{$mobile}
+			font-size: 12px

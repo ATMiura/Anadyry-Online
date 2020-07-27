@@ -1,0 +1,177 @@
+.navbar
+	padding: 0
+	.nav-item
+		margin-bottom: 22px
+		&:last-child
+			margin-bottom: 0
+		.nav-link
+			padding: 0
+			display: flex
+			align-items: center
+			color: var(--color-8)
+			position: relative
+			&_circle
+				display: flex
+				align-items: center
+				justify-content: center
+				min-width: 15px
+				height: 15px
+				border-radius: 100%
+				margin-right: 15px
+				padding: 2px
+			&_circle_inner
+				border-radius: 100%
+				border: 2px solid
+				padding: 0
+				width: 11px
+				height: 11px
+			&:hover,
+			&.active
+				.nav-link_circle
+					position: absolute
+					width: calc(100% + 10px)
+					height: 100%
+					border-radius: 50px
+					justify-content: flex-start
+					height: 24px
+					left: -3px
+				.nav-link_circle_inner
+					margin-left: 3px
+				.nav-link_text
+					padding-left: 30px
+					position: relative
+					z-index: 1
+
+		&:nth-child(8n+1)
+			.nav-link
+				&_circle
+					background: #DFF3FF
+				&_circle_inner
+					border-color: #4BB4F1
+				&:hover,
+				&.active
+					color: #4BB4F1
+
+		&:nth-child(8n+2)
+			.nav-link
+				&_circle
+					background: #E0E9FF
+				&_circle_inner
+					border-color: #5A82E3
+				&:hover,
+				&.active
+					color: #5A82E3
+
+		&:nth-child(8n+3)
+			.nav-link
+				&_circle
+					background: #F1E6FF
+				&_circle_inner
+					border-color: #AF82ED
+				&:hover,
+				&.active
+					color: #AF82ED
+
+		&:nth-child(8n+4)
+			.nav-link
+				&_circle
+					background: #F9DCF8
+				&_circle_inner
+					border-color: #F461F1
+				&:hover,
+				&.active
+					color: #F461F1
+
+		&:nth-child(8n+5)
+			.nav-link
+				&_circle
+					background: #E5FAEF
+				&_circle_inner
+					border-color: #7BD7A2
+				&:hover,
+				&.active
+					color: #7BD7A2
+
+		&:nth-child(8n+6)
+			.nav-link
+				&_circle
+					background: #E5FAF8
+				&_circle_inner
+					border-color: #7DE7DE
+				&:hover,
+				&.active
+					color: #7DE7DE
+
+		&:nth-child(8n+7)
+			.nav-link
+				&_circle
+					background: #F5F1D6
+				&_circle_inner
+					border-color: #E9D54F
+				&:hover,
+				&.active
+					color: #E9D54F
+
+		&:nth-child(8n+8)
+			.nav-link
+				&_circle
+					background: #FFE6ED
+				&_circle_inner
+					border-color: #F97C9F
+				&:hover,
+				&.active
+					color: #F97C9F
+
+	.show_more
+		margin-top: 11px
+		padding-bottom: 30px
+		border-bottom: 1px solid var(--color-6)
+
+		font-size: 0.75rem
+		line-height: 0.938rem
+		color: var(--color-7)
+		&_text
+			background: url('/images/icon-arrow-down.svg') no-repeat center right
+			cursor: pointer
+.nav_main
+	margin-bottom: 42px
+
+
+.nav-info
+	&__list
+		list-style: none
+	&__item
+		margin-bottom: 15px
+	&__link
+		font-size: .75rem
+		line-height: 0.938rem
+		color: var(--color-7)
+
+		&.more
+			text-decoration: underline
+
+
+
+.social_age
+	display: flex
+	align-items: center
+	justify-content: space-between
+	max-width: 256px
+	.social
+		display: flex
+		align-items: center
+		justify-content: space-between
+		max-width: 100px
+		width: 100%
+		&_link
+			font-size: 0
+			line-height: 0
+			display: inline-block
+	.age
+		font-size: 1rem
+		line-height: 1.313rem
+		color: var(--color-9)
+
+
+
+

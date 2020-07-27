@@ -1,0 +1,122 @@
+.accessories-tile
+	&__image
+		width: 92px
+		height: 92px
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center center
+		margin: 0 auto 15px
+
+	&__title
+		height: 70px
+		color: #1b1e32
+		font-size: 14px
+		font-weight: 400
+		line-height: 17px
+		text-align: center
+		overflow: hidden
+		margin-bottom: 20px
+
+		@media #{$mobile}
+			padding: 0 20px
+			height: 50px
+			margin-bottom: 10px
+
+	&__button
+		.button
+			width: 100%
+			position: relative
+
+		@media #{$mobile-above}
+			.icon-m-plus
+				display: none
+
+		@media #{$mobile}
+			.button
+				padding-left: 20px
+				padding-right: 20px
+				border-radius: 10px
+
+			.button__text
+				justify-content: flex-start
+
+			svg
+				position: absolute
+				top: 0
+				bottom: 0
+				right: 20px
+				margin: auto
+				fill: currentColor
+
+
+.accessories-price
+	position: relative
+	height: 40px
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-bottom: 20px
+
+	@media #{$mobile-above}
+		border-radius: 20px
+		border: 1px solid #edeef1
+
+	@media #{$mobile}
+		justify-content: space-between
+		margin-bottom: 15px
+
+	&__old
+		color: #cecfd3
+		font-size: 14px
+		line-height: 17px
+		text-decoration: line-through
+		display: flex
+		justify-content: center
+
+		@media #{$mobile-above}
+			position: absolute
+			top: -10px
+			left: 0
+			right: 0
+			margin: auto
+
+			span
+				padding: 0 15px
+				background: #fff
+				position: relative
+
+	&__default
+		color: #1b1e32
+		font-size: 17px
+		font-weight: 700
+
+		@media #{$mobile}
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 60px
+			right: 60px
+			display: flex
+			align-items: center
+			justify-content: center
+
+	&__promo
+		color: #81c341
+		font-size: 12px
+		display: flex
+		justify-content: center
+
+		@media #{$mobile-above}
+			position: absolute
+			bottom: -7px
+			left: 0
+			right: 0
+			margin: auto
+
+			span
+				padding: 0 15px
+				background: #fff
+				position: relative
+
+		@media #{$mobile}
+			text-align: center

@@ -1,0 +1,203 @@
+.is-search-buttons-show
+	@media #{$tablet-above}
+		.header-search__button,
+		.header-search__close
+			opacity: 1
+			pointer-events: all
+
+.is-search-result-open
+	.search-panel
+		display: block
+
+.is-search-form-show
+	.aside-search
+		display: block
+
+	@media #{$mobile}
+		.aside,
+		.aside-header
+			background: #fff !important
+
+		.aside-header__logo
+			&:before
+				opacity: 1
+
+		.logo
+			opacity: 0
+
+		.aside-burger
+			svg
+				fill: #1a1e32
+
+		.header-control__icon
+			svg
+				fill: #a9b0b7
+
+		.search_control
+			.icon-m-search
+				opacity: 0
+
+			.icon-m-close
+				opacity: 1
+
+.search-panel
+	position: fixed
+	top: 120px
+	left: 0
+	right: 0
+	background: #fff
+	z-index: 4
+	display: none
+	box-shadow: 0 30px 120px rgba(200, 207, 222, 0.42)
+
+	@media #{$tablet-above}
+		padding-left: 285px
+
+		&__main
+			display: flex
+
+		&__section
+			width: calc(100% - 340px)
+			border-right: 1px solid #edeef1
+			padding: 35px 55px 35px 135px
+
+			@media (max-width: 1400px)
+				padding-left: 95px
+
+		&__aside
+			width: 340px
+			padding: 35px 40px 35px 55px
+
+	@media #{$tablet}
+		&__section
+			padding: 35px 80px 40px
+
+		&__aside
+			padding: 0 80px 40px
+
+	@media #{$mobile}
+		display: none !important
+
+	&__header
+		padding-bottom: 15px
+		border-bottom: 1px solid #edeef1
+		margin-bottom: 25px
+
+	&__label
+		color: #3a4051
+		font-size: 16px
+		font-weight: 500
+		line-height: 17px
+		text-transform: uppercase
+		letter-spacing: 1px
+
+		sup
+			top: -.8em
+			font-size: 50%
+
+	&__slider
+		position: relative
+		padding: 0 50px
+
+	&__footer
+		border-top: 1px solid #edeef1
+		height: 80px
+		display: flex
+		align-items: center
+		padding-left: 135px
+
+		@media (max-width: 1400px)
+			padding-left: 95px
+
+		@media #{$tablet}
+			padding-left: 80px
+
+	&__link
+		color: #3a4051
+		font-size: 17px
+		display: flex
+		align-items: center
+		transition: 300ms ease-out
+
+		&:hover
+			opacity: .6
+
+		&:active
+			opacity: .3
+
+		svg
+			margin-left: 15px
+			fill: #a9b0b7
+
+	&__category
+		color: #3a4051
+		font-size: 16px
+
+		li
+			&:not(:last-child)
+				margin-bottom: 15px
+
+		a
+			transition: 300ms ease-out
+
+			&:hover
+				opacity: .6
+
+			&:active
+				opacity: .3
+
+	&__list
+		color: #3a4051
+		font-size: 16px
+		overflow: hidden
+		max-height: 195px
+		position: relative
+
+		@media #{$tablet}
+			max-height: 165px
+
+		&:before
+			content: ""
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			height: 60px
+			background: linear-gradient(to bottom,rgba(255,255,255,0) 0%,#fff 100%)
+
+		li
+			&:not(:last-child)
+				margin-bottom: 15px
+
+		a
+			transition: 300ms ease-out
+
+			&:hover
+				opacity: .6
+
+			&:active
+				opacity: .3
+
+.search-product
+	display: block
+	transition: 300ms ease-out
+
+	&:hover
+		.search-product__title
+			opacity: .6
+
+	&:active
+		opacity: .3
+
+	&__image
+		width: 92px
+		height: 92px
+		+backcover
+		margin: 0 auto 15px
+
+	&__title
+		color: #1b1e32
+		font-size: 14px
+		line-height: 17px
+		text-align: center
+		transition: 300ms ease-out

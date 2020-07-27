@@ -1,0 +1,323 @@
+.is-page-loaded
+	.hero-page
+		opacity: 1
+
+.hero-page
+	overflow-x: hidden
+	opacity: 0
+	transition: 300ms ease-out
+
+.hero-container
+	@media #{$tablet-above}
+		padding: 50px 0 10px
+
+	@media #{$tablet}
+		padding: 20px 0 0
+
+.hero-top
+	margin-bottom: 40px
+
+	@media #{$tablet-above}
+		display: flex
+
+		&__left
+			width: calc(100% - 305px)
+			padding-right: 40px
+
+		&__right
+			width: 305px
+			position: relative
+			z-index: 2
+
+	@media #{$mobile-above}
+		&__partners
+			display: none
+
+		@media #{$tablet}
+			&__right
+				display: none
+
+	&__left
+		position: relative
+		z-index: 0
+
+	&__partners
+		@media #{$mobile}
+			position: relative
+			z-index: 2
+			margin: 20px 0
+
+.hero-slider
+	position: relative
+	transition: 300ms ease-out
+
+	@media #{$mobile}
+		padding-bottom: 40px
+
+	.swiper-container
+		overflow: visible
+
+	.swiper-pagination
+		position: absolute
+		bottom: 40px
+		left: 70px
+		z-index: 2
+		justify-content: flex-start
+
+		@media #{$mobile}
+			bottom: 60px
+			left: 25px
+
+	.swiper-pagination-bullet
+		width: 37px
+		height: 3px
+		border-radius: 2px
+		background-color: rgba(255, 255, 255, 0.3)
+		opacity: 1
+		position: relative
+		outline: none
+		margin: 0 10px 0 0
+
+		@media #{$mobile}
+			width: 25px
+			height: 2px
+			margin: 0 8px 0 0
+
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 0
+			height: 100%
+			background: #fff
+			border-radius: 2px
+
+		&-active
+			&:before
+				width: 100%
+				transition: 5s ease-out
+
+	&__nav
+		position: absolute
+		display: flex
+		z-index: 2
+
+		@media #{$mobile-above}
+			bottom: 20px
+			right: 20px
+
+			@media #{$tablet}
+				bottom: 13px
+				right: 13px
+
+		@media #{$mobile}
+			bottom: 0
+			right: 10px
+
+		&-button
+			width: 40px
+			height: 40px
+			position: relative
+			cursor: pointer
+			outline: none
+
+			@media #{$mobile-above}
+				border-radius: 10px
+				background-color: #ffffff
+				margin-left: 8px
+
+			@media #{$mobile}
+				width: 30px
+
+			svg
+				width: 6px
+				height: 11px
+				+abscenter
+				fill: #484d5d
+
+.hero-slide
+	color: #fff
+	position: relative
+	border-radius: 20px
+	background-color: #e94298
+
+	@media #{$mobile-above}
+		height: 360px
+
+		@media #{$tablet}
+			height: 400px
+
+	@media #{$mobile}
+		padding-bottom: 60%
+
+	&__image
+		position: absolute
+		top: 0
+		bottom: 0
+		left: -50px
+		right: -50px
+		display: flex
+		align-items: center
+		justify-content: center
+
+		@media #{$mobile}
+			left: -20px
+			right: -30px
+
+		img
+			width: 100%
+			display: block
+
+	&__title
+		max-width: 300px
+		font-size: 30px
+		font-weight: 700
+		line-height: 43px
+		position: absolute
+		top: 65px
+		left: 75px
+
+		@media #{$tablet}
+			top: 75px
+			left: 70px
+
+		@media #{$mobile}
+			max-width: 180px
+			font-size: 17px
+			line-height: 19px
+			top: 25px
+			left: 20px
+
+	&__button
+		position: absolute
+
+		@media #{$mobile-above}
+			bottom: 80px
+			left: 45px
+
+			@media #{$tablet}
+				bottom: 75px
+				left: 40px
+
+			.button
+				height: 54px
+
+		@media #{$mobile}
+			top: 100%
+			left: 0
+			right: 0
+
+			.button
+				width: 100%
+				height: 40px
+				box-shadow: 0 7px 20px rgba(43, 53, 71, 0.2)
+				border-radius: 10px
+
+			.button__text
+				justify-content: flex-start
+
+.hero-partners
+	margin-bottom: 40px
+
+	@media #{$mobile}
+		display: none
+
+	&__slider
+		height: 105px
+		padding: 0 50px
+		border-radius: 20px
+		position: relative
+		display: flex
+		align-items: center
+		border: 1px solid #edeef1
+		background-color: #ffffff
+		overflow: hidden
+
+		@media #{$tablet}
+			.swiper-slide
+				width: 160px
+
+		 @media #{$mobile}
+			 height: 72px
+			 padding: 0 30px
+
+			 .swiper-slide
+				 width: 100px
+				 height: auto
+
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 20px
+			width: 40px
+			background: #fff
+			box-shadow: 20px 0 20px #fff
+			z-index: 2
+
+			@media #{$mobile}
+				width: 20px
+				left: 15px
+				box-shadow: 10px 0 10px #fff
+
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 20px
+			width: 40px
+			background: #fff
+			box-shadow: -20px 0 20px #fff
+			z-index: 2
+
+			@media #{$mobile}
+				width: 20px
+				right: 15px
+				box-shadow: -10px 0 10px #fff
+
+	&__button
+		width: 70px
+		height: 100%
+		position: absolute
+		top: 0
+		bottom: 0
+		margin: auto
+		cursor: pointer
+		outline: none
+		z-index: 3
+
+		@media #{$mobile}
+			width: 40px
+
+		&.button_prev
+			left: 0
+
+		&.button_next
+			right: 0
+
+		svg
+			fill: #a9b0b7
+			width: 8px
+			height: 30px
+			+abscenter
+
+			@media #{$mobile}
+				width: 5px
+				height: 20px
+
+.hero-partner
+	@media #{$mobile-above}
+		display: block
+		text-align: center
+
+	@media #{$mobile}
+		height: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+
+		img
+			width: 100% !important

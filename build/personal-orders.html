@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Личный кабинет (история заказов)</title>
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png">
+		<link rel="icon" type="image/png" href="images/favicon/favicon-196x196.png" sizes="196x196">
+		<link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="images/favicon/favicon-128.png" sizes="128x128">
+		<meta name="application-name" content="&amp;nbsp;">
+		<meta name="msapplication-TileColor" content="#FFFFFF">
+		<meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+		<meta name="msapplication-square70x70logo" content="images/favicon/mstile-70x70.png">
+		<meta name="msapplication-square150x150logo" content="images/favicon/mstile-150x150.png">
+		<meta name="msapplication-wide310x150logo" content="images/favicon/mstile-310x150.png">
+		<meta name="msapplication-square310x310logo" content="images/favicon/mstile-310x310.png">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/main.css" type="text/css">
+	</head>
+	<body>
+		<header class="header">
+			<div class="header-top">
+				<div class="header-nav">
+					<div class="header-nav__elem style_pink"><a class="header-nav__link" href="#">Распродажа</a></div>
+					<div class="header-nav__elem"><a class="header-nav__link" href="contacts.html">Магазины</a></div>
+					<div class="header-nav__elem"><a class="header-nav__link" href="offers.html">Акции</a></div>
+					<div class="header-nav__elem"><a class="header-nav__link" href="#">Ремонт</a></div>
+					<div class="header-nav__elem"><a class="header-nav__link" href="#">Доставка</a></div>
+					<div class="header-nav__elem"><a class="header-nav__link" href="#">Оплата</a></div>
+					<div class="header-nav__elem"><a class="header-nav__link" href="#">Гарантия</a></div>
+					<div class="header-nav__elem"><a class="header-nav__link" href="#">Чехол на заказ	</a></div>
+				</div>
+				<div class="header-phone"><a class="header-phone__link" href="tel:88002011902">8 (800) 201-19-02 </a></div>
+			</div>
+			<div class="header-main">
+				<div class="header-search">
+					<form class="header-search__form" action="#">
+						<div class="header-search__icon">
+							<svg class="icon icon-search ">
+								<use xlink:href="images/sprites.svg#search"></use>
+							</svg>
+						</div>
+						<input class="header-search__input js-searchInput" type="text" placeholder="Поиск по сайту">
+						<div class="header-search__close js-searchClear">
+							<svg class="icon icon-m-close ">
+								<use xlink:href="images/sprites.svg#m-close"></use>
+							</svg>
+						</div>
+						<div class="header-search__button">
+							<button class="button style_violet js-searchButton"><span class="button__text">Найти</span></button>
+						</div>
+					</form>
+				</div>
+				<div class="header-controls"><a class="header-control control_user is-active js-headerTooltipControl" href="#" data-tooltip-id="#headerTooltipMenu">
+						<div class="header-control__icon">
+							<svg class="icon icon-user ">
+								<use xlink:href="images/sprites.svg#user"></use>
+							</svg>
+						</div></a><a class="header-control js-headerTooltipControl" href="#" data-tooltip-id="#viewHistoryTooltip">
+						<div class="header-control__icon">
+							<svg class="icon icon-history ">
+								<use xlink:href="images/sprites.svg#history"></use>
+							</svg>
+						</div></a><a class="header-control" href="#">
+						<div class="header-control__icon">
+							<svg class="icon icon-cart ">
+								<use xlink:href="images/sprites.svg#cart"></use>
+							</svg>
+						</div>
+						<div class="header-control__title">Корзина пуста</div></a>
+				</div>
+			</div>
+		</header>
+		<div class="view-history js-headerTooltip" id="viewHistoryTooltip">
+			<div class="view-history__header">
+				<div class="view-history__title">История просмотров <sup>145</sup></div>
+			</div>
+			<div class="view-history__main">
+				<div class="view-history__list"><a class="view-product" href="#">
+											<div class="view-product__image">
+												<div class="view-product__cover" style="background-image: url('images/phone-1.jpg')"></div>
+											</div>
+											<div class="view-product__info">
+												<div class="view-product__category">Samsung</div>
+												<div class="view-product__title">Чехол Матовый для Samsung Galaxy S9 Plus черный силиконовый</div>
+											</div>
+											<div class="view-product__footer">
+												<div class="catalog-product__footer">
+													<div class="catalog-product__price">
+														<div class="product-price">
+															<div class="product-price__old"><span>199 руб</span></div>
+															<div class="product-price__default">149 руб</div>
+															<div class="product-price__promo"> <span>выгода 50 руб!</span></div>
+														</div>
+													</div>
+													<div class="catalog-product__cart">
+														<div class="catalog-cart-button js-modalLink" data-mfp-src="#modalAddedToCartGreen"><span class="catalog-cart-button__title">В корзину</span>
+															<svg class="icon icon-m-plus ">
+																<use xlink:href="images/sprites.svg#m-plus"></use>
+															</svg>
+															<svg class="icon icon-add-to-cart ">
+																<use xlink:href="images/sprites.svg#add-to-cart"></use>
+															</svg>
+														</div>
+													</div>
+												</div>
+												<div class="product-rating">
+													<div class="product-rating__elem style_green"></div>
+													<div class="product-rating__elem style_green"></div>
+													<div class="product-rating__elem style_green"></div>
+												</div>
+											</div></a><a class="view-product" href="#">
+											<div class="view-product__image">
+												<div class="view-product__cover" style="background-image: url('images/phone-1.jpg')"></div>
+											</div>
+											<div class="view-product__info">
+												<div class="view-product__category">Samsung</div>
+												<div class="view-product__title">Чехол Матовый для Samsung Galaxy S9 Plus черный силиконовый</div>
+											</div>
+											<div class="view-product__footer">
+												<div class="catalog-product__footer">
+													<div class="catalog-product__price">
+														<div class="product-price">
+															<div class="product-price__old"><span>199 руб</span></div>
+															<div class="product-price__default">149 руб</div>
+															<div class="product-price__promo"> <span>выгода 50 руб!</span></div>
+														</div>
+													</div>
+													<div class="catalog-product__cart">
+														<div class="catalog-cart-button js-modalLink" data-mfp-src="#modalAddedToCartGreen"><span class="catalog-cart-button__title">В корзину</span>
+															<svg class="icon icon-m-plus ">
+																<use xlink:href="images/sprites.svg#m-plus"></use>
+															</svg>
+															<svg class="icon icon-add-to-cart ">
+																<use xlink:href="images/sprites.svg#add-to-cart"></use>
+															</svg>
+														</div>
+													</div>
+												</div>
+												<div class="product-rating">
+													<div class="product-rating__elem style_green"></div>
+													<div class="product-rating__elem style_green"></div>
+													<div class="product-rating__elem style_green"></div>
+												</div>
+											</div></a><a class="view-product" href="#">
+											<div class="view-product__image">
+												<div class="view-product__cover" style="background-image: url('images/phone-1.jpg')"></div>
+											</div>
+											<div class="view-product__info">
+												<div class="view-product__category">Samsung</div>
+												<div class="view-product__title">Чехол Матовый для Samsung Galaxy S9 Plus черный силиконовый</div>
+											</div>
+											<div class="view-product__footer">
+												<div class="catalog-product__footer">
+													<div class="catalog-product__price">
+														<div class="product-price">
+															<div class="product-price__old"><span>199 руб</span></div>
+															<div class="product-price__default">149 руб</div>
+															<div class="product-price__promo"> <span>выгода 50 руб!</span></div>
+														</div>
+													</div>
+													<div class="catalog-product__cart">
+														<div class="catalog-cart-button js-modalLink" data-mfp-src="#modalAddedToCartGreen"><span class="catalog-cart-button__title">В корзину</span>
+															<svg class="icon icon-m-plus ">
+																<use xlink:href="images/sprites.svg#m-plus"></use>
+															</svg>
+															<svg class="icon icon-add-to-cart ">
+																<use xlink:href="images/sprites.svg#add-to-cart"></use>
+															</svg>
+														</div>
+													</div>
+												</div>
+												<div class="product-rating">
+													<div class="product-rating__elem style_green"></div>
+													<div class="product-rating__elem style_green"></div>
+													<div class="product-rating__elem style_green"></div>
+												</div>
+											</div></a><a class="view-product" href="#">
+											<div class="view-product__image">
+												<div class="view-product__cover" style="background-image: url('images/phone-1.jpg')"></div>
+											</div>
+											<div class="view-product__info">
+												<div class="view-product__category">Samsung</div>
+												<div class="view-product__title">Чехол Матовый для Samsung Galaxy S9 Plus черный силиконовый</div>
+											</div>
+											<div class="view-product__footer">
+												<div class="catalog-product__footer">
+													<div class="catalog-product__price">
+														<div class="product-price">
+															<div class="product-price__old"><span>199 руб</span></div>
+															<div class="product-price__default">149 руб</div>
+															<div class="product-price__promo"> <span>выгода 50 руб!</span></div>
+														</div>
+													</div>
+													<div class="catalog-product__cart">
+														<div class="catalog-cart-button js-modalLink" data-mfp-src="#modalAddedToCartGreen"><span class="catalog-cart-button__title">В корзину</span>
+															<svg class="icon icon-m-plus ">
+																<use xlink:href="images/sprites.svg#m-plus"></use>
+															</svg>
+															<svg class="icon icon-add-to-cart ">
+																<use xlink:href="images/sprites.svg#add-to-cart"></use>
+															</svg>
+														</div>
+													</div>
+												</div>
+												<div class="product-rating">
+													<div class="product-rating__elem style_green"></div>
+													<div class="product-rating__elem style_green"></div>
+													<div class="product-rating__elem style_green"></div>
+												</div>
+											</div></a>
+				</div>
+			</div>
+			<div class="view-history__footer">
+				<div class="view-history__more"><a class="view-history__link" href="#"><span>Показать все</span>
+						<svg class="icon icon-m-right-arrow ">
+							<use xlink:href="images/sprites.svg#m-right-arrow"></use>
+						</svg></a></div>
+			</div>
+		</div>
+		<div class="header-tooltip js-headerTooltip" id="headerTooltipAuth">
+			<form class="header-tooltip__content" action="#">
+				<div class="header-tooltip__group">
+					<div class="field">
+						<input class="input" type="tel" name="phone" placeholder="Телефон">
+					</div>
+					<div class="field">
+						<input class="input" type="password" name="password" placeholder="Пароль">
+					</div>
+				</div>
+				<div class="header-tooltip__buttons">
+					<button class="button style_green size_small"><span class="button__text">Вход	</span></button><a class="button style_gray size_small" href="#"><span class="button__text">Регистрация</span></a>
+				</div>
+			</form>
+		</div>
+		<div class="header-tooltip js-headerTooltip" id="headerTooltipMenu">
+			<div class="header-tooltip__content">
+				<div class="header-tooltip__user">
+					<div class="header-tooltip__name">Глуханько Антон Александрович</div>
+					<div class="header-tooltip__bonus">23 347 бонусных баллов</div>
+				</div>
+				<div class="header-tooltip__buttons"><a class="button style_green size_small" href="#"><span class="button__text">Личный кабинет</span></a><a class="button style_green size_small" href="#"><span class="button__text">История заказов</span></a><a class="button style_gray size_small" href="#"><span class="button__text">Выйти</span></a></div>
+			</div>
+		</div>
+		<div class="header-tooltip js-headerTooltip" id="headerTooltipCart">
+			<div class="header-tooltip__content">
+				<div class="tooltip-cart">
+					<div class="tooltip-cart__list">
+						<div class="tooltip-cart__elem"><a class="tooltip-cart__image" href="#" style="background-image: url('images/phone-1.jpg')"></a>
+							<div class="tooltip-cart__title"><a href="#">Чехол Матовый для Samsung Galaxy S9 Plus черный силиконовый</a></div>
+							<div class="tooltip-cart__footer">
+								<div class="tooltip-cart__price"><span>1 шт.</span><span>550 руб.</span></div><a class="tooltip-cart__del" href="#">удалить</a>
+							</div>
+						</div>
+						<div class="tooltip-cart__elem"><a class="tooltip-cart__image" href="#" style="background-image: url('images/phone-2.jpg')"></a>
+							<div class="tooltip-cart__title"><a href="#">Чехол Матовый для Samsung Galaxy S9 Plus черный силиконовый</a></div>
+							<div class="tooltip-cart__footer">
+								<div class="tooltip-cart__price"><span>1 шт.</span><span>550 руб.</span></div><a class="tooltip-cart__del" href="#">удалить</a>
+							</div>
+						</div>
+					</div>
+					<div class="tooltip-cart__total">
+						<div class="tooltip-cart__total-count">Товаров: 3	</div>
+						<div class="tooltip-cart__total-price">На сумму: 23 347 руб.</div>
+					</div>
+				</div>
+				<div class="header-tooltip__buttons"><a class="button style_green size_small" href="#"><span class="button__text">Оформить заказ</span></a></div>
+			</div>
+		</div>
+		<div class="search-panel">
+			<div class="search-panel__main">
+				<div class="search-panel__section">
+					<div class="search-panel__header">
+						<div class="search-panel__label">Товары <sup>145</sup></div>
+					</div>
+					<div class="search-panel__content">
+						<div class="search-panel__slider js-searchSlider">
+							<div class="slider-button button_prev js-searchSliderPrev">
+								<svg class="icon icon-prev-small ">
+									<use xlink:href="images/sprites.svg#prev-small"></use>
+								</svg>
+							</div>
+							<div class="slider-button button_next js-searchSliderNext">
+								<svg class="icon icon-next-small ">
+									<use xlink:href="images/sprites.svg#next-small"></use>
+								</svg>
+							</div>
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><a class="search-product" href="#">
+											<div class="search-product__image" style="background-image: url('images/case-item.jpg')"></div>
+											<div class="search-product__title">Чехол Матовый для Samsung Galaxy S9 Plus черный силиконовый</div></a></div>
+									<div class="swiper-slide"><a class="search-product" href="#">
+											<div class="search-product__image" style="background-image: url('images/case-item.jpg')"></div>
+											<div class="search-product__title">Чехол Матовый для Samsung Galaxy S9 Plus черный силиконовый</div></a></div>
+									<div class="swiper-slide"><a class="search-product" href="#">
+											<div class="search-product__image" style="background-image: url('images/case-item.jpg')"></div>
+											<div class="search-product__title">Чехол Матовый для Samsung Galaxy S9 Plus черный силиконовый</div></a></div>
+									<div class="swiper-slide"><a class="search-product" href="#">
+											<div class="search-product__image" style="background-image: url('images/case-item.jpg')"></div>
+											<div class="search-product__title">Чехол Матовый для Samsung Galaxy S9 Plus черный силиконовый</div></a></div>
+								</div>
+							</div>
+						</div>
+						<div class="search-panel__list" style="display: none">
+							<ul>
+								<li><a href="#">Умный чехол Cinemood Aм Ням (салатовый)</a></li>
+								<li><a href="#">Чехол для кредитных карт Piquadro Square PP1395B2/N (черный)</a></li>
+								<li><a href="#">Чехол для кредитных карт Piquadro Square PP1395B2/MO (коричневый)</a></li>
+								<li><a href="#">Чехол для кредитных карт Piquadro Square PP1395B2/BLU2 (синий)</a></li>
+								<li><a href="#">Умный чехол Cinemood Aм Ням (салатовый)</a></li>
+								<li><a href="#">Чехол для кредитных карт Piquadro Square PP1395B2/N (черный)</a></li>
+								<li><a href="#">Чехол для кредитных карт Piquadro Square PP1395B2/MO (коричневый)</a></li>
+								<li><a href="#">Чехол для кредитных карт Piquadro Square PP1395B2/BLU2 (синий)</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="search-panel__aside">
+					<div class="search-panel__header">
+						<div class="search-panel__label">Категории <sup>3</sup></div>
+					</div>
+					<div class="search-panel__category">
+						<ul>
+							<li><a href="#">Чехлы</a></li>
+							<li><a href="#">Зарядные чехлы</a></li>
+							<li><a href="#">Чехлы-книжки</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="search-panel__footer">
+				<div class="search-panel__more"><a class="search-panel__link" href="#"><span>Показать все</span>
+						<svg class="icon icon-m-right-arrow ">
+							<use xlink:href="images/sprites.svg#m-right-arrow"></use>
+						</svg></a></div>
+			</div>
+		</div>
+		<div class="menu">
+			<div class="menu-container"><a class="menu-city js-modalLink" href="javascript:;" data-mfp-src="#modalChooseCity">
+					<svg class="icon icon-location ">
+						<use xlink:href="images/sprites.svg#location"></use>
+					</svg>
+					<div class="menu-city__title">г. Краснодар</div>
+					<svg class="icon icon-m-showmore ">
+						<use xlink:href="images/sprites.svg#m-showmore"></use>
+					</svg></a>
+				<div class="menu-contact"><a class="menu-contact__elem" href="tel:88002011902">
+						<div class="menu-contact__title">8 (800) 201-19-02</div>
+						<svg class="icon icon-m-phone ">
+							<use xlink:href="images/sprites.svg#m-phone"></use>
+						</svg></a><a class="menu-contact__elem" href="mailto:info@ibutik.pro">
+						<div class="menu-contact__title">info@ibutik.pro</div>
+						<svg class="icon icon-m-mail ">
+							<use xlink:href="images/sprites.svg#m-mail"></use>
+						</svg></a></div>
+				<div class="menu-nav">
+					<div class="menu-nav__col"><a class="menu-nav__link" href="#">Магазины</a><a class="menu-nav__link" href="#">Акции</a><a class="menu-nav__link" href="#">Ремонт</a><a class="menu-nav__link" href="#">Доставка</a><a class="menu-nav__link" href="#">Оплата</a></div>
+					<div class="menu-nav__col"><a class="menu-nav__link" href="#">Гарантия</a><a class="menu-nav__link" href="#">Чехол на заказ</a><a class="menu-nav__link" href="#">Контакты</a><a class="menu-nav__link" href="#">Карьера</a></div>
+				</div>
+				<div class="menu-social">
+					<div class="menu-social__elem"><a class="menu-social__link" href="#">
+							<svg class="icon icon-vk ">
+								<use xlink:href="images/sprites.svg#vk"></use>
+							</svg></a></div>
+					<div class="menu-social__elem"><a class="menu-social__link" href="#">
+							<svg class="icon icon-youtube ">
+								<use xlink:href="images/sprites.svg#youtube"></use>
+							</svg></a></div>
+					<div class="menu-social__elem"><a class="menu-social__link" href="#">
+							<svg class="icon icon-facebook ">
+								<use xlink:href="images/sprites.svg#facebook"></use>
+							</svg></a></div>
+					<div class="menu-social__elem"><a class="menu-social__link" href="#">
+							<svg class="icon icon-instagram ">
+								<use xlink:href="images/sprites.svg#instagram"></use>
+							</svg></a></div>
+				</div>
+			</div>
+		</div>
+		<div class="aside">
+			<div class="aside-header">
+				<div class="aside-header__logo"><a class="logo" href="/"></a></div>
+				<div class="aside-header__burger">
+					<div class="aside-burger aside_menu_burger js-asideBurger">
+						<svg class="icon icon-t-menu ">
+							<use xlink:href="images/sprites.svg#t-menu"></use>
+						</svg>
+						<svg class="icon icon-m-close ">
+							<use xlink:href="images/sprites.svg#m-close"></use>
+						</svg>
+						<div class="aside-burger__title"> <span>Меню</span><span>Закрыть</span></div>
+					</div>
+					<div class="aside-burger aside_header_burger js-menuBurger">
+						<svg class="icon icon-m-menu ">
+							<use xlink:href="images/sprites.svg#m-menu"></use>
+						</svg>
+						<svg class="icon icon-m-close ">
+							<use xlink:href="images/sprites.svg#m-close"></use>
+						</svg>
+					</div>
+				</div>
+				<div class="aside-header__controls"><a class="header-control search_control js-searchToggle" href="javascript:;">
+						<div class="header-control__icon">
+							<svg class="icon icon-m-search ">
+								<use xlink:href="images/sprites.svg#m-search"></use>
+							</svg>
+							<svg class="icon icon-m-close ">
+								<use xlink:href="images/sprites.svg#m-close"></use>
+							</svg>
+						</div></a><a class="header-control js-headerTooltipControl" href="#" data-tooltip-id="#headerTooltipMenu">
+						<div class="header-control__icon">
+							<svg class="icon icon-m-user ">
+								<use xlink:href="images/sprites.svg#m-user"></use>
+							</svg>
+						</div></a><a class="header-control" href="#">
+						<div class="header-control__icon">
+							<svg class="icon icon-m-history ">
+								<use xlink:href="images/sprites.svg#m-history"></use>
+							</svg>
+						</div></a><a class="header-control" href="#">
+						<div class="header-control__icon">
+							<svg class="icon icon-m-cart ">
+								<use xlink:href="images/sprites.svg#m-cart"></use>
+							</svg>
+						</div></a>
+				</div>
+			</div>
+			<div class="aside-search">
+				<form class="header-search__form" action="#">
+					<div class="header-search__icon">
+						<svg class="icon icon-search ">
+							<use xlink:href="images/sprites.svg#search"></use>
+						</svg>
+					</div>
+					<input class="header-search__input js-searchInput" type="text" placeholder="Поиск по сайту">
+					<div class="header-search__close js-searchClear">
+						<svg class="icon icon-m-close ">
+							<use xlink:href="images/sprites.svg#m-close"></use>
+						</svg>
+					</div>
+					<div class="header-search__button">
+						<button class="button style_violet js-searchButton"><span class="button__text">Найти</span>
+							<svg class="icon icon-triangle-arrow-right ">
+								<use xlink:href="images/sprites.svg#triangle-arrow-right"></use>
+							</svg>
+						</button>
+					</div>
+				</form>
+			</div>
+			<div class="aside-catalog">
+				<div class="aside-catalog__button js-asideBurger">
+					<svg class="icon icon-m-dropdown ">
+						<use xlink:href="images/sprites.svg#m-dropdown"></use>
+					</svg>Каталог товаров
+					<svg class="icon icon-m-showmore ">
+						<use xlink:href="images/sprites.svg#m-showmore"></use>
+					</svg>
+				</div>
+			</div>
+			<div class="aside-city"><a class="aside-city__control js-modalLink" href="javascript:;" data-mfp-src="#modalChooseCity">
+					<svg class="icon icon-location ">
+						<use xlink:href="images/sprites.svg#location"></use>
+					</svg>
+					<div class="aside-city__title">г. Краснодар</div>
+					<svg class="icon icon-m-dropdown ">
+						<use xlink:href="images/sprites.svg#m-dropdown"></use>
+					</svg></a></div>
+			<div class="aside-logo"><a class="logo" href="/"></a></div>
+			<div class="aside-menu">
+				<div class="aside-categories">
+					<div class="aside-nav">
+						<div class="aside-nav__elem"><a class="aside-nav__link" href="#">
+								<div class="aside-nav__icon"><img class="js-x2size" src="images/category-left-white-18.png" data-xsize="4"></div>
+								<div class="aside-nav__title">Телефоны</div></a></div>
+						<div class="aside-nav__elem"><a class="aside-nav__link" href="#">
+								<div class="aside-nav__icon"><img class="js-x2size" src="images/category-left-white-11.png" data-xsize="4"></div>
+								<div class="aside-nav__title">Смартчасы</div></a></div>
+						<div class="aside-nav__elem"><a class="aside-nav__link" href="#">
+								<div class="aside-nav__icon"><img class="js-x2size" src="images/category-left-white-1.png" data-xsize="4"></div>
+								<div class="aside-nav__title">Чехлы</div></a></div>
+						<div class="aside-nav__elem"><a class="aside-nav__link" href="#">
+								<div class="aside-nav__icon"><img class="js-x2size" src="images/category-left-white-4.png" data-xsize="4"></div>
+								<div class="aside-nav__title">Защитные стекла</div></a></div>
+						<div class="aside-nav__elem"><a class="aside-nav__link" href="#">
+								<div class="aside-nav__icon"><img class="js-x2size" src="images/category-left-white-16.png" data-xsize="4"></div>
+								<div class="aside-nav__title">Провода</div></a></div>
+						<div class="aside-nav__elem"><a class="aside-nav__link" href="#">
+								<div class="aside-nav__icon"><img class="js-x2size" src="images/category-left-white-13.png" data-xsize="4"></div>
+								<div class="aside-nav__title">Зарядки</div></a></div>
+						<div class="aside-nav__elem"><a class="aside-nav__link" href="#">
+								<div class="aside-nav__icon"><img class="js-x2size" src="images/category-left-white-7.png" data-xsize="4"></div>
+								<div class="aside-nav__title">Наушники</div></a></div>
+						<div class="aside-nav__elem"><a class="aside-nav__link" href="#">
+								<div class="aside-nav__icon"><img class="js-x2size" src="images/category-left-white-8.png" data-xsize="4"></div>
+								<div class="aside-nav__title">Колонки</div></a></div>
+						<div class="aside-nav__elem"><a class="aside-nav__link" href="#">
+								<div class="aside-nav__icon"><img class="js-x2size" src="images/category-left-white-17.png" data-xsize="4"></div>
+								<div class="aside-nav__title">Павербанки</div></a></div>
+						<div class="aside-nav__elem"><a class="aside-nav__link" href="#">
+								<div class="aside-nav__icon"><img class="js-x2size" src="images/category-left-white-15.png" data-xsize="4"></div>
+								<div class="aside-nav__title">Авто-аксессуары</div></a></div>
+						<div class="aside-nav__elem"><a class="aside-nav__link" href="#">
+								<div class="aside-nav__icon"><img class="js-x2size" src="images/category-left-white-6.png" data-xsize="4"></div>
+								<div class="aside-nav__title">Фото-акессуары</div></a></div>
+						<div class="aside-nav__elem"><a class="aside-nav__link" href="#">
+								<div class="aside-nav__icon"><img class="js-x2size" src="images/category-left-white-12.png" data-xsize="4"></div>
+								<div class="aside-nav__title">Полезные гаджеты</div></a></div>
+					</div>
+					<div class="aside-more"><a class="aside-more__link" href="#">Все категории
+							<svg class="icon icon-m-right-arrow ">
+								<use xlink:href="images/sprites.svg#m-right-arrow"></use>
+							</svg></a></div>
+				</div>
+			</div>
+			<div class="aside-close js-asideSubnavClose">
+				<svg class="icon icon-m-close ">
+					<use xlink:href="images/sprites.svg#m-close"></use>
+				</svg>
+				<div class="aside-close__title">Закрыть</div>
+			</div>
+		</div>
+		<div class="page-wrap">
+			<div class="container">
+				<div class="page-container">
+					<div class="form-page page_personal">
+						<div class="page-header">
+							<div class="section-title">Личный кабинет</div>
+						</div>
+						<div class="form-nav">
+							<div class="form-nav__elem"><a class="form-nav__link" href="personal.html"><span class="hidden-xs">Личные данные</span><span class="visible-xs">Данные</span></a></div>
+							<div class="form-nav__elem is-active"><a class="form-nav__link" href="personal-orders.html"><span class="hidden-xs">История заказов</span><span class="visible-xs">Заказы</span></a></div><a class="form-logout" href="#">
+								<div class="form-logout__title">Выйти из системы</div>
+								<div class="form-logout__icon">
+									<svg class="icon icon-logout ">
+										<use xlink:href="images/sprites.svg#logout"></use>
+									</svg>
+								</div></a>
+						</div>
+						<div class="orders">
+							<div class="order-list">
+								<div class="order-elem js-orderElem">
+									<div class="order-elem__header">
+										<div class="order-elem__number">№1234</div>
+										<div class="order-elem__char">
+											<div class="order-char">
+												<div class="order-char__date">4.06.2019 10:50</div>
+												<div class="order-char__price">3 500 руб.</div>
+												<div class="order-char__status">Не оплачен</div>
+											</div>
+										</div>
+										<div class="order-elem__toggle js-orderElemToggle"><span>Детали заказа</span>
+											<svg class="icon icon-sort-arrow ">
+												<use xlink:href="images/sprites.svg#sort-arrow"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="order-elem__content js-orderElemContent">
+										<div class="order-table">
+											<table>
+												<tr>
+													<td>Фамилия:</td>
+													<td>Глуханько </td>
+												</tr>
+												<tr>
+													<td>Имя:</td>
+													<td>Антон</td>
+												</tr>
+												<tr>
+													<td>Отчество:</td>
+													<td>Александрович</td>
+												</tr>
+												<tr>
+													<td>Телефон: </td>
+													<td>8 918 455-02-16</td>
+												</tr>
+												<tr>
+													<td>E-mail: </td>
+													<td>Antonglukhanko@gmail.com</td>
+												</tr>
+												<tr>
+													<td>Способ доставки:</td>
+													<td>Доставка </td>
+												</tr>
+												<tr>
+													<td>Город:</td>
+													<td>Краснодар</td>
+												</tr>
+												<tr>
+													<td>Улица:</td>
+													<td>Гудимы</td>
+												</tr>
+												<tr>
+													<td>Номер дома:</td>
+													<td>64</td>
+												</tr>
+												<tr>
+													<td>Квартира:</td>
+													<td>81</td>
+												</tr>
+												<tr>
+													<td>Сумма к оплате: </td>
+													<td>3 500 руб.</td>
+												</tr>
+												<tr>
+													<td>Оплачен: </td>
+													<td>Нет</td>
+												</tr>
+												<tr>
+													<td>Способ оплаты: </td>
+													<td>Оплата курьеру при доставке</td>
+												</tr>
+												<tr>
+													<td>Комментарий: </td>
+													<td>«Пожалуйста, доставьте скорее»</td>
+												</tr>
+											</table>
+										</div>
+										<div class="order-products"><a class="order-product" href="product.html" target="_blank">
+																							<div class="order-product__image" style="background-image: url('images/case-item.jpg')"></div>
+																							<div class="order-product__main">
+																								<div class="order-product__category">Samsung</div>
+																								<div class="order-product__title">Чехол Матовый для Samsung Galaxy S9 Plus черный силиконовый</div>
+																								<div class="order-product__price">149 руб</div>
+																							</div>
+																							<div class="order-product__footer">
+																								<div class="order-product__count">2 шт.</div>
+																								<div class="order-product__total"> <span class="order-product__total-label">Итого: </span><span class="order-product__total-price">298 руб</span></div>
+																							</div></a><a class="order-product" href="product.html" target="_blank">
+																							<div class="order-product__image" style="background-image: url('images/case-item.jpg')"></div>
+																							<div class="order-product__main">
+																								<div class="order-product__category">Samsung</div>
+																								<div class="order-product__title">Чехол Матовый для Samsung Galaxy S9 Plus черный силиконовый</div>
+																								<div class="order-product__price">149 руб</div>
+																							</div>
+																							<div class="order-product__footer">
+																								<div class="order-product__count">2 шт.</div>
+																								<div class="order-product__total"> <span class="order-product__total-label">Итого: </span><span class="order-product__total-price">298 руб</span></div>
+																							</div></a>
+										</div>
+									</div>
+								</div>
+								<div class="order-elem js-orderElem">
+									<div class="order-elem__header">
+										<div class="order-elem__number">№1234</div>
+										<div class="order-elem__char">
+											<div class="order-char">
+												<div class="order-char__date">4.06.2019 10:50</div>
+												<div class="order-char__price">3 500 руб.</div>
+												<div class="order-char__status">Не оплачен</div>
+											</div>
+										</div>
+										<div class="order-elem__toggle js-orderElemToggle"><span>Детали заказа</span>
+											<svg class="icon icon-sort-arrow ">
+												<use xlink:href="images/sprites.svg#sort-arrow"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="order-elem__content js-orderElemContent">
+										<div class="order-table">
+											<table>
+												<tr>
+													<td>Фамилия:</td>
+													<td>Глуханько </td>
+												</tr>
+												<tr>
+													<td>Имя:</td>
+													<td>Антон</td>
+												</tr>
+												<tr>
+													<td>Отчество:</td>
+													<td>Александрович</td>
+												</tr>
+												<tr>
+													<td>Телефон: </td>
+													<td>8 918 455-02-16</td>
+												</tr>
+												<tr>
+													<td>E-mail: </td>
+													<td>Antonglukhanko@gmail.com</td>
+												</tr>
+												<tr>
+													<td>Способ доставки:</td>
+													<td>Доставка </td>
+												</tr>
+												<tr>
+													<td>Город:</td>
+													<td>Краснодар</td>
+												</tr>
+												<tr>
+													<td>Улица:</td>
+													<td>Гудимы</td>
+												</tr>
+												<tr>
+													<td>Номер дома:</td>
+													<td>64</td>
+												</tr>
+												<tr>
+													<td>Квартира:</td>
+													<td>81</td>
+												</tr>
+												<tr>
+													<td>Сумма к оплате: </td>
+													<td>3 500 руб.</td>
+												</tr>
+												<tr>
+													<td>Оплачен: </td>
+													<td>Нет</td>
+												</tr>
+												<tr>
+													<td>Способ оплаты: </td>
+													<td>Оплата курьеру при доставке</td>
+												</tr>
+												<tr>
+													<td>Комментарий: </td>
+													<td>«Пожалуйста, доставьте скорее»</td>
+												</tr>
+											</table>
+										</div>
+										<div class="order-products"><a class="order-product" href="product.html" target="_blank">
+																							<div class="order-product__image" style="background-image: url('images/case-item.jpg')"></div>
+																							<div class="order-product__main">
+																								<div class="order-product__category">Samsung</div>
+																								<div class="order-product__title">Чехол Матовый для Samsung Galaxy S9 Plus черный силиконовый</div>
+																								<div class="order-product__price">149 руб</div>
+																							</div>
+																							<div class="order-product__footer">
+																								<div class="order-product__count">2 шт.</div>
+																								<div class="order-product__total"> <span class="order-product__total-label">Итого: </span><span class="order-product__total-price">298 руб</span></div>
+																							</div></a><a class="order-product" href="product.html" target="_blank">
+																							<div class="order-product__image" style="background-image: url('images/case-item.jpg')"></div>
+																							<div class="order-product__main">
+																								<div class="order-product__category">Samsung</div>
+																								<div class="order-product__title">Чехол Матовый для Samsung Galaxy S9 Plus черный силиконовый</div>
+																								<div class="order-product__price">149 руб</div>
+																							</div>
+																							<div class="order-product__footer">
+																								<div class="order-product__count">2 шт.</div>
+																								<div class="order-product__total"> <span class="order-product__total-label">Итого: </span><span class="order-product__total-price">298 руб</span></div>
+																							</div></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container"></div>
+		</footer>
+		<div class="modal mfp-hide" id="modalChooseCity">
+			<div class="modal-block">
+				<div class="modal-city">
+					<div class="modal-city__form">
+						<div class="modal-city__submit">
+							<svg class="icon icon-search ">
+								<use xlink:href="images/sprites.svg#search"></use>
+							</svg>
+						</div>
+						<input class="modal-city__input" type="text" placeholder="Поиск города">
+						<div class="modal-close js-modalClose">
+							<svg class="icon icon-m-close ">
+								<use xlink:href="images/sprites.svg#m-close"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="modal-city__inner">
+						<div class="modal-city__radios">
+							<label class="radio-button style_light">
+								<input type="radio" name="type"><span class="radio-button__title">Все</span>
+							</label>
+							<label class="radio-button style_light">
+								<input type="radio" name="type"><span class="radio-button__title">Доставка</span>
+							</label>
+							<label class="radio-button style_light">
+								<input type="radio" name="type"><span class="radio-button__title">МАГАЗИНЫ iБУТИК</span>
+							</label>
+						</div>
+						<div class="modal-city__list">
+							<div class="city-list">
+								<div class="city-list__elem"><a class="city-list__link" href="#">Краснодар <span class="city-list__count">6 магазинов</span></a></div>
+								<div class="city-list__elem"><a class="city-list__link" href="#">Сочи <span class="city-list__count">1 магазин</span></a></div>
+								<div class="city-list__elem"><a class="city-list__link" href="#">Туапсе <span class="city-list__count">1 магазин</span></a></div>
+								<div class="city-list__elem"><a class="city-list__link" href="#">Москва</a></div>
+								<div class="city-list__elem"><a class="city-list__link" href="#">Санкт-Петербург</a></div>
+								<div class="city-list__elem"><a class="city-list__link" href="#">Архангельск</a></div>
+								<div class="city-list__elem"><a class="city-list__link" href="#">Владивосток</a></div>
+								<div class="city-list__elem"><a class="city-list__link" href="#">Новороссийск <span class="city-list__count">1 магазин</span></a></div>
+								<div class="city-list__elem"><a class="city-list__link" href="#">Анапа <span class="city-list__count">1 магазин</span></a></div>
+								<div class="city-list__elem"><a class="city-list__link" href="#">Армавир <span class="city-list__count">1 магазин</span></a></div>
+								<div class="city-list__elem"><a class="city-list__link" href="#">Набережные Челны</a></div>
+								<div class="city-list__elem"><a class="city-list__link" href="#">Нижний Новгород</a></div>
+								<div class="city-list__elem"><a class="city-list__link" href="#">Новосибирск</a></div>
+								<div class="city-list__elem"><a class="city-list__link" href="#">Омск</a></div>
+								<div class="city-list__elem"><a class="city-list__link" href="#">Пермь</a></div>
+								<div class="city-list__elem"><a class="city-list__link" href="#">Ростов-на-Дону</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-city__footer"><a class="modal-city__link" href="contacts.html">АДРЕСА МАГАЗИНОВ iБУТИК					</a></div>
+				</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+		<script src="js/vendor.js?v=1593865064456"></script>
+		<script src="js/main.js?v=1593865064456"></script>
+	</body>
+</html>

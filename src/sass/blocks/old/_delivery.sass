@@ -1,0 +1,316 @@
+.delivery
+	@media #{$mobile-above}
+		padding: 35px
+		border-radius: 20px
+		border: 1px solid #edeef1
+		background-color: #ffffff
+
+	@media #{$tablet-above}
+		margin-left: -35px
+
+	@media #{$mobile}
+		padding: 25px 20px 30px
+		margin: 0 -20px
+		background: #fff
+		border-top: 1px solid #edeef1
+		border-bottom: 1px solid #edeef1
+		border-radius: 0 0 20px 20px
+
+.delivery-radios
+	@media #{$mobile-above}
+		display: flex
+		margin-bottom: 30px
+
+		.delivery-radio
+			&:first-child
+				.delivery-radio__block
+					border-radius: 20px 0 0 20px
+
+			&:last-child
+				.delivery-radio__block
+					border-radius: 0 20px 20px 0
+
+			&:not(:first-child)
+				margin-left: -2px
+
+	@media #{$mobile}
+		margin-bottom: 25px
+
+.delivery-radio
+	position: relative
+	display: inline-block
+
+	@media #{$mobile}
+		&:not(:last-child)
+			margin-bottom: 10px
+
+	&__block
+		cursor: pointer
+		border: 2px solid #d7d8da
+		padding: 30px
+		position: relative
+		transition: 300ms ease-out
+		border-radius: 20px
+
+		@media #{$mobile}
+			padding: 25px 20px
+			border-radius: 10px
+
+	&__promo
+		color: #81c341
+
+		@media #{$mobile-above}
+			font-size: 17px
+			position: absolute
+			top: 28px
+			right: 30px
+
+		@media #{$mobile}
+			font-size: 14px
+			margin-bottom: 15px
+
+	&__title
+		color: #3a4051
+		font-size: 18px
+		font-weight: 500
+		line-height: 17px
+		text-transform: uppercase
+		letter-spacing: 1px
+		margin: 0 0 20px
+
+		@media #{$mobile}
+			font-size: 15px
+			margin: 0 0 15px
+
+			& + .delivery-radio__promo
+				margin-top: -12px
+
+	p
+		color: #1b1e32
+		font-size: 16px
+		line-height: 17px
+
+		@media #{$mobile}
+			font-size: 14px
+
+	input
+		position: absolute
+		top: 0
+		left: 0
+		width: 0
+		height: 0
+		opacity: 0
+
+		&:checked + .delivery-radio__block
+			border-color: #3a4051
+			z-index: 2
+
+.delivery-content
+	& > div
+		display: none
+
+.delivery-tab
+	&__content
+		& > div
+			display: none
+
+.delivery-panel
+	border-top: 1px solid #edeef1
+	border-bottom: 1px solid #edeef1
+
+	@media #{$mobile-above}
+		height: 55px
+		padding: 0 35px
+		margin: 0 -35px
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+		@media #{$tablet}
+			&.style_with_info
+				flex-wrap: wrap
+				height: auto
+
+	@media #{$mobile}
+		margin: 0 -20px
+		padding: 0 45px
+
+	&__city
+		height: 55px
+		display: flex
+		align-items: center
+
+		@media #{$mobile}
+			height: 46px
+
+	&__info
+		color: #3a4051
+		font-size: 16px
+		font-weight: 500
+		line-height: 17px
+		text-transform: uppercase
+		letter-spacing: 1px
+		display: flex
+
+		@media #{$tablet}
+			width: 100%
+			height: 55px
+			align-items: center
+			justify-content: space-between
+			position: relative
+
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				left: -35px
+				right: -35px
+				height: 1px
+				background: #edeef1
+
+		@media #{$mobile}
+			display: none
+
+			&:before
+				left: -45px
+				right: -45px
+
+	&__price
+		width: 140px
+		text-align: right
+
+		@media #{$tablet-above}
+			@media (max-width: 1400px)
+				width: 120px
+
+	&__range
+		@media #{$mobile}
+			height: 55px
+			display: flex
+			align-items: center
+			position: relative
+
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				left: -45px
+				right: -45px
+				height: 1px
+				background: #edeef1
+
+			.range-control
+				min-width: 260px
+
+		@media #{$mobile}
+			height: 46px
+
+.delivery-list
+	padding: 30px 0
+
+	&:last-child
+		padding-bottom: 0
+
+	@media #{$mobile}
+		margin-bottom: -20px
+
+.delivery-elem
+	position: relative
+
+	@media #{$tablet-above}
+		display: flex
+		align-items: center
+
+		&:not(:last-child)
+			margin-bottom: 15px
+
+		&__left
+			width: calc(100% - 360px)
+			padding-right: 20px
+			display: flex
+			align-items: center
+
+		&__right
+			width: 360px
+			display: flex
+			justify-content: flex-end
+
+	@media #{$mobile-above}
+		@media #{$tablet}
+			&:not(:last-child)
+				margin-bottom: 30px
+
+			&__left
+				display: flex
+				align-items: center
+				margin-bottom: 10px
+
+	@media #{$tablet}
+		&__right
+			width: 100%
+
+	@media #{$mobile}
+		margin: 0 -20px
+		padding: 0 45px 20px
+
+		&:not(:last-child)
+			border-bottom: 1px solid #edeef1
+			margin-bottom: 20px
+
+		.radio-button
+			width: 100%
+
+	&__price
+		height: 41px
+		color: #1b1e32
+		display: flex
+		align-items: center
+		padding: 0 25px
+		font-size: 15px
+		font-weight: 700
+		border-radius: 20px
+
+		@media #{$mobile-above}
+			border: 2px solid rgba(62, 32, 104, 0.3)
+
+		@media #{$tablet}
+			position: absolute
+			top: 26px
+			right: 0
+
+		@media #{$mobile}
+			font-size: 14px
+			top: 15px
+			right: 45px
+			background-color: #f0f1f5
+
+	.radio-button
+		display: flex
+
+	.radio-button__title
+		border-color: rgba(62, 32, 104, 0.3)
+
+		@media #{$tablet}
+			width: 100%
+
+.delivery-map
+	height: 475px
+	position: relative
+
+	.map
+		background: transparent
+
+	@media #{$mobile-above}
+		margin: 0 -35px -35px
+
+	@media #{$mobile}
+		margin: 0 -20px -30px
+
+.delivery-form
+	color: #3a4051
+
+	@media #{$mobile-above}
+		margin-top: 35px
+
+	@media #{$mobile}
+		padding: 25px 25px 5px

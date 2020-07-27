@@ -1,0 +1,34 @@
+.sort-select
+	display: flex
+	align-items: center
+	color: #3a4051
+	font-size: 14px
+
+	@media #{$mobile-above}
+		display: none
+
+	&__label
+		margin-right: 7px
+
+	&__control
+		position: relative
+
+	&__button
+		display: flex
+		align-items: center
+		position: relative
+
+		svg
+			width: 7px
+			height: 4px
+			fill: #484d5d
+			margin-left: 9px
+
+	&__list
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+		outline: none

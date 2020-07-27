@@ -1,0 +1,18 @@
+.auth-container
+	@media #{$mobile-above}
+		@media #{$tablet}
+			padding-left: 60px
+			padding-right: 30px
+
+	@media #{$tablet-above}
+		max-width: 950px
+
+	@media #{$mobile}
+		padding: 0 20px
+
+.auth-content
+	@media #{$tablet-above}
+		width: calc(100% - 300px)
+
+	& > div
+		display: none

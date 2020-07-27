@@ -1,0 +1,47 @@
+header.header
+	//if isAuth == true
+	//else
+	//+icon('m-search')
+
+	.container
+		.row
+			.col-2.header__logo
+				a(href="/")
+					+icon('logo')
+
+			.col-md-8.header__search(data-header-search='search')
+				form
+					.form-group
+						input#header__search.form-control.inp-search.form_field(type='text', placeholder='')
+
+			if isAuth == true
+				.col-2.header__userbar.logged
+					.icon_box(data-icon='bell', data-dropdown='notice')
+						+icon('bell')
+						.notif_quantity 1
+					append vars
+						-
+							var userHasImg = false
+
+					if userHasImg == true
+						.user
+							.user-avatar
+								.user-avatar-photo
+									img(src="/images/face_1.png")
+					else
+						.user
+							.user-avatar
+								.user-avatar-name(style="background-color: #D7F0E2; color: #5FB284") АЛ
+
+					.icon_box(data-icon='services', data-dropdown='services')
+						+icon('menu')
+					a.post_create(href='#')
+						+icon('pencil')
+			else
+				.col-2.header__userbar
+					a.btn.btn-primary(href='#') Войти
+					.icon_box(data-icon='services', data-dropdown='services')
+						+icon('menu')
+
+
+

@@ -1,0 +1,41 @@
+/*
+ * Ion range slider
+ */
+
+.irs--flat
+	height: 3px
+
+	@media #{$mobile}
+		height: 2px
+
+	.irs-line
+		top: 0
+		height: 3px
+		background: #edeef1
+
+		@media #{$mobile}
+			height: 2px
+
+	.irs-bar
+		top: 0
+		height: 3px
+		background: #351a5a
+
+		@media #{$mobile}
+			height: 2px
+
+	.irs-handle
+		width: 25px
+		height: 25px
+		top: -11px
+		border: 2px solid #351a5a
+		background-color: #ffffff
+		border-radius: 50%
+
+		@media #{$mobile}
+			width: 14px
+			height: 14px
+			top: -6px
+
+		i
+			display: none !important

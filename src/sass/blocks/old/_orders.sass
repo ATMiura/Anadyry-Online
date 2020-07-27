@@ -1,0 +1,355 @@
+.orders
+	@media #{$tablet-above}
+		margin-left: -35px
+
+	@media #{$mobile}
+		padding: 25px 20px 0
+		margin: 0 -20px
+		background: #fff
+		border-top: 1px solid #edeef1
+		box-shadow: 0 50px 0 #fff
+
+.order-elem
+	border-radius: 30px
+	border: 1px solid #edeef1
+	background-color: #ffffff
+
+	@media #{$mobile}
+		border-radius: 10px
+
+	&:not(:last-child)
+		margin-bottom: 10px
+
+	&__header
+		position: relative
+
+		@media #{$mobile-above}
+			height: 130px
+			padding: 0 45px 0 230px
+			display: flex
+			align-items: center
+			justify-content: space-between
+
+			@media #{$tablet}
+				justify-content: flex-end
+				height: 185px
+				padding: 0 35px 55px
+
+
+		@media #{$mobile}
+			height: 115px
+			padding: 17px 20px
+
+	&__number
+		color: #1b1e32
+		font-size: 30px
+		font-weight: 700
+
+		@media #{$mobile-above}
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 35px
+			display: flex
+			align-items: center
+
+			@media #{$tablet}
+				bottom: 55px
+
+		@media #{$mobile}
+			font-size: 20px
+			margin-bottom: 3px
+
+	&__toggle
+		opacity: 0.3
+		color: #1b1e32
+		font-size: 17px
+		cursor: pointer
+
+		@media #{$mobile}
+			font-size: 14px
+			position: absolute
+			bottom: 20px
+			left: 20px
+
+		&.is-active
+			svg
+				transform: rotate(180deg)
+
+		svg
+			fill: #1b1e32
+			position: relative
+			top: -1px
+			margin-left: 12px
+			transition: 300ms ease-out
+
+			@media #{$mobile}
+				margin-left: 10px
+
+	&__char
+		@media #{$mobile-above}
+			@media #{$tablet}
+				height: 55px
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				padding: 0 35px
+				border-top: 1px solid #edeef1
+				display: flex
+				align-items: center
+
+	&__content
+		display: none
+
+		@media #{$mobile-above}
+			border-top: 1px solid #edeef1
+			padding: 40px 35px 35px
+
+		@media #{$mobile}
+			padding: 0 20px 20px
+
+.order-char
+	color: #1b1e32
+
+	@media #{$mobile-above}
+		display: flex
+		font-size: 17px
+		position: relative
+
+	@media #{$tablet}
+		width: 100%
+
+	@media #{$mobile}
+		font-size: 14px
+		display: flex
+		justify-content: space-between
+
+	&__date
+		@media #{$tablet-above}
+			margin-right: 25px
+
+		@media #{$mobile-above}
+			@media #{$tablet}
+				width: 200px
+
+	&__price
+		@media #{$tablet-above}
+			margin-right: 25px
+
+	&__status
+		@media #{$mobile-above}
+			@media #{$tablet}
+				position: absolute
+				right: 27px
+
+		@media #{$mobile}
+			position: absolute
+			top: 20px
+			right: 20px
+
+.order-table
+	color: #1b1e32
+	font-size: 17px
+	line-height: 20px
+
+	@media #{$mobile-above}
+		&:not(:last-child)
+			margin-bottom: 40px
+
+		table
+			width: 100%
+			border-collapse: collapse
+
+		td
+			vertical-align: top
+			padding: 11px 0
+
+			&:first-child
+				width: 200px
+				padding-right: 20px
+
+	@media #{$mobile}
+		font-size: 14px
+		line-height: 17px
+
+		&:not(:last-child)
+			margin-bottom: 40px
+
+		table,
+		tbody,
+		tr,
+		td
+			display: block
+
+		tr
+			&:not(:last-child)
+				margin-bottom: 20px
+
+
+.order-product
+	display: block
+	position: relative
+
+	@media #{$tablet-above}
+		height: 200px
+		padding: 20px 30px 20px 200px
+		border-radius: 20px
+		border: 1px solid #edeef1
+
+		&:not(:last-child)
+			margin-bottom: 10px
+
+	@media #{$mobile-above}
+		@media #{$tablet}
+			height: 90px
+			padding: 5px 0 0 105px
+
+			&:not(:last-child)
+				margin-bottom: 30px
+
+	@media #{$mobile}
+		height: 130px
+		padding-left: 95px
+
+		&:not(:last-child)
+			margin-bottom: 25px
+
+	&__image
+		width: 152px
+		height: 152px
+		position: absolute
+		top: 20px
+		left: 20px
+		+backcover
+
+		@media #{$tablet}
+			width: 90px
+			height: 90px
+			top: 0
+			left: 0
+
+		@media #{$mobile}
+			left: -10px
+			top: -10px
+
+	&__main
+		@media #{$tablet-above}
+			padding-right: 220px
+			position: relative
+
+	&__category
+		opacity: 0.3
+		color: #33394a
+		font-size: 16px
+		margin: 0 0 10px
+
+		@media #{$tablet}
+			display: none
+
+	&__title
+		max-height: 60px
+		overflow: hidden
+		color: #1b1e32
+
+		@media #{$tablet-above}
+			max-width: 360px
+			font-size: 19px
+			line-height: 20px
+
+		@media #{$tablet}
+			max-height: 33px
+			font-size: 14px
+			line-height: 16px
+
+		@media #{$mobile}
+			max-height: 80px
+
+	&__price
+		@media #{$tablet-above}
+			width: 190px
+			position: absolute
+			top: 15px
+			right: 0
+			height: 40px
+			display: flex
+			align-items: center
+			justify-content: center
+			color: #1b1e32
+			font-size: 19px
+			font-weight: 700
+			border-radius: 10px
+			border: 1px solid #edeef1
+
+		@media #{$tablet}
+			position: absolute
+			bottom: 5px
+			left: 195px
+			color: #1b1e32
+
+		@media #{$mobile}
+			display: none
+
+	&__footer
+		display: flex
+		position: absolute
+
+		@media #{$mobile-above}
+			justify-content: space-between
+
+		@media #{$tablet-above}
+			height: 41px
+			align-items: center
+			bottom: 25px
+			right: 30px
+			left: 200px
+			padding-right: 40px
+			border-radius: 20px
+			border: 1px solid #edeef1
+
+		@media #{$tablet}
+			align-items: flex-end
+			padding-top: 15px
+			color: #1b1e32
+			font-size: 14px
+			left: 105px
+			right: 0
+			bottom: 5px
+			border-top: 1px solid #edeef1
+
+		@media #{$mobile}
+			left: 0
+
+	&__count
+		@media #{$tablet-above}
+			width: 185px
+			height: 43px
+			color: #444444
+			margin: -1px 0 0 -1px
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: 16px
+			border-radius: 20px
+			background-color: #f0f1f5
+
+		@media #{$mobile}
+			width: 70px
+			text-align: center
+			margin-right: 25px
+
+	&__total
+		@media #{$tablet-above}
+			font-size: 16px
+			color: #444444
+			display: flex
+			align-items: center
+
+			&-price
+				margin-left: 15px
+				color: #1b1e32
+				font-size: 19px
+
+		@media #{$tablet}
+			&-label
+				display: none

@@ -1,0 +1,401 @@
+.header
+	@media #{$mobile-above}
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		z-index: 5
+		transition: 300ms ease-out
+
+	@media #{$mobile}
+		display: none
+
+.header-top
+	height: 40px
+	font-size: 14px
+	color: #fff
+	display: flex
+	align-items: center
+	justify-content: space-between
+	background-color: #201b27
+
+	@media #{$mobile-above}
+		@media #{$tablet}
+			padding: 0 20px
+
+	@media #{$tablet-above}
+		padding: 0 40px 0 420px
+
+		@media (max-width: 1400px)
+			padding-left: 380px
+
+.header-nav
+	display: flex
+	align-items: center
+
+	&__elem
+		&.style_pink
+			color: #e94298
+
+		&:not(:last-child)
+			margin-right: 15px
+
+			@media #{$tablet}
+				margin-right: 10px
+
+	&__link
+		@media #{$tablet-above}
+			transition: 300ms ease-out
+
+			&:hover
+				opacity: .6
+
+			&:active
+				opacity: .3
+
+.header-main
+	height: 80px
+	background: #fff
+	padding: 0 40px 0 420px
+	display: flex
+	align-items: center
+	justify-content: space-between
+	border-bottom: 1px solid #edeef1
+
+	@media (max-width: 1400px)
+		padding-left: 380px
+
+	@media #{$tablet}
+		display: none
+
+.header-search
+	height: 100%
+	width: calc(100% - 300px)
+
+	&__form
+		position: relative
+		height: 100%
+
+		@media #{$tablet-above}
+			&:hover
+				.header-search__input
+					+placeholder(#c2c2c2, 16px)
+
+		@media #{$mobile}
+			height: 40px
+
+	&__icon
+		width: 18px
+		height: 18px
+		position: absolute
+		top: 0
+		bottom: 0
+		left: -30px
+		margin: auto
+
+		@media #{$mobile}
+			width: 12px
+			height: 12px
+			left: -23px
+
+			svg
+				width: 12px
+				height: 12px
+
+		svg
+			fill: #a9b0b7
+
+	&__input
+		width: 100%
+		height: 100%
+		color: #444444
+		background: transparent
+		font-size: 16px
+		padding-right: 190px
+		+placeholder(#cbcbcb, 16px)
+		transition: 300ms ease-out
+
+		@media #{$mobile}
+			font-size: 12px
+			padding-right: 60px
+			+placeholder(#cbcbcb, 12px)
+
+	&__close
+		width: 50px
+		height: 50px
+		position: absolute
+		top: 15px
+		right: 135px
+		cursor: pointer
+		opacity: .5
+
+		@media #{$tablet-above}
+			transition: 300ms ease-out
+			opacity: 0
+			pointer-events: none
+
+			&:hover
+				svg
+					fill: #a9b0b7
+					transform: rotate(180deg)
+
+			&:active
+				svg
+					opacity: .3
+
+		@media #{$mobile}
+			display: none
+
+		svg
+			+abscenter
+			fill: #a9b0b7
+			transition: 300ms ease-out
+
+	&__button
+		position: absolute
+		top: 15px
+		right: 0
+
+		@media #{$mobile-above}
+			svg
+				display: none
+
+			.button
+				width: 130px
+				height: 50px
+
+		@media #{$tablet-above}
+			transition: 300ms ease-out
+			opacity: 0
+			pointer-events: none
+
+		@media #{$mobile}
+			top: 0
+
+			.button
+				width: 50px
+				height: 40px
+				background: transparent
+
+			.button__text
+				display: none
+
+			svg
+				width: 5px
+				height: 9px
+				fill: #1b1e32
+				+abscenter
+
+.header-controls
+	display: flex
+	align-items: center
+
+.header-control
+	height: 28px
+	display: flex
+	align-items: center
+	position: relative
+
+	@media #{$mobile-above}
+		padding: 0 19px
+
+		&:last-child
+			padding-right: 0
+
+		@media #{$tablet}
+			&:not(:last-child)
+				border-right: 1px solid rgba(255, 255, 255, 0.1)
+
+	@media #{$tablet-above}
+		&:hover
+			svg
+				fill: #3a4051
+
+			.header-control__title
+				color: #3a4051
+
+			.header-control__button
+				background-color: #72b432
+
+		&:active
+			svg,
+			.header-control__title
+				opacity: .3
+
+			.header-control__button
+				color: rgba(255, 255, 255, 0.3)
+
+		&:not(:last-child)
+			border-right: 1px solid #f0f0f0
+
+		&.control_user
+			&:before
+				content: ""
+				width: 7px
+				height: 7px
+				border-radius: 4px
+				background-color: #81c341
+				position: absolute
+				top: -4px
+				right: 16px
+				border-radius: 50%
+				opacity: 0
+
+			&.is-active
+				&:before
+					opacity: 1
+
+		&.is-active,
+		&.is-hover
+			svg
+				fill: #3a4051
+
+	@media #{$mobile}
+		width: 40px
+		height: 40px
+		justify-content: center
+
+	&__icon
+		position: relative
+
+		@media #{$mobile-above}
+			@media #{$tablet}
+				.icon-m-search,
+				.icon-m-cart
+					width: 19px
+					height: 19px
+
+				.icon-m-user
+					width: 22px
+					height: 18px
+
+				.icon-m-history
+					width: 20px
+					height: 20px
+
+		svg
+			transition: 300ms ease-out
+
+			@media #{$mobile-above}
+				@media #{$tablet}
+					fill: #fff
+
+			@media #{$tablet-above}
+				fill: #a9b0b7
+
+			@media #{$mobile}
+				fill: rgba(255, 255, 255, 0.7)
+
+	&__title
+		color: #444444
+		font-size: 14px
+		margin-left: 16px
+		transition: 300ms ease-out
+
+	&__count
+		width: 22px
+		height: 22px
+		border-radius: 11px
+		background-color: #81c341
+		position: absolute
+		bottom: 50%
+		left: 50%
+		display: flex
+		align-items: center
+		justify-content: center
+		color: #fff
+		font-size: 14px
+		font-weight: 500
+		text-transform: uppercase
+
+		@media #{$tablet}
+			display: none
+
+	&__order
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		padding-top: 9px
+		transition: 300ms 600ms ease-out
+
+	&__button
+		height: 32px
+		display: flex
+		align-items: center
+		justify-content: center
+		color: #ffffff
+		font-size: 16px
+		font-weight: 500
+		text-transform: uppercase
+		letter-spacing: 1px
+		border-radius: 16px
+		background-color: #81c341
+
+		@media #{$tablet-above}
+			transition: 300ms ease-out
+
+		@media #{$tablet}
+			display: none
+
+
+.search_control
+	.icon-m-close
+		width: 12px
+		height: 12px
+		opacity: 0
+		+abscenter
+		top: -1px
+
+
+.header-tooltip
+	width: 325px
+	position: fixed
+	top: 100px
+	right: 20px
+	z-index: 5
+	padding: 25px 20px 20px
+	box-shadow: 0 30px 120px rgba(200, 207, 222, 0.42)
+	border-radius: 10px
+	border: 1px solid #edeef1
+	background-color: #ffffff
+	transition: 300ms ease-out
+	opacity: 0
+	pointer-events: none
+
+	&.is-show
+		opacity: 1
+		pointer-events: all
+
+	@media #{$tablet}
+		z-index: 10
+
+	@media #{$mobile}
+		display: none !important
+
+	&__group
+		padding: 0 20px
+
+		&:not(:last-child)
+			margin-bottom: 40px
+
+	&__user
+		color: #1b1e32
+		margin-bottom: 25px
+
+	&__name
+		font-size: 17px
+		font-weight: 700
+		line-height: 17px
+		margin: 0 0 20px
+
+	&__bonus
+		font-size: 14px
+		line-height: 16px
+
+	.button
+		width: 100%
+		border-radius: 10px
+
+		&:not(:last-child)
+			margin-bottom: 10px

@@ -1,0 +1,67 @@
+.tooltip-cart
+	margin-bottom: 20px
+
+	&__list
+		margin: -25px -20px 20px
+
+	&__elem
+		height: 110px
+		position: relative
+		padding: 20px 20px 10px 110px
+		border-bottom: 1px solid #edeef1
+
+		&:active
+			.tooltip-cart__image,
+			.tooltip-cart__title,
+			.tooltip-cart__price
+				opacity: .3
+
+	&__image
+		width: 72px
+		height: 72px
+		position: absolute
+		top: 20px
+		left: 20px
+		+backcover
+		transition: 300ms ease-out
+
+	&__title
+		height: 46px
+		overflow: hidden
+		color: #1b1e32
+		font-size: 14px
+		line-height: 16px
+		transition: 300ms ease-out
+
+	&__footer
+		position: absolute
+		left: 110px
+		right: 20px
+		bottom: 20px
+		color: #1b1e32
+		font-size: 14px
+		background: #fff
+		box-shadow: 0 -15px 15px #fff
+
+	&__price
+		transition: 300ms ease-out
+
+		span
+			&:not(:last-child)
+				margin-right: 10px
+
+	&__del
+		position: absolute
+		right: 0
+		top: 0
+		opacity: .3
+		transition: 300ms ease-out
+
+		&:hover
+			opacity: 1
+
+	&__total
+		display: flex
+		justify-content: space-between
+		color: #1b1e32
+		font-weight: 700

@@ -1,0 +1,41 @@
+.countdown
+	width: 168px
+	display: flex
+	align-items: center
+	height: 25px
+	padding: 0 15px 0 12px
+	border-radius: 12px
+	background-color: #edeef1
+
+	@media #{$mobile}
+		width: 150px
+		justify-content: center
+		padding: 0 12px
+
+	svg
+		margin-right: 15px
+		fill: #a9b0b7
+
+		@media #{$mobile}
+			display: none
+
+.countdown-list
+	display: flex
+	align-items: center
+
+.countdown-el
+	color: #444444
+	font-size: 12px
+	font-weight: 500
+	display: flex
+	text-transform: uppercase
+	letter-spacing: 1.2px
+
+	&:not(:last-child)
+		&:after
+			content: ":"
+			display: inline-block
+			margin: 0 2px
+
+	&__code
+		min-width: 18px
