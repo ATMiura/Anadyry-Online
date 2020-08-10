@@ -1,0 +1,298 @@
+extends _layouts/_base
+
+append vars
+	-
+		var title = 'Создание поста'
+		var isAuth = true
+		var psotDetail = true
+
+block content
+	.wall.post-create
+
+		.post-type
+			.post-type__item
+				form.form.post-create-form
+					.title
+						h1.h1 Новый пост (Публикация)
+					.dropdown(data-dropdown="select")
+						input(type="hidden", value="", class="dropdown__value")
+						.dropdown__name Тип поста
+						.dropdown__label
+							.dropdown__label__text Выбирите тип поста
+						ul.dropdown__list
+							li.dropdown__item.active(data-value="Публикация") Публикация
+							li.dropdown__item(data-value="Альбом") Альбом
+							li.dropdown__item(data-value="Видео") Видео
+							li.dropdown__item(data-value="Опрос") Опрос
+							li.dropdown__item(data-value="События") События
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-title') Заголовк поста
+							input#post-create-form-title.form-control(type='text')
+
+					.form-row.file-upload
+						.form-group.col-md-6.col-12
+							.file-upload-list
+								.file-upload-list__item
+									img(src="/images/file-upload-default.jpg").img-fluid
+									.file-upload__remove
+										+icon('trash-basket')
+
+						.form-group.col-md-6.col-12
+							.form-heading(for='post-create-form-img') Изображение на обложку
+							.file-upload__small.form-text.text-muted Оптимальный размер изображения 800 x 600px и размером до 50 Мb
+							label.file-upload__label
+								input#post-create-form-img.file-upload__input(type='file')
+								button.btn.btn-dark.btn-file Загрузить файл
+
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-meta-title') Мета заголовок
+							input#post-create-form-meta-title.form-control(type='text')
+
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-meta-descr') Мета описание
+							textarea#post-create-form-meta-descr.form-control
+
+					.form-row
+						.form-group.col-md-6.col-12
+							label(for='post-create-form-date-finish') Окончание публикации
+							input#post-create-form-date-finish.form-control(type='date')
+						.form-group.col-md-6.col-12
+							label(for='post-create-form-date-start') Начало публикации
+							input#post-create-form-date-start.form-control(type='date')
+						.form-group.col-12
+							.custom-control.custom-checkbox
+								input#post-create-comments-allow.custom-control-input(type='checkbox')
+								label.custom-control-label(for='post-create-comments-allow') Разрешить комментарии
+
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-text') Текст поста
+							textarea#post-create-form-text.form-control
+
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-tag-list') Список тегов
+							input#post-create-form-tag-list.form-control(type='text')
+
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-source') Источник
+							input#post-create-form-source.form-control(type='text')
+
+					.form-row
+						.form-group.col-12
+							.form__heading Связать посты
+							label(for='post-create-link-articles') Заголовок поста
+							input#post-create-link-articles.form-control(type='text')
+							button.btn.btn-small Связать посты
+						.form-group.col-12.d-flex.justify-content-end
+							button.btn.btn-dark Черновик
+							button.btn.btn-primary На проверку
+
+			.post-type__item
+				form.form.post-create-form
+					.title
+						h1.h1 Новый пост (Альбом)
+					.dropdown(data-dropdown="select")
+						input(type="hidden", value="", class="dropdown__value")
+						.dropdown__name Тип поста
+						.dropdown__label
+							.dropdown__label__text Выбирите тип поста
+						ul.dropdown__list
+							li.dropdown__item.active(data-value="Публикация") Публикация
+							li.dropdown__item(data-value="Альбом") Альбом
+							li.dropdown__item(data-value="Видео") Видео
+							li.dropdown__item(data-value="Опрос") Опрос
+							li.dropdown__item(data-value="События") События
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-title') Заголовк поста
+							input#post-create-form-title.form-control(type='text')
+
+					.form-row.file-upload
+						.form-group.col-12
+							.file-upload-list.row
+								.file-upload-list__item.col-md-3
+									img(src="/images/file-upload-default.jpg").img-fluid
+									.file-upload__remove
+										+icon('trash-basket')
+								.file-upload-list__item.col-md-3
+									img(src="/images/file-upload-default.jpg").img-fluid
+									.file-upload__remove
+										+icon('trash-basket')
+								.file-upload-list__item.col-md-3
+									img(src="/images/file-upload-default.jpg").img-fluid
+									.file-upload__remove
+										+icon('trash-basket')
+
+						.form-group.col-12
+							label.file-upload__label.file-upload__label__multi(for="post-create-form-multi")
+								input#post-create-form-multi.file-upload__input(type='file')
+								| Кликните, чтобы добавить фото или перетащите фото сюда
+
+
+			.post-type__item
+				form.form.post-create-form
+					.title
+						h1.h1 Новый пост (Видео)
+					.dropdown(data-dropdown="select")
+						input(type="hidden", value="", class="dropdown__value")
+						.dropdown__name Тип поста
+						.dropdown__label
+							.dropdown__label__text Выбирите тип поста
+						ul.dropdown__list
+							li.dropdown__item.active(data-value="Публикация") Публикация
+							li.dropdown__item(data-value="Альбом") Альбом
+							li.dropdown__item(data-value="Видео") Видео
+							li.dropdown__item(data-value="Опрос") Опрос
+							li.dropdown__item(data-value="События") События
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-title') Заголовк поста
+							input#post-create-form-title.form-control(type='text')
+
+					.form-row.file-upload
+						.form-group.col-md-5.col-12
+							.file-upload-list
+								.file-upload-list__item
+									img(src="/images/file-upload-video.jpg").img-fluid
+									.file-upload__remove
+										+icon('trash-basket')
+
+						.form-group.col-md-7.col-12
+							.form-heading(for='post-create-form-img') Загрузка видео
+							.file-upload__small.form-text.text-muted Оптимальное размерешение видео 1200 x 800px и размером до 50 Мb
+							.form-row
+								.form-group
+									label(for='post-create-form--video-title') Заголовк видео
+									input#post-create-form--video-title.form-control(type='text')
+							label.file-upload__label
+								input#post-create-form-img.file-upload__input(type='file')
+								button.btn.btn-dark.btn-file Загрузить файл
+
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-video-link') Ссылка на видео
+							input#post-create-form-video-link.form-control(type='text')
+							small.form-text Введите ссылку на видео на YouTube, вида https://youtu.be/XXXXXXXXXXX. При этом все поля кроме списка тегов, заполнятся автоматически.
+
+			.post-type__item
+				form.form.post-create-form
+					.title
+						h1.h1 Новый пост (Опрос)
+					.dropdown(data-dropdown="select")
+						input(type="hidden", value="", class="dropdown__value")
+						.dropdown__name Тип поста
+						.dropdown__label
+							.dropdown__label__text Выбирите тип поста
+						ul.dropdown__list
+							li.dropdown__item.active(data-value="Публикация") Публикация
+							li.dropdown__item(data-value="Альбом") Альбом
+							li.dropdown__item(data-value="Видео") Видео
+							li.dropdown__item(data-value="Опрос") Опрос
+							li.dropdown__item(data-value="События") События
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-title') Заголовк поста
+							input#post-create-form-title.form-control(type='text')
+					.form-row
+						.form-group.col-12
+							.form__heading Варианты в опросе
+							label(for='post-create-form-quiz') Текст варианта
+							input#post-create-form-quiz.form-control(type='text')
+							button.btn.btn-dark.btn-add Добавить вариант
+					.form-row
+						.form-group.col-12
+							.form__heading Выбирите цвет фона для Вашего опроса
+							.form-quiz-radio
+								.form-quiz-radio__list
+									.form-quiz-radio__item(style="background-color: #2DB285;")
+										input(type="radio", name="quiz-radio", id="quiz-radio-green").form-quiz-radio__input
+										label.form-quiz-radio__label(for="quiz-radio-green")
+											+icon('quiz-radio')
+									.form-quiz-radio__item(style="background-color: #D74343;")
+										input(type="radio", name="quiz-radio", id="quiz-radio-red", checked="checked").form-quiz-radio__input
+										label.form-quiz-radio__label(for="quiz-radio-red")
+											+icon('quiz-radio')
+									.form-quiz-radio__item(style="background-color: #3282B8;")
+										input(type="radio", name="quiz-radio", id="quiz-radio-blue").form-quiz-radio__input
+										label.form-quiz-radio__label(for="quiz-radio-blue")
+											+icon('quiz-radio')
+									.form-quiz-radio__item(style="background-color: #D79343;")
+										input(type="radio", name="quiz-radio", id="quiz-radio-orange").form-quiz-radio__input
+										label.form-quiz-radio__label(for="quiz-radio-orange")
+											+icon('quiz-radio')
+									.form-quiz-radio__item(style="background-color: #9F2DB2;")
+										input(type="radio", name="quiz-radio", id="quiz-radio-violet").form-quiz-radio__input
+										label.form-quiz-radio__label(for="quiz-radio-violet")
+											+icon('quiz-radio')
+									.form-quiz-radio__item(style="background-color: #B22D45;")
+										input(type="radio", name="quiz-radio", id="quiz-radio-red-2").form-quiz-radio__input
+										label.form-quiz-radio__label(for="quiz-radio-red-2")
+											+icon('quiz-radio')
+
+			.post-type__item
+				form.form.post-create-form
+					.title
+						h1.h1 Новый пост (События)
+					.dropdown(data-dropdown="select")
+						input(type="hidden", value="", class="dropdown__value")
+						.dropdown__name Тип поста
+						.dropdown__label
+							.dropdown__label__text Выбирите тип поста
+						ul.dropdown__list
+							li.dropdown__item.active(data-value="Публикация") Публикация
+							li.dropdown__item(data-value="Альбом") Альбом
+							li.dropdown__item(data-value="Видео") Видео
+							li.dropdown__item(data-value="Опрос") Опрос
+							li.dropdown__item(data-value="События") События
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-title') Заголовк поста
+							input#post-create-form-title.form-control(type='text')
+					.form-row.file-upload
+						.form-group.col-md-6.col-12
+							.file-upload-list
+								.file-upload-list__item
+									img(src="/images/file-upload-default.jpg").img-fluid
+									.file-upload__remove
+										+icon('trash-basket')
+
+						.form-group.col-md-6.col-12
+							.form-heading(for='post-create-form-img') Изображение на обложку
+							.file-upload__small.form-text.text-muted Оптимальный размер изображения 800 x 600px и размером до 50 Мb
+							label.file-upload__label
+								input#post-create-form-img.file-upload__input(type='file')
+								button.btn.btn-dark.btn-file Загрузить файл
+
+					.form-row
+						.form-group.col-md-6.col-12
+							.dropdown(data-dropdown="select")
+								input(type="hidden", value="", class="dropdown__value")
+								.dropdown__name Знак информационной продукции
+								.dropdown__label
+									.dropdown__label__text +0
+								ul.dropdown__list
+									li.dropdown__item.active(data-value="+0") +0
+									li.dropdown__item(data-value="+1") +1
+									li.dropdown__item(data-value="+2") +2
+									li.dropdown__item(data-value="+3") +3
+									li.dropdown__item(data-value="+4") +4
+
+					.form-row
+						.form-group.col-12
+							.form__heading Расписание
+							label Дата и время события
+							.event
+								.event__List
+									.event__item
+										input#post-create-form-event-date.form-control.event__item__date(type='date')
+										input#post-create-form-event-time.form-control.event__item__time(type='text', placeholder="14:00")
+										.event__item__remove
+											+icon('trash-basket-red')
+							button.btn.btn-dark.btn-add Добавить расписание
+
+

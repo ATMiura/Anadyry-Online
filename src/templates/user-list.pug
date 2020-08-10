@@ -1,0 +1,291 @@
+extends _layouts/_base
+
+append vars
+	-
+		var title = 'Список пользователей'
+		var isAuth = true
+
+block content
+	.wall
+		.title
+			h1 Список пользователей
+
+
+		.tag_filter
+			.tag_filter__item.active
+				a(href="#") Все
+			.tag_filter__item
+				a(href="#") Публикация
+			.tag_filter__item
+				a(href="#") Опрос
+			.tag_filter__item
+				a(href="#") Альбом
+			.tag_filter__item
+				a(href="#") Видео
+			.tag_filter__item
+				a(href="#") Событие
+
+		.dropdown(data-dropdown="select")
+			input(type="hidden", value="", class="dropdown__value")
+			.dropdown__label
+				.dropdown__label__text По просмотрам за неделю
+			ul.dropdown__list
+				li.dropdown__item.active(data-value="За месяц") За месяц
+				li.dropdown__item(data-value="За год") За год
+				li.dropdown__item(data-value="За день") За день
+
+		form.form
+			.form-row
+				.form-group
+					input#user__search.form-control.inp-search.form_field(type='text', placeholder='Найти пользователя')
+
+		.form-result
+			.form__heading Новые пользователя
+			.user-card
+				.user-card__header
+					.user
+						.user-avatar
+							.user-avatar-photo
+								img(src='/images/face_1.png')
+							.user-status.is-offline
+						.user-info
+							.user-name
+								h3 Дмитрий Иванов
+								.user-role.user-role__new Новый
+
+							.user-tag @sergeybabkin
+							.user-follow
+								.btn.btn-small + Подписаться
+								.btn.btn-small Сообщение
+						.user-dots.dots(data-tooltip='dots')
+							+icon('dots_v')
+				.user-card__footer
+					.user-actions
+						.user-actions__list
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-star')
+								.user-actions__item__text 1394 рейтинг
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-articles')
+								.user-actions__item__text 23 поста
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-subscribers')
+								.user-actions__item__text 3 подписчика
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-subscriptions')
+								.user-actions__item__text 4 подписки
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-comments')
+								.user-actions__item__text 11 комментариев
+
+			.user-card
+				.user-card__header
+					.user
+						.user-avatar
+							.user-avatar-name(style='background-color: #FEDCDC; color: #C56A6A') АГ
+							.user-status.is-online
+						.user-info
+							.user-name
+								h3 Алексей Гордиенко
+								.user-role.user-role__admin Администратор
+
+							.user-tag @sergeybabkin
+							.user-follow
+								.btn.btn-small + Подписаться
+								.btn.btn-small Сообщение
+						.user-dots.dots(data-tooltip='dots')
+							+icon('dots_v')
+				.user-card__footer
+					.user-actions
+						.user-actions__list
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-star')
+								.user-actions__item__text 1394 рейтинг
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-articles')
+								.user-actions__item__text 23 поста
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-subscribers')
+								.user-actions__item__text 3 подписчика
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-subscriptions')
+								.user-actions__item__text 4 подписки
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-comments')
+								.user-actions__item__text 11 комментариев
+
+			.form__heading Все пользователи
+			.user-card
+				.user-card__header
+					.user
+						.user-avatar
+							.user-avatar-photo
+								img(src='/images/face_1.png')
+							.user-status.is-offline
+						.user-info
+							.user-name
+								h3 Дмитрий Иванов
+								.user-role.user-role__new Новый
+
+							.user-tag @sergeybabkin
+							.user-follow
+								.btn.btn-small + Подписаться
+								.btn.btn-small Сообщение
+						.user-dots.dots(data-tooltip='dots')
+							+icon('dots_v')
+				.user-card__footer
+					.user-actions
+						.user-actions__list
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-star')
+								.user-actions__item__text 1394 рейтинг
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-articles')
+								.user-actions__item__text 23 поста
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-subscribers')
+								.user-actions__item__text 3 подписчика
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-subscriptions')
+								.user-actions__item__text 4 подписки
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-comments')
+								.user-actions__item__text 11 комментариев
+
+			.user-card
+				.user-card__header
+					.user
+						.user-avatar
+							.user-avatar-name(style='background-color: #FEDCDC; color: #C56A6A') АГ
+							.user-status.is-online
+						.user-info
+							.user-name
+								h3 Алексей Гордиенко
+								.user-role.user-role__admin Администратор
+
+							.user-tag @sergeybabkin
+							.user-follow
+								.btn.btn-small + Подписаться
+								.btn.btn-small Сообщение
+						.user-dots.dots(data-tooltip='dots')
+							+icon('dots_v')
+				.user-card__footer
+					.user-actions
+						.user-actions__list
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-star')
+								.user-actions__item__text 1394 рейтинг
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-articles')
+								.user-actions__item__text 23 поста
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-subscribers')
+								.user-actions__item__text 3 подписчика
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-subscriptions')
+								.user-actions__item__text 4 подписки
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-comments')
+								.user-actions__item__text 11 комментариев
+			.user-card
+				.user-card__header
+					.user
+						.user-avatar
+							.user-avatar-photo
+								img(src='/images/face_1.png')
+							.user-status.is-offline
+						.user-info
+							.user-name
+								h3 Дмитрий Иванов
+								.user-role.user-role__new Новый
+
+							.user-tag @sergeybabkin
+							.user-follow
+								.btn.btn-small + Подписаться
+								.btn.btn-small Сообщение
+						.user-dots.dots(data-tooltip='dots')
+							+icon('dots_v')
+				.user-card__footer
+					.user-actions
+						.user-actions__list
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-star')
+								.user-actions__item__text 1394 рейтинг
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-articles')
+								.user-actions__item__text 23 поста
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-subscribers')
+								.user-actions__item__text 3 подписчика
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-subscriptions')
+								.user-actions__item__text 4 подписки
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-comments')
+								.user-actions__item__text 11 комментариев
+
+			.user-card
+				.user-card__header
+					.user
+						.user-avatar
+							.user-avatar-name(style='background-color: #FEDCDC; color: #C56A6A') АГ
+							.user-status.is-online
+						.user-info
+							.user-name
+								h3 Алексей Гордиенко
+								.user-role.user-role__admin Администратор
+
+							.user-tag @sergeybabkin
+							.user-follow
+								.btn.btn-small + Подписаться
+								.btn.btn-small Сообщение
+						.user-dots.dots(data-tooltip='dots')
+							+icon('dots_v')
+				.user-card__footer
+					.user-actions
+						.user-actions__list
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-star')
+								.user-actions__item__text 1394 рейтинг
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-articles')
+								.user-actions__item__text 23 поста
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-subscribers')
+								.user-actions__item__text 3 подписчика
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-subscriptions')
+								.user-actions__item__text 4 подписки
+							.user-actions__item
+								.user-actions__item__icon
+									+icon('user-actions-icon-comments')
+								.user-actions__item__text 11 комментариев

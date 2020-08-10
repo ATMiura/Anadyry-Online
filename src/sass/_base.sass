@@ -123,6 +123,9 @@ li
 	padding-right: 31px
 	padding-top: 55px
 	.title
+		display: flex
+		align-items: center
+		justify-content: space-between
 		margin-bottom: 35px
 
 .detail
@@ -131,6 +134,26 @@ li
 	padding-right: 31px
 	padding-top: 70px
 	padding-bottom: 110px
+	&.with_gallery
+		position: relative
+		.post__header
+			position: relative
+			margin-bottom: 65px
+			& > div
+				position: relative
+				z-index: 2
+			&:before
+				content: ""
+				display: block
+				width: calc(100% + 60px)
+				height: calc(100% + 70px)
+				background-color: var(--color-19)
+				position: absolute
+				top: -10.6%
+				left: -30px
+				right: 0
+				margin: 0 auto
+				z-index: 0
 
 .dots,
 [data-tooltip="dots"]
@@ -173,3 +196,6 @@ li
 
 .advt
 	margin-bottom: 40px
+
+
+

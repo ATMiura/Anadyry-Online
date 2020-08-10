@@ -1,0 +1,278 @@
+extends _layouts/_base
+
+append vars
+	-
+		var title = 'Публикация подробная. Галерея'
+		var isAuth = true
+		var psotDetail = true
+
+block content
+	.detail.with_gallery
+		.post__detail
+			.post__item
+				.post__content
+					.post__header.colored
+						.post-tag_dots
+							.tag
+								.tag__box
+									.tag__item
+										a.tag__link(href="#", style="color: #29B2B7;") # aфиша
+									.tag__item
+										a.tag__link(href="#", style="color: #923BDD;") # развлечения
+									.tag__item
+										a.tag__link(href="#", style="color: #4EBB7E;") # кино
+							.dots(data-tooltip="dots")
+								+icon('dots_v')
+						.post__title
+							h1 Сатира и манифест о проблемах технологий: почему стоит посмотреть закончившийся сериал «Кремниевая долина»
+						.post__gallery__thumbs
+							.swiper-container.gallery-top
+								.swiper-wrapper
+									.swiper-slide
+										img(src="images/post__gallery__thumbs_big.jpg")
+									.swiper-slide
+										img(src="images/post__gallery__thumbs_big.jpg")
+									.swiper-slide
+										img(src="images/post__gallery__thumbs_big.jpg")
+									.swiper-slide
+										img(src="images/post__gallery__thumbs_big.jpg")
+									.swiper-slide
+										img(src="images/post__gallery__thumbs_big.jpg")
+									.swiper-slide
+										img(src="images/post__gallery__thumbs_big.jpg")
+								.swiper-buttons
+									.swiper-button-next.swiper-button-white
+									.swiper-button-prev.swiper-button-white
+								div.swiper-total(id="swiper-total") 0 Фото
+
+							.swiper-container.gallery-thumbs
+								.swiper-wrapper
+									.swiper-slide
+										img(src="images/post__gallery__thumbs_small_1.jpg")
+									.swiper-slide
+										img(src="images/post__gallery__thumbs_small_2.jpg")
+									.swiper-slide
+										img(src="images/post__gallery__thumbs_small_3.jpg")
+									.swiper-slide
+										img(src="images/post__gallery__thumbs_small_1.jpg")
+									.swiper-slide
+										img(src="images/post__gallery__thumbs_small_2.jpg")
+									.swiper-slide
+										img(src="images/post__gallery__thumbs_small_3.jpg")
+					.post__body
+						.post__excerpt
+							p «Практически документальное» шоу с реалистичной атмосферой стартапов и героями, написанными по реальным предпринимателям. Точность деталей одобрил фанат сериала Билл Гейтс.
+
+							p «Только у мыса Обсервации кое-где есть небольшие возвышенности, кочки, но трещин нет. Допустимая нагрузка на лёд составляет 10 тонн, просьба к водителям соблюдать её, дистанцию и скоростной режим для лучшей сохранности переправы», – отметил старший государственный инспектор Анадырского участка Центра ГИМС Анатолий Воронцов.
+
+							blockquote.blockquote
+								.blockquote__user
+									.user
+										.user-avatar
+											.user-avatar-photo
+												img(src="images/face_1.png")
+										.user-name Сергей Бабкин
+								.blockquote__content
+									p «Практически документальное» шоу с реалистичной атмосферой стартапов и героями, написанными по реальным предпринимателям. Точность деталей одобрил фанат сериала Билл Гейтс.
+
+							p «Практически документальное» шоу с реалистичной атмосферой стартапов и героями, написанными по реальным предпринимателям. Точность деталей одобрил фанат сериала Билл Гейтс.
+
+							p «Только у мыса Обсервации кое-где есть небольшие возвышенности, кочки, но трещин нет. Допустимая нагрузка на лёд составляет 10 тонн, просьба к водителям соблюдать её, дистанцию и скоростной режим для лучшей сохранности переправы», – отметил старший государственный инспектор Анадырского участка Центра ГИМС Анатолий Воронцов.
+					.post__footer
+						.post-tag_dots
+							.tag
+								.tag__box
+									.tag__item
+										a.tag__link(href="#", style="color: #29B2B7;") # экономика
+									.tag__item
+										a.tag__link(href="#", style="color: #923BDD;") # статистика
+									.tag__item
+										a.tag__link(href="#", style="color: #4EBB7E;") # зарплаты
+									.tag__item
+										a.tag__link(href="#", style="color: #FC7991;") # жкх
+
+						.post__btns
+							.user
+								.user-avatar
+									.user-avatar-photo
+										img(src="images/face_1.png")
+								.user-info
+									.user-portal Портал
+										a(href="#") Prochukotku.ru
+									.user-post-date 20 нояб. 2019 · 16м
+								.user-follow
+									.btn.btn-small + Подписаться
+								.user-dots.dots(data-tooltip="dots")
+									+icon('dots_v')
+							include _parts/_like_box_post
+
+						.post__social
+
+					form.post__reply
+						h2 2 Комментария
+						.form-group.form-control.textarea
+							textarea(rows='3', placeholder="Написать комментарий")
+
+							.post__reply__actions
+								.post__reply__actions__add
+									.btn.btn-dark
+										+icon('textarea-add-img')
+									.btn.btn-dark
+										+icon('textarea-add-link')
+								.post__reply__actions__send
+									button.btn.btn-primary Отправить
+
+						.post__reply__list
+							.post__reply__item
+								.user
+									.user-avatar
+										.user-avatar-photo
+											img(src="images/face_1.png")
+									.user-info
+										.user-portal Портал
+											a(href="#") Prochukotku.ru
+										.user-post-date 20 нояб. 2019 · 16м
+									.user-follow
+										.btn.btn-small + Подписаться
+									.user-dots.dots(data-tooltip="dots")
+										+icon('dots_v')
+								.like_box
+									.like__list
+										.icon_box.like__item
+											+icon('like')
+											span.like__value 25
+										.icon_box.like__item
+											+icon('dislike')
+											span.like__value 5
+								.post__reply__comment
+									.reply-comment__text Очень длинный комментарий в одну строку
+								.post__reply__footer
+									a.post__reply__link Ответить
+									.post__reply__bookmarks
+										+icon('bookmarks')
+									.post__reply__dots(data-tooltip="dots")
+										+icon('dots-horizontal')
+
+							.post__reply__item.deep
+								.user
+									.user-avatar
+										.user-avatar-photo
+											img(src="images/face_1.png")
+									.user-info
+										.user-portal Портал
+											a(href="#") Prochukotku.ru
+										.user-post-date 20 нояб. 2019 · 16м
+									.user-follow
+										.btn.btn-small + Подписаться
+									.user-dots.dots(data-tooltip="dots")
+										+icon('dots_v')
+								.like_box
+									.like__list
+										.icon_box.like__item
+											+icon('like')
+											span.like__value 25
+										.icon_box.like__item
+											+icon('dislike')
+											span.like__value 5
+								.post__reply__comment
+									.reply-comment__text Очень длинный комментарий в одну строку
+								.post__reply__footer
+									a.post__reply__link Ответить
+									.post__reply__bookmarks
+										+icon('bookmarks')
+									.post__reply__dots(data-tooltip="dots")
+										+icon('dots-horizontal')
+
+
+
+
+							button.btn.btn-dark.btn-big.show_more.mx-auto Показать еще 25 комментариев
+
+
+	.wall
+		.title
+			h2.h1 Другие новости
+		.post__list
+			.post__item
+				.post__content
+					.post__header
+						.post-tag_dots
+							.tag
+								.tag__box
+									.tag__item
+										a.tag__link(href="#", style="color: #29B2B7;") # aфиша
+									.tag__item
+										a.tag__link(href="#", style="color: #923BDD;") # развлечения
+									.tag__item
+										a.tag__link(href="#", style="color: #4EBB7E;") # кино
+							.dots(data-tooltip="dots")
+								+icon('dots_v')
+						.post__title
+							h2 Сатира и манифест о проблемах технологий: почему стоит посмотреть закончившийся сериал «Кремниевая долина»
+					.post__body
+						.post__excerpt
+							| «Практически документальное» шоу с реалистичной атмосферой стартапов и героями, написанными по реальным предпринимателям. Точность деталей одобрил фанат сериала Билл Гейтс.
+					.post__footer
+						.post__btns
+							.user
+								.user-avatar
+									.user-avatar-photo
+										img(src="images/face_1.png")
+								.user-info
+									.user-portal Портал
+										a(href="#") Prochukotku.ru
+									.user-post-date 20 нояб. 2019 · 16м
+								.user-dots.dots(data-tooltip="dots")
+									+icon('dots_v')
+							include _parts/_like_box_post
+			.post__item.colored(style="background: #3282B8;", data-color="#3282B8")
+				.post__content
+					.post__header
+						.post-tag_dots
+							.tag
+								.tag__box
+									.tag__item
+										a.tag__link(href="#", style="color: #2290D0;") # экономика
+									.tag__item
+										a.tag__link(href="#", style="color: #923BDD;") # статистика
+									.tag__item
+										a.tag__link(href="#", style="color: #4EBB7E;") # зарплаты
+							.dots(data-tooltip="dots")
+								+icon('dots_v')
+						.post__title
+							h2 Сатира и манифест о проблемах технологий: почему стоит посмотреть закончившийся сериал «Кремниевая долина»
+					.post__body
+						.post__excerpt
+							| «Практически документальное» шоу с реалистичной атмосферой стартапов и героями, написанными по реальным предпринимателям. Точность деталей одобрил фанат сериала Билл Гейтс.
+						.post__gallery
+							.post__gallery__item.post__gallery__item__width__1
+								img(src="images/post__gallery__item__1.jpg")
+							.post__gallery__item.post__gallery__item__width__2
+								img(src="images/post__gallery__item__2.jpg")
+							.post__gallery__item.post__gallery__item__width__2
+								img(src="images/post__gallery__item__5.jpg")
+							.post__gallery__item.post__gallery__item__width__2
+								img(src="images/post__gallery__item__4.jpg")
+							.post__gallery__item.post__gallery__item__width__2
+								img(src="images/post__gallery__item__3.jpg")
+					.post__footer
+						.post__btns
+							.user
+								.user-avatar
+									.user-avatar-photo
+										img(src="images/face_1.png")
+								.user-info
+									.user-portal Портал
+										a(href="#") Prochukotku.ru
+									.user-post-date 20 нояб. 2019 · 16м
+								.user-dots.dots(data-tooltip="dots")
+									+icon('dots_v')
+							include _parts/_like_box_post
+
+
+
+
+
+
+
+

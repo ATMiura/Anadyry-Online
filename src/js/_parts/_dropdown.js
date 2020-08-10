@@ -6,4 +6,5 @@ $(document).on('click', '.dropdown__label',function () {
 	$(this).parents('.dropdown').find('.dropdown__label').text($(this).text());
 	$(this).parents('.dropdown').toggleClass('is-open');
 	$(this).parents('.dropdown').find('.dropdown__value').val($(this).data('value'));
+	$(this).parents('.dropdown').addClass('is-valid');
 });

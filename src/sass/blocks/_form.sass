@@ -2,28 +2,115 @@
 .form-group:last-child
 	margin-bottom: 0
 
-.form_field
-	background: #FFFFFF
-	border-radius: 2px
+.form
+	&_field
+		background: #FFFFFF
+		border-radius: 2px
 
-.form-control
-	height: calc(1.5em + .75rem + 7px)
-	padding: 0.563rem 1rem 0.5rem 2.813rem
-	font-size: inherit
-	line-height: 1.5
-	color: var(--color-3)
-	&.textarea
-		padding-top: 1.063rem
-		padding-bottom: 1.875rem
-		height: initial
+	&-control
+		height: calc(1.5em + .75rem + 7px)
+		padding: 0.563rem 1rem 0.5rem 0.563rem
+		font-size: inherit
+		line-height: 1.5
+		color: var(--color-3)
+		border: 0
+		&.inp-search
+			padding: 0.563rem 1rem 0.5rem 2.813rem
+		&.textarea
+			padding-top: 1.063rem
+			padding-bottom: 1.875rem
+			height: initial
 
-	textarea
+		textarea
+			width: 100%
+			display: block
+			margin-bottom: 10px
+			min-height: 150px
+
+	&-row
+		margin: 0 -15px
+		.form-group
+			padding: 0 15px
+			margin-bottom: 20px
+
+	&-group
 		width: 100%
-		display: block
-		margin-bottom: 10px
+		label
+			width: 100%
+		.btn-small
+			margin-top: 12px
+	&__heading
+		font-size: 1rem
+		line-height: 1.188rem
+		font-weight: 600
+		color: var(--color-8)
+		margin-bottom: 16px
+	&-text
+		font-size: 0.75rem
+		line-height: 0.938rem
+		color: var(--color-22)
+
+
+	/* опрос */
+	&-quiz-radio
+		&__list
+			display: flex
+			align-items: center
+			flex-wrap: wrap
+			width: 100%
+		&__item
+			&:not(:last-child)
+				margin-right: 15px
+		&__label
+			width: 78px !important
+			height: 62px
+			display: flex
+			align-items: center
+			justify-content: center
+			padding: 5px
+			border-radius: 3px
+			cursor: pointer
+			position: relative
+			&:before
+				content: ""
+				width: 20px
+				height: 20px
+				background-position: center center
+				background-repeat: no-repeat
+				position: absolute
+				top: -6px
+				right: -6px
+		&__input
+			display: none
+
+.form-quiz-radio__input:checked~.form-quiz-radio__label:before
+	background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle r='9' transform='matrix(-1 0 0 1 10 10)' fill='white' stroke='%23EFF3F8' stroke-width='2'/%3E%3Cpath d='M7 10.0292L9.31052 12L14 8' stroke='%2358CD55' stroke-width='2'/%3E%3C/svg%3E%0A")
+
+
+/* событие */
+.event
+	&__list
+	&__item
+		display: flex
+		align-items: center
+		&:not(:last-child)
+			margin-bottom: 10px
+		&__date
+			max-width: 220px
+			margin-right: 15px
+		&__time
+			max-width: 75px
+		&__remove
+			cursor: pointer
+			margin-left: 10px
+			.icon-trash-basket
+				fill: var(--color-23)
+
 
 .inp-search
-	background: url(../images/icon-search.svg) no-repeat
+	background-image: url(../images/icon-search.svg)
+	background-repeat: no-repeat
+	background-color: var(--color-white)
 	background-position: center left 14px
 
 	border: 1px solid #E2E2E2
@@ -33,3 +120,112 @@
 
 	&:focus
 		//background: transparent
+
+/* valid */
+.is
+	&-valid
+		&:after
+			content: ""
+			background-image: url("data:image/svg+xml,%3Csvg width='16' height='12' viewBox='0 0 16 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.46484 5.56881L6.0293 10.1333L15.2934 0.869141' stroke='%2358CD55' stroke-width='2'/%3E%3C/svg%3E%0A")
+			background-repeat: no-repeat
+			background-position: center center
+			width: 14px
+			height: 10px
+			position: absolute
+			right: 0
+			top: 50%
+			transform: translate(23px, 70%)
+		&.form-control
+
+	&-invalid
+
+.file-upload
+	.form__heading
+		margin-bottom: 7px
+	&__small
+		margin-bottom: 20px
+	&__label
+		&__multi
+			background-color: var(--color-21)
+			width: 100%
+			height: 95px
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: 0.875rem
+			line-height: 1.063rem
+			color: var(--color-3)
+			cursor: pointer
+			&:before
+				content: ""
+				display: inline-block
+				margin-right: 25px
+				width: 24px
+				height: 21px
+				background-image: url("data:image/svg+xml,%3Csvg width='24' height='21' viewBox='0 0 24 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.9134 9.49228C12.2311 9.49228 13.3033 8.41712 13.3033 7.0956C13.3033 5.77389 12.2311 4.69873 10.9134 4.69873C9.59571 4.69873 8.52368 5.77389 8.52368 7.0956C8.52368 8.41712 9.59571 9.49228 10.9134 9.49228ZM10.9134 6.10445C11.4583 6.10445 11.9016 6.54905 11.9016 7.0956C11.9016 7.64196 11.4583 8.08656 10.9134 8.08656C10.3686 8.08656 9.92531 7.64196 9.92531 7.0956C9.92531 6.54905 10.3686 6.10445 10.9134 6.10445Z' fill='%23AFAFAF'/%3E%3Cpath d='M23.1265 0.208984H0.952319C0.470692 0.208984 0.0788574 0.601964 0.0788574 1.085V19.9089C0.0788574 20.3919 0.470692 20.7849 0.952319 20.7849H23.1265C23.6081 20.7849 23.9999 20.3919 23.9999 19.9089V1.085C23.9999 0.601964 23.6081 0.208984 23.1265 0.208984ZM22.5983 1.61471V12.7389L18.1901 8.31769C17.9027 8.02996 17.4353 8.03014 17.148 8.31824L10.9135 14.571L6.93113 10.5771C6.79188 10.4373 6.60664 10.3602 6.40954 10.3602C6.21261 10.3602 6.02756 10.4371 5.88831 10.5767L1.48048 14.9974V1.61471H22.5983ZM1.48048 19.3792V16.9854L6.40954 12.0419L10.3918 16.0358C10.5312 16.1756 10.7164 16.2529 10.9135 16.2529C11.1103 16.2529 11.2955 16.1758 11.4346 16.0362L17.6693 9.78327L22.5985 14.7269V19.3792H1.48048Z' fill='%23AFAFAF'/%3E%3C/svg%3E%0A")
+				background-repeat: no-repeat
+				background-position: center center
+	//&__btn
+		display: flex !important
+		align-items: center
+		&:before
+			content: ""
+			display: inline-block
+			background-repeat: no-repeat
+			background-position: center left
+			margin-right: 8px
+			width: 17px
+			height: 17px
+	&__input
+		display: none
+	&-list
+		display: flex
+		flex-wrap: wrap
+		&__item
+			position: relative
+			padding: 0
+			&[class*=col-]
+				padding: 0 15px
+				.file-upload__remove
+					right: 22px
+	&__remove
+		width: 30px
+		height: 30px
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: var(--color-4)
+
+		position: absolute
+		right: 7px
+		bottom: 7px
+		cursor: pointer
+
+.custom
+	&-checkbox
+	&-control
+		padding-left: 0
+		&-input
+			display: none
+		&-label
+			border-color: var(--color-20)
+			display: flex
+			align-items: center
+			&:before
+				width: 22px
+				height: 22px
+				border-radius: 2px
+				margin-right: 10px
+				top: 0
+				left: 0
+				position: relative
+			&:after
+				display: none
+
+
+.custom-control-input:checked~.custom-control-label::before
+	background-image: url("data:image/svg+xml,%3Csvg width='11' height='10' viewBox='0 0 11 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4.55109L3.97067 8L10 1' stroke='%23737373' stroke-width='2'/%3E%3C/svg%3E%0A")
+	background-position: center center
+	background-repeat: no-repeat
+	background-color: var(--color-white)
+	border-color: var(--color-20)

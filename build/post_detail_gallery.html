@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Публикация подробная. Галерея</title>
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png">
+		<link rel="icon" type="image/png" href="images/favicon/favicon-196x196.png" sizes="196x196">
+		<link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="images/favicon/favicon-128.png" sizes="128x128">
+		<meta name="application-name" content="&amp;nbsp;">
+		<meta name="msapplication-TileColor" content="#FFFFFF">
+		<meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+		<meta name="msapplication-square70x70logo" content="images/favicon/mstile-70x70.png">
+		<meta name="msapplication-square150x150logo" content="images/favicon/mstile-150x150.png">
+		<meta name="msapplication-wide310x150logo" content="images/favicon/mstile-310x150.png">
+		<meta name="msapplication-square310x310logo" content="images/favicon/mstile-310x310.png">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/main.css" type="text/css">
+	</head>
+	<body>
+		<header class="header">
+			<!--if isAuth == true-->
+			<!--else-->
+			<!--+icon('m-search')-->
+			<div class="container">
+				<div class="row">
+					<div class="col-2 header__logo"><a href="/">
+							<svg class="icon icon-logo ">
+								<use xlink:href="images/sprites.svg#logo"></use>
+							</svg></a></div>
+					<div class="col-md-8 header__search" data-header-search="search">
+						<form>
+							<div class="form-group">
+								<input class="form-control inp-search form_field" id="header__search" type="text" placeholder="">
+							</div>
+						</form>
+					</div>
+					<div class="col-2 header__userbar logged">
+						<div class="icon_box" data-icon="bell" data-dropdown="notice">
+							<svg class="icon icon-bell ">
+								<use xlink:href="images/sprites.svg#bell"></use>
+							</svg>
+							<div class="notif_quantity">1</div>
+						</div>
+						<div class="user">
+							<div class="user-avatar">
+								<div class="user-avatar-name" style="background-color: #D7F0E2; color: #5FB284">АЛ</div>
+							</div>
+						</div>
+						<div class="icon_box" data-icon="services" data-dropdown="services">
+							<svg class="icon icon-menu ">
+								<use xlink:href="images/sprites.svg#menu"></use>
+							</svg>
+						</div><a class="post_create" href="#">
+							<svg class="icon icon-pencil ">
+								<use xlink:href="images/sprites.svg#pencil"></use>
+							</svg></a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<div class="page">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 sidebar sidebar_left">
+							<div class="sidebar_inner sidebar_left_inner">
+								<nav class="navbar navbar-expand-lg nav_main">
+									<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+									<div class="collapse navbar-collapse" id="navbarNav">
+										<ul class="navbar-nav d-flex flex-column">
+																					<li class="nav-item"><a class="nav-link" href="#"><span class="nav-link_circle"><span class="nav-link_circle_inner"></span></span>
+																							<div class="nav-link_text">Новости</div></a></li>
+											<li class="nav-item"><a class="nav-link active" href="#"><span class="nav-link_circle"><span class="nav-link_circle_inner"></span></span>
+													<div class="nav-link_text">Есть мнение</div></a></li>
+																					<li class="nav-item"><a class="nav-link" href="#"><span class="nav-link_circle"><span class="nav-link_circle_inner"></span></span>
+																							<div class="nav-link_text">Афиша</div></a></li>
+																					<li class="nav-item"><a class="nav-link" href="#"><span class="nav-link_circle"><span class="nav-link_circle_inner"></span></span>
+																							<div class="nav-link_text">События</div></a></li>
+																					<li class="nav-item"><a class="nav-link" href="#"><span class="nav-link_circle"><span class="nav-link_circle_inner"></span></span>
+																							<div class="nav-link_text">Истории</div></a></li>
+																					<li class="nav-item"><a class="nav-link" href="#"><span class="nav-link_circle"><span class="nav-link_circle_inner"></span></span>
+																							<div class="nav-link_text">Диалог с властью</div></a></li>
+																					<li class="nav-item"><a class="nav-link" href="#"><span class="nav-link_circle"><span class="nav-link_circle_inner"></span></span>
+																							<div class="nav-link_text">Новости</div></a></li>
+																					<li class="nav-item"><a class="nav-link" href="#"><span class="nav-link_circle"><span class="nav-link_circle_inner"></span></span>
+																							<div class="nav-link_text">Есть мнение</div></a></li>
+																					<li class="nav-item"><a class="nav-link" href="#"><span class="nav-link_circle"><span class="nav-link_circle_inner"></span></span>
+																							<div class="nav-link_text">Афиша</div></a></li>
+																					<li class="nav-item"><a class="nav-link" href="#"><span class="nav-link_circle"><span class="nav-link_circle_inner"></span></span>
+																							<div class="nav-link_text">События</div></a></li>
+																					<li class="nav-item"><a class="nav-link" href="#"><span class="nav-link_circle"><span class="nav-link_circle_inner"></span></span>
+																							<div class="nav-link_text">Истории</div></a></li>
+																					<li class="nav-item"><a class="nav-link" href="#"><span class="nav-link_circle"><span class="nav-link_circle_inner"></span></span>
+																							<div class="nav-link_text">Диалог с властью</div></a></li><span class="show_more" data-menu-show-more="">
+												<div class="show_more_text">Показать все</div></span>
+										</ul>
+									</div>
+								</nav>
+								<nav class="nav-info">
+									<ul class="nav-info__list">
+										<li class="nav-info__item"><a class="nav-info__link" href="#">Конфиденциальность</a></li>
+										<li class="nav-info__item"><a class="nav-info__link" href="#">Соглашение пользователя</a></li>
+										<li class="nav-info__item"><span class="nav-info__link more" data-tooltip="nav-info-more">Еще</span></li>
+									</ul>
+								</nav>
+								<div class="social_age">
+									<div class="social">
+										<div class="icon_box"><a class="social_link" href="#">
+												<svg class="icon icon-vk ">
+													<use xlink:href="images/sprites.svg#vk"></use>
+												</svg></a></div>
+										<div class="icon_box"><a class="social_link" href="#">
+												<svg class="icon icon-instagram ">
+													<use xlink:href="images/sprites.svg#instagram"></use>
+												</svg></a></div>
+										<div class="icon_box"><a class="social_link" href="#">
+												<svg class="icon icon-facebook ">
+													<use xlink:href="images/sprites.svg#facebook"></use>
+												</svg></a></div>
+									</div>
+									<div class="age">18+</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 content">
+							<div class="detail with_gallery">
+								<div class="post__detail">
+									<div class="post__item">
+										<div class="post__content">
+											<div class="post__header colored">
+												<div class="post-tag_dots">
+													<div class="tag">
+														<div class="tag__box">
+															<div class="tag__item"><a class="tag__link" href="#" style="color: #29B2B7;"># aфиша</a></div>
+															<div class="tag__item"><a class="tag__link" href="#" style="color: #923BDD;"># развлечения</a></div>
+															<div class="tag__item"><a class="tag__link" href="#" style="color: #4EBB7E;"># кино</a></div>
+														</div>
+													</div>
+													<div class="dots" data-tooltip="dots">
+														<svg class="icon icon-dots_v ">
+															<use xlink:href="images/sprites.svg#dots_v"></use>
+														</svg>
+													</div>
+												</div>
+												<div class="post__title">
+													<h1>Сатира и манифест о проблемах технологий: почему стоит посмотреть закончившийся сериал «Кремниевая долина»</h1>
+												</div>
+												<div class="post__gallery__thumbs">
+													<div class="swiper-container gallery-top">
+														<div class="swiper-wrapper">
+															<div class="swiper-slide"><img src="images/post__gallery__thumbs_big.jpg"></div>
+															<div class="swiper-slide"><img src="images/post__gallery__thumbs_big.jpg"></div>
+															<div class="swiper-slide"><img src="images/post__gallery__thumbs_big.jpg"></div>
+															<div class="swiper-slide"><img src="images/post__gallery__thumbs_big.jpg"></div>
+															<div class="swiper-slide"><img src="images/post__gallery__thumbs_big.jpg"></div>
+															<div class="swiper-slide"><img src="images/post__gallery__thumbs_big.jpg"></div>
+														</div>
+														<div class="swiper-buttons">
+															<div class="swiper-button-next swiper-button-white"></div>
+															<div class="swiper-button-prev swiper-button-white"></div>
+														</div>
+														<div class="swiper-total" id="swiper-total">0 Фото</div>
+													</div>
+													<div class="swiper-container gallery-thumbs">
+														<div class="swiper-wrapper">
+															<div class="swiper-slide"><img src="images/post__gallery__thumbs_small_1.jpg"></div>
+															<div class="swiper-slide"><img src="images/post__gallery__thumbs_small_2.jpg"></div>
+															<div class="swiper-slide"><img src="images/post__gallery__thumbs_small_3.jpg"></div>
+															<div class="swiper-slide"><img src="images/post__gallery__thumbs_small_1.jpg"></div>
+															<div class="swiper-slide"><img src="images/post__gallery__thumbs_small_2.jpg"></div>
+															<div class="swiper-slide"><img src="images/post__gallery__thumbs_small_3.jpg"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="post__body">
+												<div class="post__excerpt">
+													<p>«Практически документальное» шоу с реалистичной атмосферой стартапов и героями, написанными по реальным предпринимателям. Точность деталей одобрил фанат сериала Билл Гейтс.</p>
+													<p>«Только у мыса Обсервации кое-где есть небольшие возвышенности, кочки, но трещин нет. Допустимая нагрузка на лёд составляет 10 тонн, просьба к водителям соблюдать её, дистанцию и скоростной режим для лучшей сохранности переправы», – отметил старший государственный инспектор Анадырского участка Центра ГИМС Анатолий Воронцов.</p>
+													<blockquote class="blockquote">
+														<div class="blockquote__user">
+															<div class="user">
+																<div class="user-avatar">
+																	<div class="user-avatar-photo"><img src="images/face_1.png"></div>
+																</div>
+																<div class="user-name">Сергей Бабкин</div>
+															</div>
+														</div>
+														<div class="blockquote__content">
+															<p>«Практически документальное» шоу с реалистичной атмосферой стартапов и героями, написанными по реальным предпринимателям. Точность деталей одобрил фанат сериала Билл Гейтс.</p>
+														</div>
+													</blockquote>
+													<p>«Практически документальное» шоу с реалистичной атмосферой стартапов и героями, написанными по реальным предпринимателям. Точность деталей одобрил фанат сериала Билл Гейтс.</p>
+													<p>«Только у мыса Обсервации кое-где есть небольшие возвышенности, кочки, но трещин нет. Допустимая нагрузка на лёд составляет 10 тонн, просьба к водителям соблюдать её, дистанцию и скоростной режим для лучшей сохранности переправы», – отметил старший государственный инспектор Анадырского участка Центра ГИМС Анатолий Воронцов.</p>
+												</div>
+											</div>
+											<div class="post__footer">
+												<div class="post-tag_dots">
+													<div class="tag">
+														<div class="tag__box">
+															<div class="tag__item"><a class="tag__link" href="#" style="color: #29B2B7;"># экономика</a></div>
+															<div class="tag__item"><a class="tag__link" href="#" style="color: #923BDD;"># статистика</a></div>
+															<div class="tag__item"><a class="tag__link" href="#" style="color: #4EBB7E;"># зарплаты</a></div>
+															<div class="tag__item"><a class="tag__link" href="#" style="color: #FC7991;"># жкх</a></div>
+														</div>
+													</div>
+												</div>
+												<div class="post__btns">
+													<div class="user">
+														<div class="user-avatar">
+															<div class="user-avatar-photo"><img src="images/face_1.png"></div>
+														</div>
+														<div class="user-info">
+															<div class="user-portal">Портал<a href="#">Prochukotku.ru</a></div>
+															<div class="user-post-date">20 нояб. 2019 · 16м</div>
+														</div>
+														<div class="user-follow">
+															<div class="btn btn-small">+ Подписаться</div>
+														</div>
+														<div class="user-dots dots" data-tooltip="dots">
+															<svg class="icon icon-dots_v ">
+																<use xlink:href="images/sprites.svg#dots_v"></use>
+															</svg>
+														</div>
+													</div>
+													<div class="like_box">
+														<div class="like__user__list">
+															<div class="user">
+																<div class="user-avatar">
+																	<div class="user-avatar-photo"><img src="images/face_1.png"></div>
+																</div>
+															</div>
+															<div class="user">
+																<div class="user-avatar">
+																	<div class="user-avatar-name" style="background-color: #A5E2E4; color: #29B2B7">СВ</div>
+																</div>
+															</div>
+															<div class="user">
+																<div class="user-avatar">
+																	<div class="user-avatar-name" style="background-color: #A3D6B9; color: #628772">ТА</div>
+																</div>
+															</div>
+															<div class="user">
+																<div class="user-avatar">
+																	<div class="user-avatar-name" style="background-color: #B0CEF0; color: #6480A2">СВ</div>
+																</div>
+															</div>
+														</div>
+														<div class="like__list">
+															<div class="icon_box like__item">
+																<svg class="icon icon-like ">
+																	<use xlink:href="images/sprites.svg#like"></use>
+																</svg><span class="like__value">25</span>
+															</div>
+															<div class="icon_box like__item">
+																<svg class="icon icon-dislike ">
+																	<use xlink:href="images/sprites.svg#dislike"></use>
+																</svg><span class="like__value">5</span>
+															</div>
+															<div class="icon_box like__item">
+																<svg class="icon icon-comments ">
+																	<use xlink:href="images/sprites.svg#comments"></use>
+																</svg><span class="like__value">36</span>
+															</div>
+															<div class="icon_box like__item">
+																<svg class="icon icon-views ">
+																	<use xlink:href="images/sprites.svg#views"></use>
+																</svg><span class="like__value">126</span>
+															</div>
+															<div class="icon_box like__item">
+																<svg class="icon icon-bookmarks ">
+																	<use xlink:href="images/sprites.svg#bookmarks"></use>
+																</svg>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="post__social"></div>
+											</div>
+											<form class="post__reply">
+												<h2>2 Комментария</h2>
+												<div class="form-group form-control textarea">
+													<textarea rows="3" placeholder="Написать комментарий"></textarea>
+													<div class="post__reply__actions">
+														<div class="post__reply__actions__add">
+															<div class="btn btn-dark">
+																<svg class="icon icon-textarea-add-img ">
+																	<use xlink:href="images/sprites.svg#textarea-add-img"></use>
+																</svg>
+															</div>
+															<div class="btn btn-dark">
+																<svg class="icon icon-textarea-add-link ">
+																	<use xlink:href="images/sprites.svg#textarea-add-link"></use>
+																</svg>
+															</div>
+														</div>
+														<div class="post__reply__actions__send">
+															<button class="btn btn-primary">Отправить</button>
+														</div>
+													</div>
+												</div>
+												<div class="post__reply__list">
+													<div class="post__reply__item">
+														<div class="user">
+															<div class="user-avatar">
+																<div class="user-avatar-photo"><img src="images/face_1.png"></div>
+															</div>
+															<div class="user-info">
+																<div class="user-portal">Портал<a href="#">Prochukotku.ru</a></div>
+																<div class="user-post-date">20 нояб. 2019 · 16м</div>
+															</div>
+															<div class="user-follow">
+																<div class="btn btn-small">+ Подписаться</div>
+															</div>
+															<div class="user-dots dots" data-tooltip="dots">
+																<svg class="icon icon-dots_v ">
+																	<use xlink:href="images/sprites.svg#dots_v"></use>
+																</svg>
+															</div>
+														</div>
+														<div class="like_box">
+															<div class="like__list">
+																<div class="icon_box like__item">
+																	<svg class="icon icon-like ">
+																		<use xlink:href="images/sprites.svg#like"></use>
+																	</svg><span class="like__value">25</span>
+																</div>
+																<div class="icon_box like__item">
+																	<svg class="icon icon-dislike ">
+																		<use xlink:href="images/sprites.svg#dislike"></use>
+																	</svg><span class="like__value">5</span>
+																</div>
+															</div>
+														</div>
+														<div class="post__reply__comment">
+															<div class="reply-comment__text">Очень длинный комментарий в одну строку</div>
+														</div>
+														<div class="post__reply__footer"><a class="post__reply__link">Ответить</a>
+															<div class="post__reply__bookmarks">
+																<svg class="icon icon-bookmarks ">
+																	<use xlink:href="images/sprites.svg#bookmarks"></use>
+																</svg>
+															</div>
+															<div class="post__reply__dots" data-tooltip="dots">
+																<svg class="icon icon-dots-horizontal ">
+																	<use xlink:href="images/sprites.svg#dots-horizontal"></use>
+																</svg>
+															</div>
+														</div>
+													</div>
+													<div class="post__reply__item deep">
+														<div class="user">
+															<div class="user-avatar">
+																<div class="user-avatar-photo"><img src="images/face_1.png"></div>
+															</div>
+															<div class="user-info">
+																<div class="user-portal">Портал<a href="#">Prochukotku.ru</a></div>
+																<div class="user-post-date">20 нояб. 2019 · 16м</div>
+															</div>
+															<div class="user-follow">
+																<div class="btn btn-small">+ Подписаться</div>
+															</div>
+															<div class="user-dots dots" data-tooltip="dots">
+																<svg class="icon icon-dots_v ">
+																	<use xlink:href="images/sprites.svg#dots_v"></use>
+																</svg>
+															</div>
+														</div>
+														<div class="like_box">
+															<div class="like__list">
+																<div class="icon_box like__item">
+																	<svg class="icon icon-like ">
+																		<use xlink:href="images/sprites.svg#like"></use>
+																	</svg><span class="like__value">25</span>
+																</div>
+																<div class="icon_box like__item">
+																	<svg class="icon icon-dislike ">
+																		<use xlink:href="images/sprites.svg#dislike"></use>
+																	</svg><span class="like__value">5</span>
+																</div>
+															</div>
+														</div>
+														<div class="post__reply__comment">
+															<div class="reply-comment__text">Очень длинный комментарий в одну строку</div>
+														</div>
+														<div class="post__reply__footer"><a class="post__reply__link">Ответить</a>
+															<div class="post__reply__bookmarks">
+																<svg class="icon icon-bookmarks ">
+																	<use xlink:href="images/sprites.svg#bookmarks"></use>
+																</svg>
+															</div>
+															<div class="post__reply__dots" data-tooltip="dots">
+																<svg class="icon icon-dots-horizontal ">
+																	<use xlink:href="images/sprites.svg#dots-horizontal"></use>
+																</svg>
+															</div>
+														</div>
+													</div>
+													<button class="btn btn-dark btn-big show_more mx-auto">Показать еще 25 комментариев</button>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="wall">
+								<div class="title">
+									<h2 class="h1">Другие новости</h2>
+								</div>
+								<div class="post__list">
+									<div class="post__item">
+										<div class="post__content">
+											<div class="post__header">
+												<div class="post-tag_dots">
+													<div class="tag">
+														<div class="tag__box">
+															<div class="tag__item"><a class="tag__link" href="#" style="color: #29B2B7;"># aфиша</a></div>
+															<div class="tag__item"><a class="tag__link" href="#" style="color: #923BDD;"># развлечения</a></div>
+															<div class="tag__item"><a class="tag__link" href="#" style="color: #4EBB7E;"># кино</a></div>
+														</div>
+													</div>
+													<div class="dots" data-tooltip="dots">
+														<svg class="icon icon-dots_v ">
+															<use xlink:href="images/sprites.svg#dots_v"></use>
+														</svg>
+													</div>
+												</div>
+												<div class="post__title">
+													<h2>Сатира и манифест о проблемах технологий: почему стоит посмотреть закончившийся сериал «Кремниевая долина»</h2>
+												</div>
+											</div>
+											<div class="post__body">
+												<div class="post__excerpt">«Практически документальное» шоу с реалистичной атмосферой стартапов и героями, написанными по реальным предпринимателям. Точность деталей одобрил фанат сериала Билл Гейтс.</div>
+											</div>
+											<div class="post__footer">
+												<div class="post__btns">
+													<div class="user">
+														<div class="user-avatar">
+															<div class="user-avatar-photo"><img src="images/face_1.png"></div>
+														</div>
+														<div class="user-info">
+															<div class="user-portal">Портал<a href="#">Prochukotku.ru</a></div>
+															<div class="user-post-date">20 нояб. 2019 · 16м</div>
+														</div>
+														<div class="user-dots dots" data-tooltip="dots">
+															<svg class="icon icon-dots_v ">
+																<use xlink:href="images/sprites.svg#dots_v"></use>
+															</svg>
+														</div>
+													</div>
+													<div class="like_box">
+														<div class="like__user__list">
+															<div class="user">
+																<div class="user-avatar">
+																	<div class="user-avatar-photo"><img src="images/face_1.png"></div>
+																</div>
+															</div>
+															<div class="user">
+																<div class="user-avatar">
+																	<div class="user-avatar-name" style="background-color: #A5E2E4; color: #29B2B7">СВ</div>
+																</div>
+															</div>
+															<div class="user">
+																<div class="user-avatar">
+																	<div class="user-avatar-name" style="background-color: #A3D6B9; color: #628772">ТА</div>
+																</div>
+															</div>
+															<div class="user">
+																<div class="user-avatar">
+																	<div class="user-avatar-name" style="background-color: #B0CEF0; color: #6480A2">СВ</div>
+																</div>
+															</div>
+														</div>
+														<div class="like__list">
+															<div class="icon_box like__item">
+																<svg class="icon icon-like ">
+																	<use xlink:href="images/sprites.svg#like"></use>
+																</svg><span class="like__value">25</span>
+															</div>
+															<div class="icon_box like__item">
+																<svg class="icon icon-dislike ">
+																	<use xlink:href="images/sprites.svg#dislike"></use>
+																</svg><span class="like__value">5</span>
+															</div>
+															<div class="icon_box like__item">
+																<svg class="icon icon-comments ">
+																	<use xlink:href="images/sprites.svg#comments"></use>
+																</svg><span class="like__value">36</span>
+															</div>
+															<div class="icon_box like__item">
+																<svg class="icon icon-views ">
+																	<use xlink:href="images/sprites.svg#views"></use>
+																</svg><span class="like__value">126</span>
+															</div>
+															<div class="icon_box like__item">
+																<svg class="icon icon-bookmarks ">
+																	<use xlink:href="images/sprites.svg#bookmarks"></use>
+																</svg>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="post__item colored" style="background: #3282B8;" data-color="#3282B8">
+										<div class="post__content">
+											<div class="post__header">
+												<div class="post-tag_dots">
+													<div class="tag">
+														<div class="tag__box">
+															<div class="tag__item"><a class="tag__link" href="#" style="color: #2290D0;"># экономика</a></div>
+															<div class="tag__item"><a class="tag__link" href="#" style="color: #923BDD;"># статистика</a></div>
+															<div class="tag__item"><a class="tag__link" href="#" style="color: #4EBB7E;"># зарплаты</a></div>
+														</div>
+													</div>
+													<div class="dots" data-tooltip="dots">
+														<svg class="icon icon-dots_v ">
+															<use xlink:href="images/sprites.svg#dots_v"></use>
+														</svg>
+													</div>
+												</div>
+												<div class="post__title">
+													<h2>Сатира и манифест о проблемах технологий: почему стоит посмотреть закончившийся сериал «Кремниевая долина»</h2>
+												</div>
+											</div>
+											<div class="post__body">
+												<div class="post__excerpt">«Практически документальное» шоу с реалистичной атмосферой стартапов и героями, написанными по реальным предпринимателям. Точность деталей одобрил фанат сериала Билл Гейтс.</div>
+												<div class="post__gallery">
+													<div class="post__gallery__item post__gallery__item__width__1"><img src="images/post__gallery__item__1.jpg"></div>
+													<div class="post__gallery__item post__gallery__item__width__2"><img src="images/post__gallery__item__2.jpg"></div>
+													<div class="post__gallery__item post__gallery__item__width__2"><img src="images/post__gallery__item__5.jpg"></div>
+													<div class="post__gallery__item post__gallery__item__width__2"><img src="images/post__gallery__item__4.jpg"></div>
+													<div class="post__gallery__item post__gallery__item__width__2"><img src="images/post__gallery__item__3.jpg"></div>
+												</div>
+											</div>
+											<div class="post__footer">
+												<div class="post__btns">
+													<div class="user">
+														<div class="user-avatar">
+															<div class="user-avatar-photo"><img src="images/face_1.png"></div>
+														</div>
+														<div class="user-info">
+															<div class="user-portal">Портал<a href="#">Prochukotku.ru</a></div>
+															<div class="user-post-date">20 нояб. 2019 · 16м</div>
+														</div>
+														<div class="user-dots dots" data-tooltip="dots">
+															<svg class="icon icon-dots_v ">
+																<use xlink:href="images/sprites.svg#dots_v"></use>
+															</svg>
+														</div>
+													</div>
+													<div class="like_box">
+														<div class="like__user__list">
+															<div class="user">
+																<div class="user-avatar">
+																	<div class="user-avatar-photo"><img src="images/face_1.png"></div>
+																</div>
+															</div>
+															<div class="user">
+																<div class="user-avatar">
+																	<div class="user-avatar-name" style="background-color: #A5E2E4; color: #29B2B7">СВ</div>
+																</div>
+															</div>
+															<div class="user">
+																<div class="user-avatar">
+																	<div class="user-avatar-name" style="background-color: #A3D6B9; color: #628772">ТА</div>
+																</div>
+															</div>
+															<div class="user">
+																<div class="user-avatar">
+																	<div class="user-avatar-name" style="background-color: #B0CEF0; color: #6480A2">СВ</div>
+																</div>
+															</div>
+														</div>
+														<div class="like__list">
+															<div class="icon_box like__item">
+																<svg class="icon icon-like ">
+																	<use xlink:href="images/sprites.svg#like"></use>
+																</svg><span class="like__value">25</span>
+															</div>
+															<div class="icon_box like__item">
+																<svg class="icon icon-dislike ">
+																	<use xlink:href="images/sprites.svg#dislike"></use>
+																</svg><span class="like__value">5</span>
+															</div>
+															<div class="icon_box like__item">
+																<svg class="icon icon-comments ">
+																	<use xlink:href="images/sprites.svg#comments"></use>
+																</svg><span class="like__value">36</span>
+															</div>
+															<div class="icon_box like__item">
+																<svg class="icon icon-views ">
+																	<use xlink:href="images/sprites.svg#views"></use>
+																</svg><span class="like__value">126</span>
+															</div>
+															<div class="icon_box like__item">
+																<svg class="icon icon-bookmarks ">
+																	<use xlink:href="images/sprites.svg#bookmarks"></use>
+																</svg>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 sidebar sidebar_right">
+							<div class="sidebar_inner sidebar_right_inner">
+								<div class="sidebar_item posts">
+									<h2>Часто обсуждаемое</h2>
+									<div class="posts_sidebar">
+										<div class="posts_sidebar__item">
+											<div class="posts_sidebar__text"> От молодёжного блога до «нового поколения» риэлторских агентств: история «Локалс»</div>
+											<div class="like_box">
+												<div class="like__list">
+													<div class="icon_box like__item">
+														<svg class="icon icon-like ">
+															<use xlink:href="images/sprites.svg#like"></use>
+														</svg><span class="like__value">25</span>
+													</div>
+													<div class="icon_box like__item">
+														<svg class="icon icon-dislike ">
+															<use xlink:href="images/sprites.svg#dislike"></use>
+														</svg><span class="like__value">5</span>
+													</div>
+													<div class="icon_box like__item">
+														<svg class="icon icon-comments ">
+															<use xlink:href="images/sprites.svg#comments"></use>
+														</svg><span class="like__value">36</span>
+													</div>
+													<div class="icon_box like__item">
+														<svg class="icon icon-views ">
+															<use xlink:href="images/sprites.svg#views"></use>
+														</svg><span class="like__value">126</span>
+													</div>
+													<div class="icon_box like__item">
+														<svg class="icon icon-bookmarks ">
+															<use xlink:href="images/sprites.svg#bookmarks"></use>
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="posts_sidebar__item">
+											<div class="posts_sidebar__text">От молодёжного блога до «нового поколения» риэлторских агентств: история «Локалс»</div>
+											<div class="like_box">
+												<div class="like__list">
+													<div class="icon_box like__item">
+														<svg class="icon icon-like ">
+															<use xlink:href="images/sprites.svg#like"></use>
+														</svg><span class="like__value">25</span>
+													</div>
+													<div class="icon_box like__item">
+														<svg class="icon icon-dislike ">
+															<use xlink:href="images/sprites.svg#dislike"></use>
+														</svg><span class="like__value">5</span>
+													</div>
+													<div class="icon_box like__item">
+														<svg class="icon icon-comments ">
+															<use xlink:href="images/sprites.svg#comments"></use>
+														</svg><span class="like__value">36</span>
+													</div>
+													<div class="icon_box like__item">
+														<svg class="icon icon-views ">
+															<use xlink:href="images/sprites.svg#views"></use>
+														</svg><span class="like__value">126</span>
+													</div>
+													<div class="icon_box like__item">
+														<svg class="icon icon-bookmarks ">
+															<use xlink:href="images/sprites.svg#bookmarks"></use>
+														</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div><a class="more" href="">Показать все</a>
+								</div>
+								<div class="sidebar_item users">
+									<h2>Новые пользователи</h2>
+									<div class="users_sidebar">
+										<div class="user">
+											<div class="user-avatar">
+												<div class="user-avatar-photo"><img src="/images/face_1.png"></div>
+											</div>
+											<div class="user-info">
+												<div class="user-name">
+													<h3>Дмитрий Иванов</h3>
+												</div>
+												<div class="user-tag">@sergeybabkin</div>
+												<div class="user-follow">
+													<div class="btn">+ Подписаться</div>
+												</div>
+											</div>
+										</div>
+										<div class="user">
+											<div class="user-avatar">
+												<div class="user-avatar-name" style="background-color: #D7F7F8; color: #29B2B7">МБ</div>
+											</div>
+											<div class="user-info">
+												<div class="user-name">
+													<h3>ООО “Мостбуд”</h3>
+												</div>
+												<div class="user-tag">@mostbud</div>
+												<div class="user-follow">
+													<div class="btn">+ Подписаться</div>
+												</div>
+											</div>
+										</div>
+									</div><a class="more" href="">Показать все</a>
+									<div class="chat" data-tooltip="chat">
+										<svg class="icon icon-chat ">
+											<use xlink:href="images/sprites.svg#chat"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="container"></div>
+		</footer>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+		<script src="js/vendor.js?v=1597017909704"></script>
+		<script src="js/main.js?v=1597017909704"></script>
+	</body>
+</html>

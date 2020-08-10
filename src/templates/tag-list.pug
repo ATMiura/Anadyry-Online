@@ -1,0 +1,92 @@
+extends _layouts/_base
+
+append vars
+	-
+		var title = 'Список тегов'
+		var isAuth = true
+
+block content
+	.wall
+		.title
+			h1 Список тегов
+			.btn.btn-primary + Добавить новый тег
+
+
+
+		.tag_filter
+			.tag_filter__item.active
+				a(href="#") Все
+			.tag_filter__item
+				a(href="#") Обычный
+			.tag_filter__item
+				a(href="#") Рекомендуемый
+
+		.dropdown(data-dropdown="select")
+			input(type="hidden", value="", class="dropdown__value")
+			.dropdown__label
+				.dropdown__label__text По количеству постов
+			ul.dropdown__list
+				li.dropdown__item.active(data-value="За месяц") За месяц
+				li.dropdown__item(data-value="За год") За год
+				li.dropdown__item(data-value="За день") За день
+
+		form.form
+			.form-row
+				.form-group
+					input#user__search.form-control.inp-search.form_field(type='text', placeholder='Найти пользователя')
+
+		.form-result
+			.tag-list.row
+				.tag-list__item.col-md-6.col-12
+					.tag-list__item__inner
+						.tag-list__item__info
+							.tag-list__item__img
+								img(src="images/tag-img.png")
+							.tag-list__item__text # Новости
+						.tag-list__item__value 835
+						.tag-list__item__dots
+							+icon('dots_v')
+				.tag-list__item.col-md-6.col-12
+					.tag-list__item__inner
+						.tag-list__item__info
+							.tag-list__item__img
+								img(src="images/tag-img.png")
+							.tag-list__item__text # Новости
+						.tag-list__item__value 835
+						.tag-list__item__dots
+							+icon('dots_v')
+
+				.tag-list__item.col-md-6.col-12
+					.tag-list__item__inner
+						.tag-list__item__info
+							.tag-list__item__img
+								.tag-list__item__img__circle(style="background-color: #D7F7F8; color: #29B2B7") #
+							.tag-list__item__text # Новости
+						.tag-list__item__value 835
+						.tag-list__item__dots
+							+icon('dots_v')
+				.tag-list__item.col-md-6.col-12
+					.tag-list__item__inner
+						.tag-list__item__info
+							.tag-list__item__img
+								.tag-list__item__img__circle(style="background-color: #D7F7F8; color: #29B2B7") #
+							.tag-list__item__text # Новости
+						.tag-list__item__value 835
+						.tag-list__item__dots
+							+icon('dots_v')
+
+				.tag-list__item.col-md-6.col-12
+					.tag-list__item__inner
+						.tag-list__item__info
+							.tag-list__item__text # Новости
+						.tag-list__item__value 835
+						.tag-list__item__dots
+							+icon('dots_v')
+				.tag-list__item.col-md-6.col-12
+					.tag-list__item__inner
+						.tag-list__item__info
+							.tag-list__item__text # Новости
+						.tag-list__item__value 835
+						.tag-list__item__dots
+							+icon('dots_v')
+
