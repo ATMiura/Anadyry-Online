@@ -1,0 +1,126 @@
+extends _layouts/_base
+
+append vars
+	-
+		var title = 'Список постов'
+		var isAuth = true
+		var postDetail = true
+
+block content
+	.wall
+		.title
+			h1.h1 Список постов
+			.btn.btn-primary + Создать новый пост
+
+
+		.tag_filter
+			.tag_filter__item.active
+				a(href="#") Все
+			.tag_filter__item
+				a(href="#") Опубликован
+			.tag_filter__item
+				a(href="#") Черновик
+			.tag_filter__item
+				a(href="#") Отклонен
+
+		form.form
+			.form-row
+				.form-group
+					input#user__search.form-control.inp-search.form_field(type='text', placeholder='Найти')
+
+
+		.post-list__list.row
+			.post-list__item.col-md-6.col-12
+				.post-list__item__inner
+					.post-list__item__header
+						.post-list__item__status.public Опубликован
+
+						.post-list__item__tags
+							.tag
+								.tag__box
+									.tag__item
+										a.tag__link(href="#", style="color: #923BDD;") # развлечения
+
+
+						.post-list__item__dots
+							+icon('dots_v')
+
+					.post-list__item__body
+						.post-list__item__excerpt
+							| От молодёжного блога до «нового поколения» риэлторских агентств: история «Локалс»
+
+					.post-list__item__footer
+
+						.post-list__item__user
+							.user
+								.user-avatar
+									.user-avatar-photo
+										img(src="images/face_1.png")
+								.user-info
+									.user-name Сергей Бабкин
+
+						.post-list__item__date 08.03.2020 21:25
+
+
+			.post-list__item.col-md-6.col-12
+				.post-list__item__inner
+					.post-list__item__header
+						.post-list__item__status.discarded Отменен
+
+						.post-list__item__tags
+							.tag
+								.tag__box
+									.tag__item
+										a.tag__link(href="#", style="color: #923BDD;") # развлечения
+
+
+						.post-list__item__dots
+							+icon('dots_v')
+
+					.post-list__item__body
+						.post-list__item__excerpt
+							| От молодёжного блога до «нового поколения» риэлторских агентств: история «Локалс»
+
+					.post-list__item__footer
+
+						.post-list__item__user
+							.user
+								.user-avatar
+									.user-avatar-photo
+										img(src="images/face_1.png")
+								.user-info
+									.user-name Сергей Бабкин
+
+						.post-list__item__date 08.03.2020 21:25
+
+			.post-list__item.col-md-6.col-12
+				.post-list__item__inner
+					.post-list__item__header
+						.post-list__item__status.draft Черновик
+
+						.post-list__item__tags
+							.tag
+								.tag__box
+									.tag__item
+										a.tag__link(href="#", style="color: #923BDD;") # развлечения
+
+
+						.post-list__item__dots
+							+icon('dots_v')
+
+					.post-list__item__body
+						.post-list__item__excerpt
+							| От молодёжного блога до «нового поколения» риэлторских агентств: история «Локалс»
+
+					.post-list__item__footer
+
+						.post-list__item__user
+							.user
+								.user-avatar
+									.user-avatar-photo
+										img(src="images/face_1.png")
+								.user-info
+									.user-name Сергей Бабкин
+
+						.post-list__item__date 08.03.2020 21:25
+

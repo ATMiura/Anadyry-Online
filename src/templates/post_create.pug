@@ -4,16 +4,16 @@ append vars
 	-
 		var title = 'Создание поста'
 		var isAuth = true
-		var psotDetail = true
+		var postDetail = true
 
 block content
 	.wall.post-create
+		.title
+			h1.h1 Новый пост (Публикация)
 
 		.post-type
 			.post-type__item
 				form.form.post-create-form
-					.title
-						h1.h1 Новый пост (Публикация)
 					.dropdown(data-dropdown="select")
 						input(type="hidden", value="", class="dropdown__value")
 						.dropdown__name Тип поста
@@ -94,7 +94,7 @@ block content
 
 			.post-type__item
 				form.form.post-create-form
-					.title
+					//.title
 						h1.h1 Новый пост (Альбом)
 					.dropdown(data-dropdown="select")
 						input(type="hidden", value="", class="dropdown__value")
@@ -136,7 +136,7 @@ block content
 
 			.post-type__item
 				form.form.post-create-form
-					.title
+					//.title
 						h1.h1 Новый пост (Видео)
 					.dropdown(data-dropdown="select")
 						input(type="hidden", value="", class="dropdown__value")
@@ -181,7 +181,7 @@ block content
 
 			.post-type__item
 				form.form.post-create-form
-					.title
+					//.title
 						h1.h1 Новый пост (Опрос)
 					.dropdown(data-dropdown="select")
 						input(type="hidden", value="", class="dropdown__value")
@@ -236,7 +236,7 @@ block content
 
 			.post-type__item
 				form.form.post-create-form
-					.title
+					//.title
 						h1.h1 Новый пост (События)
 					.dropdown(data-dropdown="select")
 						input(type="hidden", value="", class="dropdown__value")

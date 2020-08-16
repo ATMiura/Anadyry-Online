@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Список тегов</title>
+		<title>Редактировать аккаунт</title>
 		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
@@ -136,120 +136,93 @@
 						<div class="col-md-6 content">
 							<div class="wall">
 								<div class="title">
-									<h1>Список тегов</h1>
-									<div class="btn btn-primary">+ Добавить новый тег</div>
+									<h1>Редактировать email и пароль</h1>
 								</div>
-								<div class="tag_filter">
-									<div class="tag_filter__item active"><a href="#">Все</a></div>
-									<div class="tag_filter__item"><a href="#">Обычный</a></div>
-									<div class="tag_filter__item"><a href="#">Рекомендуемый</a></div>
-								</div>
-								<div class="dropdown" data-dropdown="select">
-									<input class="dropdown__value" type="hidden" value="">
-									<div class="dropdown__label">
-										<div class="dropdown__label__text">По количеству постов</div>
+								<div class="user-account-edit">
+									<div class="user-account-edit__email">
+										<form class="form">
+											<div class="form-row">
+												<div class="form-group col-12">
+													<label for="post-create-form-source">Email</label>
+													<input class="form-control" id="post-create-form-source" type="email">
+												</div>
+											</div>
+											<div class="form-row">
+												<div class="form-group col-12">
+													<label for="post-create-form-source">Пароль</label>
+													<input class="form-control" id="post-create-form-source" type="password"><small class="form-text">Оставьте поле пустым, если не хотите его менять</small>
+												</div>
+											</div>
+											<div class="form-row">
+												<div class="form-group col-12">
+													<label for="post-create-form-source">Подтверждение пароля</label>
+													<input class="form-control" id="post-create-form-source" type="password">
+												</div>
+											</div>
+											<div class="form-row">
+												<div class="form-group col-12 d-flex justify-content-end">
+													<button class="btn btn-primary">Обновить</button>
+												</div>
+											</div>
+										</form>
 									</div>
-									<ul class="dropdown__list">
-										<li class="dropdown__item active" data-value="За месяц">За месяц</li>
-										<li class="dropdown__item" data-value="За год">За год</li>
-										<li class="dropdown__item" data-value="За день">За день</li>
-									</ul>
-								</div>
-								<form class="form">
-									<div class="form-row">
-										<div class="form-group">
-											<input class="form-control inp-search form_field" id="user__search" type="text" placeholder="Найти пользователя">
-										</div>
-									</div>
-								</form>
-								<div class="form-result">
-									<div class="tag-list row">
-										<div class="tag-list__item col-md-6 col-12">
-											<div class="tag-list__item__inner">
-												<div class="tag-list__item__info">
-													<div class="tag-list__item__img"><img src="images/tag-img.png"></div>
-													<div class="tag-list__item__text"># Новости</div>
-												</div>
-												<div class="tag-list__item__value">835</div>
-												<div class="tag-list__item__dots">
-													<svg class="icon icon-dots_v ">
-														<use xlink:href="images/sprites.svg#dots_v"></use>
-													</svg>
-												</div>
-											</div>
-										</div>
-										<div class="tag-list__item col-md-6 col-12">
-											<div class="tag-list__item__inner">
-												<div class="tag-list__item__info">
-													<div class="tag-list__item__img"><img src="images/tag-img.png"></div>
-													<div class="tag-list__item__text"># Новости</div>
-												</div>
-												<div class="tag-list__item__value">835</div>
-												<div class="tag-list__item__dots">
-													<svg class="icon icon-dots_v ">
-														<use xlink:href="images/sprites.svg#dots_v"></use>
-													</svg>
-												</div>
-											</div>
-										</div>
-										<div class="tag-list__item col-md-6 col-12">
-											<div class="tag-list__item__inner">
-												<div class="tag-list__item__info">
-													<div class="tag-list__item__img">
-														<div class="tag-list__item__img__circle" style="background-color: #D7F7F8; color: #29B2B7">#</div>
+									<div class="user-account-edit__profile">
+										<form class="form">
+											<div class="form-row file-upload">
+												<div class="form-group col-md-6 col-12">
+													<div class="file-upload-list">
+														<div class="file-upload-list__item"><img class="img-fluid" src="/images/file-upload-default.jpg">
+															<div class="file-upload__remove">
+																<svg class="icon icon-trash-basket ">
+																	<use xlink:href="images/sprites.svg#trash-basket"></use>
+																</svg>
+															</div>
+														</div>
 													</div>
-													<div class="tag-list__item__text"># Новости</div>
 												</div>
-												<div class="tag-list__item__value">835</div>
-												<div class="tag-list__item__dots">
-													<svg class="icon icon-dots_v ">
-														<use xlink:href="images/sprites.svg#dots_v"></use>
-													</svg>
-												</div>
-											</div>
-										</div>
-										<div class="tag-list__item col-md-6 col-12">
-											<div class="tag-list__item__inner">
-												<div class="tag-list__item__info">
-													<div class="tag-list__item__img">
-														<div class="tag-list__item__img__circle" style="background-color: #D7F7F8; color: #29B2B7">#</div>
-													</div>
-													<div class="tag-list__item__text"># Новости</div>
-												</div>
-												<div class="tag-list__item__value">835</div>
-												<div class="tag-list__item__dots">
-													<svg class="icon icon-dots_v ">
-														<use xlink:href="images/sprites.svg#dots_v"></use>
-													</svg>
+												<div class="form-group col-md-6 col-12">
+													<div class="form-heading" for="post-create-form-img">Загрузить аватар</div>
+													<div class="file-upload__small form-text text-muted">Оптимальный размер изображения 800 x 600px и размером до 50 Мb</div>
+													<label class="file-upload__label">
+														<input class="file-upload__input" id="post-create-form-img" type="file">
+														<button class="btn btn-dark btn-file">Загрузить файл</button>
+													</label>
 												</div>
 											</div>
-										</div>
-										<div class="tag-list__item col-md-6 col-12">
-											<div class="tag-list__item__inner">
-												<div class="tag-list__item__info">
-													<div class="tag-list__item__text"># Новости</div>
-												</div>
-												<div class="tag-list__item__value">835</div>
-												<div class="tag-list__item__dots">
-													<svg class="icon icon-dots_v ">
-														<use xlink:href="images/sprites.svg#dots_v"></use>
-													</svg>
+											<div class="form-row">
+												<div class="form-group col-12">
+													<label for="post-create-form-source">Имя</label>
+													<input class="form-control" id="post-create-form-source" type="text">
 												</div>
 											</div>
-										</div>
-										<div class="tag-list__item col-md-6 col-12">
-											<div class="tag-list__item__inner">
-												<div class="tag-list__item__info">
-													<div class="tag-list__item__text"># Новости</div>
-												</div>
-												<div class="tag-list__item__value">835</div>
-												<div class="tag-list__item__dots">
-													<svg class="icon icon-dots_v ">
-														<use xlink:href="images/sprites.svg#dots_v"></use>
-													</svg>
+											<div class="form-row">
+												<div class="form-group col-12">
+													<label for="post-create-form-meta-descr">О себе</label>
+													<textarea class="form-control" id="post-create-form-meta-descr"></textarea>
 												</div>
 											</div>
-										</div>
+											<div class="form-row">
+												<div class="form-group col-md-6 col-12">
+													<label for="post-create-form-date-finish">Дата рождения</label>
+													<input class="form-control" id="post-create-form-date-finish" type="date">
+												</div>
+											</div>
+											<div class="form-row file-upload">
+												<div class="form-group col-12">
+													<label class="file-upload__label file-upload__label__multi" for="post-create-form-multi">
+														<input class="file-upload__input" id="post-create-form-multi" type="file">Кликните, чтобы добавить фото или перетащите фото сюда
+													</label>
+												</div>
+												<div class="form-group col-12">
+													<button class="btn btn-dark btn-banner">Загрузить обложку</button>
+												</div>
+											</div>
+											<div class="form-row">
+												<div class="form-group col-12 d-flex justify-content-end">
+													<button class="btn btn-primary">Обновить</button>
+												</div>
+											</div>
+										</form>
 									</div>
 								</div>
 							</div>
@@ -375,7 +348,7 @@
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-		<script src="js/vendor.js?v=1597616094665"></script>
-		<script src="js/main.js?v=1597616094665"></script>
+		<script src="js/vendor.js?v=1597616094766"></script>
+		<script src="js/main.js?v=1597616094766"></script>
 	</body>
 </html>

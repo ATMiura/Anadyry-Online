@@ -1,0 +1,59 @@
+extends _layouts/_base
+
+append vars
+	-
+		var title = 'Создать тэг'
+		var isAuth = true
+
+block content
+	.wall.tag-create
+		.title
+			h1 Создать тэг
+
+		.tag-type
+			.tag-type__item
+				form.form.tag-create-form
+					.form-row.file-upload
+						.form-group.col-md-5.col-12
+							.file-upload-list
+								.file-upload-list__item
+									img(src="/images/file-upload-default.jpg").img-fluid
+									.file-upload__remove
+										+icon('trash-basket')
+
+						.form-group.col-md-6.col-12
+							.form-heading(for='post-create-form-img') Изображение тега
+							.file-upload__small.form-text.text-muted Оптимальный размер изображения 800 x 600px и размером до 50 Мb
+							label.file-upload__label
+								input#post-create-form-img.file-upload__input(type='file')
+								button.btn.btn-dark.btn-file Загрузить файл
+
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-title') Имя тэга
+							input#post-create-form-title.form-control(type='text')
+						.form-group.col-12
+							.custom-control.custom-checkbox
+								input#post-create-comments-allow.custom-control-input(type='checkbox')
+								label.custom-control-label(for='post-create-comments-allow') Рекомендуемый
+
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-text') Описание
+							textarea#post-create-form-text.form-control
+
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-meta-title') Мета заголовок
+							input#post-create-form-meta-title.form-control(type='text')
+
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-meta-descr') Мета описание
+							textarea#post-create-form-meta-descr.form-control
+
+					.form-row
+						.form-group.col-12.d-flex.justify-content-end
+							button.btn.btn-primary Сохранить
+
+

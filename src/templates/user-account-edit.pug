@@ -1,0 +1,75 @@
+extends _layouts/_base
+
+append vars
+	-
+		var title = 'Редактировать аккаунт'
+		var isAuth = true
+		var userAccount = true
+
+block content
+	.wall
+		.title
+			h1 Редактировать email и пароль
+
+		.user-account-edit
+			.user-account-edit__email
+				form.form
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-source') Email
+							input#post-create-form-source.form-control(type='email')
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-source') Пароль
+							input#post-create-form-source.form-control(type='password')
+							small.form-text Оставьте поле пустым, если не хотите его менять
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-source') Подтверждение пароля
+							input#post-create-form-source.form-control(type='password')
+
+					.form-row
+						.form-group.col-12.d-flex.justify-content-end
+							button.btn.btn-primary Обновить
+
+			.user-account-edit__profile
+				form.form
+					.form-row.file-upload
+						.form-group.col-md-6.col-12
+							.file-upload-list
+								.file-upload-list__item
+									img(src="/images/file-upload-default.jpg").img-fluid
+									.file-upload__remove
+										+icon('trash-basket')
+
+						.form-group.col-md-6.col-12
+							.form-heading(for='post-create-form-img') Загрузить аватар
+							.file-upload__small.form-text.text-muted Оптимальный размер изображения 800 x 600px и размером до 50 Мb
+							label.file-upload__label
+								input#post-create-form-img.file-upload__input(type='file')
+								button.btn.btn-dark.btn-file Загрузить файл
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-source') Имя
+							input#post-create-form-source.form-control(type='text')
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-meta-descr') О себе
+							textarea#post-create-form-meta-descr.form-control
+					.form-row
+						.form-group.col-md-6.col-12
+							label(for='post-create-form-date-finish') Дата рождения
+							input#post-create-form-date-finish.form-control(type='date')
+
+					.form-row.file-upload
+						.form-group.col-12
+							label.file-upload__label.file-upload__label__multi(for="post-create-form-multi")
+								input#post-create-form-multi.file-upload__input(type='file')
+								| Кликните, чтобы добавить фото или перетащите фото сюда
+						.form-group.col-12
+							button.btn.btn-dark.btn-banner Загрузить обложку
+
+					.form-row
+						.form-group.col-12.d-flex.justify-content-end
+							button.btn.btn-primary Обновить
+
