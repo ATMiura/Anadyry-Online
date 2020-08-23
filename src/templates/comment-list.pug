@@ -10,3 +10,54 @@ block content
 	.wall.post-create
 		.title
 			h1.h1 Список комментариев
+
+		.dropdown(data-dropdown="select")
+			input(type="hidden", value="", class="dropdown__value")
+			.dropdown__label
+				.dropdown__label__text По дате
+			ul.dropdown__list
+				li.dropdown__item.active(data-value="За месяц") За месяц
+				li.dropdown__item(data-value="За год") За год
+				li.dropdown__item(data-value="За день") За день
+
+		form.form
+			.form-row
+				.form-group
+					input#user__search.form-control.inp-search.form_field(type='text', placeholder='Найти')
+
+		.form-result
+			.comments-list.row
+				.comments-item.col-12
+					.comments-item__inner
+						.comments-item__header
+							.comments-item__status.discarded Есть жалоба
+						.comments-item__body
+							.comments-item__user
+								.user
+									.user-avatar
+										.user-avatar-photo
+											img(src="images/face_1.png")
+									.user-info
+										.user-name Сергей Бабкин
+										.comments-item__date 08.03.2020 21:25
+							.comments-item__text Поражают те, кто заработал миллионы на артистическом поприще и ноют сейчас про нищенскую пенсию. Так выходите на митинги и митингуйте за повышение пенсии. А то, пока простой народ безуспешно ходит на митинги против повышения пенсионного возраста и увеличение пенсии, их все устраивало и было плевать. А сейчас вылезли из углов и плачутся.
+
+						.comments-item__dots
+							+icon('dots_v')
+
+				.comments-item.col-12
+					.comments-item__inner
+						.comments-item__header
+							.comments-item__status.public На проверке
+						.comments-item__body
+							.comments-item__user
+								.user
+									.user-avatar
+										.user-avatar-photo
+											img(src="images/face_1.png")
+									.user-info
+										.user-name Сергей Бабкин
+										.comments-item__date 08.03.2020 21:25
+							.comments-item__text Поражают те, кто заработал миллионы на артистическом поприще и ноют сейчас про нищенскую пенсию. Так выходите на митинги и митингуйте за повышение пенсии. А то, пока простой народ безуспешно ходит на митинги против повышения пенсионного возраста и увеличение пенсии, их все устраивало и было плевать. А сейчас вылезли из углов и плачутся.
+							.comments-item__dots
+								+icon('dots_v')
