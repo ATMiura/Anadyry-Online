@@ -1,0 +1,342 @@
+extends _layouts/_base
+
+append vars
+	-
+		var title = 'Главная Авторизован'
+		var isAuth = true
+
+block content
+	.wall
+		.title
+			h1 Новости
+		.tag
+			.tag__box
+				.tag__item
+					a.tag__link(href="#", style="color: #2290D0;") # экономика
+				.tag__item
+					a.tag__link(href="#", style="color: #923BDD;") # статистика
+				.tag__item
+					a.tag__link(href="#", style="color: #4EBB7E;") # зарплаты
+				.tag__item
+					a.tag__link(href="#", style="color: #FC7991;") # жкх
+
+		.post-recomended
+			.title
+				h2 Рекомендуемые
+			.post-slider.slider
+				.post__item
+					.post__banner
+						img(src="images/post_slider_img.png")
+
+					.post__content
+						.post-tag_dots
+							.tag
+								.tag__box
+									.tag__item
+										a.tag__link(href="#", style="color: #29B2B7;") # aфиша
+									.tag__item
+										a.tag__link(href="#", style="color: #923BDD;") # развлечения
+									.tag__item
+										a.tag__link(href="#", style="color: #4EBB7E;") # кино
+							.dots(data-tooltip="dots")
+								+icon('dots_v')
+
+						.post__title
+							h2 Почему стоит посмотреть закончившийся сериал «Кремниевая долина»
+						.user
+							.user-avatar
+								.user-avatar-photo
+									img(src="images/face_1.png")
+							.user-info
+								.user-portal Портал
+									a(href="#") Prochukotku.ru
+								.user-post-date 20 нояб. 2019 · 16м
+							.user-dots.dots(data-tooltip="dots")
+								+icon('dots_v')
+
+						include _parts/_like_box_post
+
+		.tag_filter
+			.tag_filter__item.active
+				a(href="#") Все
+			.tag_filter__item
+				a(href="#") Публикация
+			.tag_filter__item
+				a(href="#") Опрос
+			.tag_filter__item
+				a(href="#") Альбом
+			.tag_filter__item
+				a(href="#") Видео
+			.tag_filter__item
+				a(href="#") Событие
+
+		.dropdown(data-dropdown="select")
+			input(type="hidden", value="", class="dropdown__value")
+			.dropdown__label
+				.dropdown__label__text По просмотрам за неделю
+			ul.dropdown__list
+				li.dropdown__item.active(data-value="За месяц") За месяц
+				li.dropdown__item(data-value="За год") За год
+				li.dropdown__item(data-value="За день") За день
+
+		.post__list
+			.post__item
+				.post__content
+					.post__header
+						.post-tag_dots
+							.tag
+								.tag__box
+									.tag__item
+										a.tag__link(href="#", style="color: #29B2B7;") # aфиша
+									.tag__item
+										a.tag__link(href="#", style="color: #923BDD;") # развлечения
+									.tag__item
+										a.tag__link(href="#", style="color: #4EBB7E;") # кино
+							.dots(data-tooltip="dots")
+								+icon('dots_v')
+						.post__title
+							h2 Сатира и манифест о проблемах технологий: почему стоит посмотреть закончившийся сериал «Кремниевая долина»
+					.post__body
+						.post__excerpt
+							| «Практически документальное» шоу с реалистичной атмосферой стартапов и героями, написанными по реальным предпринимателям. Точность деталей одобрил фанат сериала Билл Гейтс.
+						.post__banner
+							img.img-fluid(src="images/post_img_1.jpg")
+					.post__footer
+						.post__btns
+							.user
+								.user-avatar
+									.user-avatar-photo
+										img(src="images/face_1.png")
+								.user-info
+									.user-portal Портал
+										a(href="#") Prochukotku.ru
+									.user-post-date 20 нояб. 2019 · 16м
+								.user-dots.dots(data-tooltip="dots")
+									+icon('dots_v')
+							include _parts/_like_box_post
+
+		.advt
+			img.img-fluid(src="images/reklama_img.jpg")
+
+
+		.post__list
+			.post__item.colored(style="background: #2DB285;", data-color="#2DB285")
+				.post__content
+					.post__header
+						.post-tag_dots
+							.tag
+								.tag__box
+									.tag__item
+										a.tag__link(href="#", style="color: #2DB285;") # Политика
+							.dots(data-tooltip="dots")
+								+icon('dots_v')
+						.post__title
+							h2 Опрос: Как Вы относитесь к политике?
+					.post__body
+						.post__excerpt
+							| Сегодня, 12 марта 2020 года под председательством прокурора Чукотского автономного округа Прохорова К.С. состоялось координационное совещание руководителей правоохранительных органов, на котором рассмотрены результаты работы по противодействию преступлениям, связанным с посягательствами на...
+						.post__quiz
+							mixin post__quiz__item(name,percantage)
+								.post__quiz__item
+									.post__quiz__item__title=name
+									.post__quiz__item__progress
+										.post__quiz__item__progress__current(style="width:" + percantage)
+										.post__quiz__item__progress__bg=percantage
+							+post__quiz__item('Положительно','20%')
+							+post__quiz__item('Отриательно','15%')
+							+post__quiz__item('Нейтрально','65%')
+					.post__footer
+						.post__btns
+							.user
+								.user-avatar
+									.user-avatar-photo
+										img(src="images/face_1.png")
+								.user-info
+									.user-portal Портал
+										a(href="#") Prochukotku.ru
+									.user-post-date 20 нояб. 2019 · 16м
+								.user-dots.dots(data-tooltip="dots")
+									+icon('dots_v')
+							include _parts/_like_box_post
+
+
+			.post__item.columns
+				.post__item__col.post__item__col__left
+					.post__banner
+						img.img-fluid(src="images/post_2_col_img.jpg")
+				.post__item__col.post__item__col__right
+					.post__content
+						.post__header
+							.post-tag_dots
+								.tag
+									.tag__box
+										.tag__item
+											a.tag__link(href="#", style="color: #29B2B7;") # aфиша
+										.tag__item
+											a.tag__link(href="#", style="color: #923BDD;") # развлечения
+										.tag__item
+											a.tag__link(href="#", style="color: #4EBB7E;") # кино
+								.dots(data-tooltip="dots")
+									+icon('dots_v')
+							.post__title
+								h2 Мульт в кино.Выпуск №115 (0+)
+						.post__body
+							.post__excerpt
+								| «Практически документальное» шоу с реалистичной атмосферой стартапов и
+							.post__cinema__sessions
+								.post__cinema__sessions__title
+									h3 Расписание
+								.post__cinema__sessions__list
+									.post__cinema__sessions__item
+										.post__cinema__sessions__item__date 12 декабря
+										.post__cinema__sessions__item__time
+											.post__cinema__sessions__item__time__item 13:30
+											.post__cinema__sessions__item__time__item 15:30
+											.post__cinema__sessions__item__time__item 17:30
+											.post__cinema__sessions__item__time__item 19:30
+									.post__cinema__sessions__item
+										.post__cinema__sessions__item__date 13 декабря
+										.post__cinema__sessions__item__time
+											.post__cinema__sessions__item__time__item 13:30
+											.post__cinema__sessions__item__time__item 15:30
+											.post__cinema__sessions__item__time__item 17:30
+											.post__cinema__sessions__item__time__item 19:30
+									.post__cinema__sessions__item
+										.post__cinema__sessions__item__date 14 декабря
+										.post__cinema__sessions__item__time
+											.post__cinema__sessions__item__time__item 13:30
+											.post__cinema__sessions__item__time__item 15:30
+											.post__cinema__sessions__item__time__item 17:30
+											.post__cinema__sessions__item__time__item 19:30
+						.post__footer
+							.post__btns
+								.user
+									.user-avatar
+										.user-avatar-photo
+											img(src="images/face_1.png")
+									.user-info
+										.user-portal Портал
+											a(href="#") Prochukotku.ru
+										.user-post-date 20 нояб. 2019 · 16м
+									.user-dots.dots(data-tooltip="dots")
+										+icon('dots_v')
+								include _parts/_like_box_post
+
+			.post__item.colored(style="background: #3282B8;", data-color="#3282B8")
+				.post__content
+					.post__header
+						.post-tag_dots
+							.tag
+								.tag__box
+									.tag__item
+										a.tag__link(href="#", style="color: #2290D0;") # экономика
+									.tag__item
+										a.tag__link(href="#", style="color: #923BDD;") # статистика
+									.tag__item
+										a.tag__link(href="#", style="color: #4EBB7E;") # зарплаты
+							.dots(data-tooltip="dots")
+								+icon('dots_v')
+						.post__title
+							h2 Сатира и манифест о проблемах технологий: почему стоит посмотреть закончившийся сериал «Кремниевая долина»
+					.post__body
+						.post__excerpt
+							| «Практически документальное» шоу с реалистичной атмосферой стартапов и героями, написанными по реальным предпринимателям. Точность деталей одобрил фанат сериала Билл Гейтс.
+						.post__gallery
+							.post__gallery__item.post__gallery__item__width__1
+								img(src="images/post__gallery__item__1.jpg")
+							.post__gallery__item.post__gallery__item__width__2
+								img(src="images/post__gallery__item__2.jpg")
+							.post__gallery__item.post__gallery__item__width__2
+								img(src="images/post__gallery__item__5.jpg")
+							.post__gallery__item.post__gallery__item__width__2
+								img(src="images/post__gallery__item__4.jpg")
+							.post__gallery__item.post__gallery__item__width__2
+								img(src="images/post__gallery__item__3.jpg")
+					.post__footer
+						.post__btns
+							.user
+								.user-avatar
+									.user-avatar-photo
+										img(src="images/face_1.png")
+								.user-info
+									.user-portal Портал
+										a(href="#") Prochukotku.ru
+									.user-post-date 20 нояб. 2019 · 16м
+								.user-dots.dots(data-tooltip="dots")
+									+icon('dots_v')
+							include _parts/_like_box_post
+
+			.post__item
+				.post__content
+					.post__header
+						.post-tag_dots
+							.tag
+								.tag__box
+									.tag__item
+										a.tag__link(href="#", style="color: #29B2B7;") # aфиша
+									.tag__item
+										a.tag__link(href="#", style="color: #923BDD;") # развлечения
+									.tag__item
+										a.tag__link(href="#", style="color: #4EBB7E;") # кино
+							.dots(data-tooltip="dots")
+								+icon('dots_v')
+						.post__title
+							h2 Сатира и манифест о проблемах технологий: почему стоит посмотреть закончившийся сериал «Кремниевая долина»
+					.post__body
+						.post__excerpt
+							| «Практически документальное» шоу с реалистичной атмосферой стартапов и героями, написанными по реальным предпринимателям. Точность деталей одобрил фанат сериала Билл Гейтс.
+					.post__footer
+						.post__btns
+							.user
+								.user-avatar
+									.user-avatar-photo
+										img(src="images/face_1.png")
+								.user-info
+									.user-portal Портал
+										a(href="#") Prochukotku.ru
+									.user-post-date 20 нояб. 2019 · 16м
+								.user-dots.dots(data-tooltip="dots")
+									+icon('dots_v')
+							include _parts/_like_box_post
+
+			.post__item.colored(style="background: #D74343;", data-color="#D74343")
+				.post__content
+					.post__header
+						.post-tag_dots
+							.tag
+								.tag__box
+									.tag__item
+										a.tag__link(href="#", style="color: #29B2B7;") # aфиша
+									.tag__item
+										a.tag__link(href="#", style="color: #923BDD;") # развлечения
+									.tag__item
+										a.tag__link(href="#", style="color: #4EBB7E;") # кино
+							.dots(data-tooltip="dots")
+								+icon('dots_v')
+						.post__title
+							h2 Сатира и манифест о проблемах технологий: почему стоит посмотреть закончившийся сериал «Кремниевая долина»
+					.post__body
+						.post__excerpt
+							| «Практически документальное» шоу с реалистичной атмосферой стартапов и героями, написанными по реальным предпринимателям. Точность деталей одобрил фанат сериала Билл Гейтс.
+						.post__banner
+							img.img-fluid(src="images/bear.jpg")
+					.post__footer
+						.post__btns
+							.user
+								.user-avatar
+									.user-avatar-photo
+										img(src="images/face_1.png")
+								.user-info
+									.user-portal Портал
+										a(href="#") Prochukotku.ru
+									.user-post-date 20 нояб. 2019 · 16м
+								.user-dots.dots(data-tooltip="dots")
+									+icon('dots_v')
+							include _parts/_like_box_post
+
+
+
+
+
+
+

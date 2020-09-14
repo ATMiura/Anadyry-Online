@@ -5,6 +5,8 @@ append vars
 		var title = 'Редактировать аккаунт'
 		var isAuth = true
 		var userAccount = true
+		var withoutRightSide = true
+		var withoutRightSideSmall = true
 
 block content
 	.wall
@@ -33,6 +35,8 @@ block content
 							button.btn.btn-primary Обновить
 
 			.user-account-edit__profile
+				.title
+					h1 Редактировать профиль
 				form.form
 					.form-row.file-upload
 						.form-group.col-md-6.col-12
@@ -72,4 +76,117 @@ block content
 					.form-row
 						.form-group.col-12.d-flex.justify-content-end
 							button.btn.btn-primary Обновить
+
+			.user-account-warning.warning
+				.row
+					.col-12.d-flex.align-items-center.justify-content-center.warning__message
+						.warning__icon
+							+icon('warning')
+						.warning__text Внимание! При удалении учетной записи, все данные будут удалены безвозвратно!
+					.col-12.d-flex.align-items-center.justify-content-end.warning__btns
+						button.btn.btn-no-border Отменить
+						button.btn.btn-red Обновить
+
+			.user-account-social
+				.title
+					h1 Редактировать социальные сети
+				form.form
+					.form-row.user-account-social__list
+						.form-group.col-12.user-account-social__item
+							.user-account-social__item-detail
+								.user-account-social__item-icon
+									+icon('ua-social-vk')
+								.user-account-social__item-id
+									input(type="text", value="id888999").user-account-social__item-id__input.disabled
+							.user-account-social__item-checkbox
+								.checkbox
+									label.checkbox__label
+										input(type="checkbox" checked="checked").checkbox__input
+										.checkbox__emulator
+							.user-account-social__item-actions
+								.user-account-social__item-edit
+									+icon('pen')
+								.user-account-social__item-remove
+									+icon('trash-basket-red')
+
+						.form-group.col-12.user-account-social__item
+							.user-account-social__item-detail
+								.user-account-social__item-icon
+									+icon('ua-social-inst')
+								.user-account-social__item-id
+									input(type="text", value="AB888999").user-account-social__item-id__input
+							.user-account-social__item-checkbox
+								.checkbox
+									label.checkbox__label
+										input(type="checkbox").checkbox__input
+										.checkbox__emulator
+							.user-account-social__item-actions
+								.user-account-social__item-edit
+									+icon('pen')
+								.user-account-social__item-remove
+									+icon('trash-basket-red')
+
+					.form-row.user-account-social__add
+						.form-group.col-md-4.col-12
+							.dropdown.white(data-dropdown="select")
+								input(type="hidden", value="", class="dropdown__value")
+								.dropdown__name Социальные сети
+								.dropdown__label
+									.dropdown__label__text Выбирите соц. сеть
+								ul.dropdown__list
+									li.dropdown__item.active(data-value="Публикация") Вконтакте
+									li.dropdown__item(data-value="Альбом") Инстаграмм
+									li.dropdown__item(data-value="Опрос") Одноклассники
+									li.dropdown__item(data-value="События") Facebook
+						.form-group.col-md-8.col-12
+							label Ссылка на социальную сеть
+							input.form-control(type='text')
+					.form-row
+						.form-group.col-12
+							button.btn.btn-small + Добавить соц сеть
+					.form-row
+						.form-group.col-12.d-flex.justify-content-end
+							button.btn.btn-primary Обновить
+
+			.user-account-notifications
+				.title
+					h1 Редактировать уведомления
+				form.form
+					.form-row.user-account-notifications__list
+						.form-group.col-12.user-account-notifications__item
+							.user-account-notifications__item-text Получать уведомления о новых комментариях
+							.user-account-notifications__item-checkbox
+								.checkbox
+									label.checkbox__label
+										input(type="checkbox", checked="checked").checkbox__input
+										.checkbox__emulator
+						.form-group.col-12.user-account-notifications__item
+							.user-account-notifications__item-text Получать уведомления о новых подписчиках
+							.user-account-notifications__item-checkbox
+								.checkbox
+									label.checkbox__label
+										input(type="checkbox").checkbox__input
+										.checkbox__emulator
+						.form-group.col-12.user-account-notifications__item
+							.user-account-notifications__item-text Получать уведомления об упоминаниях
+							.user-account-notifications__item-checkbox
+								.checkbox
+									label.checkbox__label
+										input(type="checkbox").checkbox__input
+										.checkbox__emulator
+						.form-group.col-12.user-account-notifications__item
+							.user-account-notifications__item-text Получать дайджест на почту
+							.user-account-notifications__item-checkbox
+								.checkbox
+									label.checkbox__label
+										input(type="checkbox").checkbox__input
+										.checkbox__emulator
+
+
+					.form-row
+						.form-group.col-12.d-flex.justify-content-end
+							button.btn.btn-primary Обновить
+
+
+
 

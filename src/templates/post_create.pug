@@ -5,6 +5,7 @@ append vars
 		var title = 'Создание поста'
 		var isAuth = true
 		var postDetail = true
+		var withoutRightSide = true
 
 block content
 	.wall.post-create
@@ -14,7 +15,7 @@ block content
 		.post-type
 			.post-type__item
 				form.form.post-create-form
-					.dropdown(data-dropdown="select")
+					.dropdown.white(data-dropdown="select")
 						input(type="hidden", value="", class="dropdown__value")
 						.dropdown__name Тип поста
 						.dropdown__label
@@ -96,7 +97,7 @@ block content
 				form.form.post-create-form
 					//.title
 						h1.h1 Новый пост (Альбом)
-					.dropdown(data-dropdown="select")
+					.dropdown.white(data-dropdown="select")
 						input(type="hidden", value="", class="dropdown__value")
 						.dropdown__name Тип поста
 						.dropdown__label
@@ -138,7 +139,7 @@ block content
 				form.form.post-create-form
 					//.title
 						h1.h1 Новый пост (Видео)
-					.dropdown(data-dropdown="select")
+					.dropdown.white(data-dropdown="select")
 						input(type="hidden", value="", class="dropdown__value")
 						.dropdown__name Тип поста
 						.dropdown__label
@@ -183,7 +184,7 @@ block content
 				form.form.post-create-form
 					//.title
 						h1.h1 Новый пост (Опрос)
-					.dropdown(data-dropdown="select")
+					.dropdown.white(data-dropdown="select")
 						input(type="hidden", value="", class="dropdown__value")
 						.dropdown__name Тип поста
 						.dropdown__label
@@ -238,7 +239,7 @@ block content
 				form.form.post-create-form
 					//.title
 						h1.h1 Новый пост (События)
-					.dropdown(data-dropdown="select")
+					.dropdown.white(data-dropdown="select")
 						input(type="hidden", value="", class="dropdown__value")
 						.dropdown__name Тип поста
 						.dropdown__label
@@ -270,7 +271,7 @@ block content
 
 					.form-row
 						.form-group.col-md-6.col-12
-							.dropdown(data-dropdown="select")
+							.dropdown.white(data-dropdown="select")
 								input(type="hidden", value="", class="dropdown__value")
 								.dropdown__name Знак информационной продукции
 								.dropdown__label

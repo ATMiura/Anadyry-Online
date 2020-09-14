@@ -42,14 +42,28 @@ html(class=html.classList)&attributes(html.attrs)
 							include ../_parts/_sidebar_l
 
 						if psotDetail == true
-							.col-md-6.content
+							if withoutRightSide == true
+								.col-md-8.content
+									block content
+							else
+								.col-md-6.content
 									block content
 						else
-							.col-md-6.content
+							if withoutRightSide == true
+								if withoutRightSideSmall == true
+									.col-md-6.content
+										block content
+								else
+									.col-md-8.content
+										block content
+							else
+								.col-md-6.content
 									block content
+						if withoutRightSide == true
 
-						.col-md-3.sidebar.sidebar_right
-							include ../_parts/_sidebar_r
+						else
+							.col-md-3.sidebar.sidebar_right
+								include ../_parts/_sidebar_r
 
 
 		include ../_parts/_footer
