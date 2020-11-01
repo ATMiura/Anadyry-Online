@@ -111,12 +111,15 @@ li
 
 .content
 	background: var(--color-wall)
-
-.content.col-md-6
-	padding: 0
+	min-height: 100vh
+	.wall
+		padding-left: 15px
+		padding-right: 15px
+	&.col-md-6
+	//padding: 0
 	//padding-top: 55px
-	flex: calc(50% + 45px)
-	max-width: calc(50% + 45px)
+	//flex: calc(50% + 45px)
+	//max-width: calc(50% + 45px)
 
 .wall
 	background: var(--color-wall)
@@ -134,7 +137,7 @@ li
 	padding-left: 31px
 	padding-right: 31px
 	padding-top: 70px
-	padding-bottom: 110px
+	padding-bottom: 90px
 	&.with_gallery
 		position: relative
 		.post__header
@@ -155,6 +158,10 @@ li
 				right: 0
 				margin: 0 auto
 				z-index: 0
+	& + .wall
+		padding-top: 0
+		.post__item
+			box-shadow: none
 
 .dots,
 [data-tooltip="dots"]

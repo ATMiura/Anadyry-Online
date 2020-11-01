@@ -295,5 +295,46 @@ block content
 										.event__item__remove
 											+icon('trash-basket-red')
 							button.btn.btn-dark.btn-add Добавить расписание
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-meta-title') Мета заголовок
+							input#post-create-form-meta-title.form-control(type='text')
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-meta-descr') Мета описание
+							textarea#post-create-form-meta-descr.form-control
+					.form-row
+						.form-group.col-md-6.col-12
+							label(for='post-create-form-date-finish') Окончание публикации
+							input#post-create-form-date-finish.form-control(type='date')
+						.form-group.col-md-6.col-12
+							label(for='post-create-form-date-start') Начало публикации
+							input#post-create-form-date-start.form-control(type='date')
+						.form-group.col-12
+							.custom-control.custom-checkbox
+								input#post-create-comments-allow.custom-control-input(type='checkbox')
+								label.custom-control-label(for='post-create-comments-allow') Разрешить комментарии
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-text') Текст поста
+							textarea#post-create-form-text.form-control
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-tag-list') Список тегов
+							input#post-create-form-tag-list.form-control(type='text')
+					.form-row
+						.form-group.col-12
+							label(for='post-create-form-source') Источник
+							input#post-create-form-source.form-control(type='text')
+					.form-row
+						.form-group.col-12
+							.form__heading Связать посты
+							label(for='post-create-link-articles') Заголовок поста
+							input#post-create-link-articles.form-control(type='text')
+							button.btn.btn-small Связать посты
+						.form-group.col-12.d-flex.justify-content-end
+							button.btn.btn-dark Черновик
+							button.btn.btn-primary На проверку
+
 
 

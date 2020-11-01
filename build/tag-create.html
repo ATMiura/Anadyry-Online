@@ -131,6 +131,7 @@
 									</div>
 									<div class="age">18+</div>
 								</div>
+								<div class="sidebar_left_inner__bg"></div>
 							</div>
 						</div>
 						<div class="col-md-6 content">
@@ -142,9 +143,10 @@
 									<div class="tag-type__item">
 										<form class="form tag-create-form">
 											<div class="form-row file-upload">
-												<div class="form-group col-md-5 col-12">
+												<div class="form-group col-md-4 col-12">
 													<div class="file-upload-list">
-														<div class="file-upload-list__item"><img class="img-fluid" src="/images/file-upload-default.jpg">
+														<div class="file-upload-list__item">
+															<!--img(src="/images/file-upload-default.jpg").img-fluid-->
 															<div class="file-upload__remove">
 																<svg class="icon icon-trash-basket ">
 																	<use xlink:href="images/sprites.svg#trash-basket"></use>
@@ -204,74 +206,17 @@
 						</div>
 						<div class="col-md-3 sidebar sidebar_right">
 							<div class="sidebar_inner sidebar_right_inner">
-								<div class="sidebar_item posts">
-									<h2>Часто обсуждаемое</h2>
-									<div class="posts_sidebar">
-										<div class="posts_sidebar__item">
-											<div class="posts_sidebar__text"> От молодёжного блога до «нового поколения» риэлторских агентств: история «Локалс»</div>
-											<div class="like_box">
-												<div class="like__list">
-													<div class="icon_box like__item">
-														<svg class="icon icon-like ">
-															<use xlink:href="images/sprites.svg#like"></use>
-														</svg><span class="like__value">25</span>
-													</div>
-													<div class="icon_box like__item">
-														<svg class="icon icon-dislike ">
-															<use xlink:href="images/sprites.svg#dislike"></use>
-														</svg><span class="like__value">5</span>
-													</div>
-													<div class="icon_box like__item">
-														<svg class="icon icon-comments ">
-															<use xlink:href="images/sprites.svg#comments"></use>
-														</svg><span class="like__value">36</span>
-													</div>
-													<div class="icon_box like__item">
-														<svg class="icon icon-views ">
-															<use xlink:href="images/sprites.svg#views"></use>
-														</svg><span class="like__value">126</span>
-													</div>
-													<div class="icon_box like__item">
-														<svg class="icon icon-bookmarks ">
-															<use xlink:href="images/sprites.svg#bookmarks"></use>
-														</svg>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="posts_sidebar__item">
-											<div class="posts_sidebar__text">От молодёжного блога до «нового поколения» риэлторских агентств: история «Локалс»</div>
-											<div class="like_box">
-												<div class="like__list">
-													<div class="icon_box like__item">
-														<svg class="icon icon-like ">
-															<use xlink:href="images/sprites.svg#like"></use>
-														</svg><span class="like__value">25</span>
-													</div>
-													<div class="icon_box like__item">
-														<svg class="icon icon-dislike ">
-															<use xlink:href="images/sprites.svg#dislike"></use>
-														</svg><span class="like__value">5</span>
-													</div>
-													<div class="icon_box like__item">
-														<svg class="icon icon-comments ">
-															<use xlink:href="images/sprites.svg#comments"></use>
-														</svg><span class="like__value">36</span>
-													</div>
-													<div class="icon_box like__item">
-														<svg class="icon icon-views ">
-															<use xlink:href="images/sprites.svg#views"></use>
-														</svg><span class="like__value">126</span>
-													</div>
-													<div class="icon_box like__item">
-														<svg class="icon icon-bookmarks ">
-															<use xlink:href="images/sprites.svg#bookmarks"></use>
-														</svg>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div><a class="more" href="">Показать все</a>
+								<div class="sidebar_item actual">
+									<h2>Актульаные темы для Вас</h2>
+									<ul class="actual-list">
+										<li class="actual-item"><a class="actual-link" href="#">#Анадырь</a></li>
+										<li class="actual-item"><a class="actual-link" href="#">#Экономика</a></li>
+										<li class="actual-item"><a class="actual-link" href="#">#Последние</a></li>
+										<li class="actual-item"><a class="actual-link" href="#">#События</a></li>
+										<li class="actual-item"><a class="actual-link" href="#">#Услуги жкх</a></li>
+										<li class="actual-item"><a class="actual-link" href="#">#Развлечения</a></li>
+										<li class="actual-item"><a class="actual-link" href="#">#Авто продажа</a></li>
+									</ul>
 								</div>
 								<div class="sidebar_item users">
 									<h2>Новые пользователи</h2>
@@ -311,6 +256,7 @@
 										</svg>
 									</div>
 								</div>
+								<div class="sidebar_right_inner__bg"></div>
 							</div>
 						</div>
 					</div>
@@ -323,7 +269,7 @@
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-		<script src="js/vendor.js?v=1600121259470"></script>
-		<script src="js/main.js?v=1600121259470"></script>
+		<script src="js/vendor.js?v=1604272104484"></script>
+		<script src="js/main.js?v=1604272104484"></script>
 	</body>
 </html>

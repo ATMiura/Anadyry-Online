@@ -1,4 +1,60 @@
 .sidebar_inner.sidebar_left_inner
+
+	if adminPanel == true
+		if commentList == true
+			nav.navbar.nav-admin-panel
+				ul.navbar-nav.d-flex.flex-column
+					li.nav-item
+						a.nav-link(href='#')
+							.nav-link_text Список постов
+					li.nav-item
+						a.nav-link(href='#').active
+							.nav-link_text Список комментариев
+		else if postList == true
+			nav.navbar.nav-admin-panel
+				ul.navbar-nav.d-flex.flex-column
+					li.nav-item
+						a.nav-link(href='#').active
+							.nav-link_text Список постов
+					li.nav-item
+						a.nav-link(href='#')
+							.nav-link_text Список комментариев
+		else if userRules == true
+			nav.navbar.nav-admin-panel
+				ul.navbar-nav.d-flex.flex-column
+					li.nav-item
+						a.nav-link(href='#').active
+							.nav-link_text Пользовательское соглашение
+					li.nav-item
+						a.nav-link(href='#')
+							.nav-link_text Конфиденциальность
+					li.nav-item
+						a.nav-link(href='#')
+							.nav-link_text Реклама
+					li.nav-item
+						a.nav-link(href='#')
+							.nav-link_text Правовая информация
+					li.nav-item
+						a.nav-link(href='#')
+							.nav-link_text Контакты
+
+		else
+			nav.navbar.nav-admin-panel
+				ul.navbar-nav.d-flex.flex-column
+					li.nav-item
+						a.nav-link(href='#').active
+							.nav-link_text Email и пароль
+					li.nav-item
+						a.nav-link(href='#')
+							.nav-link_text Профиль
+					li.nav-item
+						a.nav-link(href='#')
+							.nav-link_text Социальные сети
+					li.nav-item
+						a.nav-link(href='#')
+							.nav-link_text Уведомления
+	else
+
 		nav.navbar.navbar-expand-lg.nav_main
 			button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
 				span.navbar-toggler-icon
@@ -30,26 +86,33 @@
 					+nav_link('Диалог с властью')
 					span.show_more(data-menu-show-more="")
 						.show_more_text Показать все
-		nav.nav-info
-			ul.nav-info__list
-				li.nav-info__item
-					a.nav-info__link(href="#") Конфиденциальность
-				li.nav-info__item
-					a.nav-info__link(href="#") Соглашение пользователя
-				li.nav-info__item
-					span.nav-info__link.more(data-tooltip="nav-info-more") Еще
-		.social_age
-			.social
-				.icon_box
-					a.social_link(href="#")
-						+icon('vk')
-				.icon_box
-					a.social_link(href="#")
-						+icon('instagram')
-				.icon_box
-					a.social_link(href="#")
-						+icon('facebook')
-			.age 18+
+
+	nav.nav-info
+		ul.nav-info__list
+			li.nav-info__item
+				a.nav-info__link(href="#") Конфиденциальность
+			li.nav-info__item
+				a.nav-info__link(href="#") Соглашение пользователя
+			li.nav-info__item
+				span.nav-info__link.more(data-tooltip="nav-info-more") Еще
+	.social_age
+		.social
+			.icon_box
+				a.social_link(href="#")
+					+icon('vk')
+			.icon_box
+				a.social_link(href="#")
+					+icon('instagram')
+			.icon_box
+				a.social_link(href="#")
+					+icon('facebook')
+		.age 18+
+
+	if adminPanel == true
+
+	else
+		.sidebar_left_inner__bg
+
 
 
 

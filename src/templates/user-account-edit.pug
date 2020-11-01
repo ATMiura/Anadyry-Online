@@ -7,6 +7,7 @@ append vars
 		var userAccount = true
 		var withoutRightSide = true
 		var withoutRightSideSmall = true
+		var adminPanel = true
 
 block content
 	.wall
@@ -39,10 +40,10 @@ block content
 					h1 Редактировать профиль
 				form.form
 					.form-row.file-upload
-						.form-group.col-md-6.col-12
+						.form-group.col-md-4.col-12
 							.file-upload-list
 								.file-upload-list__item
-									img(src="/images/file-upload-default.jpg").img-fluid
+									//img(src="/images/file-upload-default.jpg").img-fluid
 									.file-upload__remove
 										+icon('trash-basket')
 
@@ -61,7 +62,7 @@ block content
 							label(for='post-create-form-meta-descr') О себе
 							textarea#post-create-form-meta-descr.form-control
 					.form-row
-						.form-group.col-md-6.col-12
+						.form-group.col-md-4.col-12
 							label(for='post-create-form-date-finish') Дата рождения
 							input#post-create-form-date-finish.form-control(type='date')
 

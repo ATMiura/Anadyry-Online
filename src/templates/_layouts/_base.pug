@@ -53,12 +53,16 @@ html(class=html.classList)&attributes(html.attrs)
 								if withoutRightSideSmall == true
 									.col-md-6.content
 										block content
+								else if userRules == true
+									.col-md-8
+										block content
 								else
 									.col-md-8.content
 										block content
 							else
 								.col-md-6.content
 									block content
+
 						if withoutRightSide == true
 
 						else

@@ -13,7 +13,8 @@
 		font-size: inherit
 		line-height: 1.5
 		color: var(--color-3)
-		border: 0
+		&:not(.textarea)
+			border: 0
 		&.inp-search
 			padding: 0.563rem 1rem 0.5rem 2.813rem
 		&.textarea
@@ -188,6 +189,11 @@
 		&__item
 			position: relative
 			padding: 0
+			background: url('../images/file-upload-default.jpg') no-repeat center
+			border-radius: 100%
+			min-width: 160px
+			max-width: 160px
+			height: 160px
 			&[class*=col-]
 				padding: 0 15px
 				.file-upload__remove
