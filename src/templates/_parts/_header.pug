@@ -1,8 +1,6 @@
-header.header
-	//if isAuth == true
-	//else
-	//+icon('m-search')
+include ../_mixins/_import
 
+header.header
 	.container
 		.row
 			.col-2.header__logo
@@ -10,9 +8,10 @@ header.header
 					+icon('logo')
 
 			.col-md-8.header__search(data-header-search='search')
-				form
-					.form-group
-						input#header__search.form-control.inp-search.form_field(type='text', placeholder='')
+				form.form
+					.form-row
+						.form-group
+							input#header__search.form-control.inp-search.form_field(type='text', placeholder='')
 
 			if isAuth == true
 				.col-2.header__userbar.logged

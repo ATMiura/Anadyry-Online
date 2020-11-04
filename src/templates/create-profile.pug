@@ -1,0 +1,75 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Создать учетную запись
+		include _parts/_head
+	body
+		main.main
+			.page-enter
+				.page-enter__img
+					img.img-fluid(src="images/page-enter-img.jpg")
+				.page-enter__container
+					.page-enter__header
+						.page-enter__logo
+							img(src="images/logo.svg")
+					.page-enter__body
+						.page-enter__form
+							form.form
+								.form-row
+									.form-group.col-12
+										.form__heading Создать учетную запись
+								.form-row
+									.form-group.col-12
+										label(for='signup-email') Email
+										input#signup-email.form-control(type='email')
+								.form-row
+									.form-group.col-md-6.col-12
+										label(for='signup-email') Имя
+										input#signup-nema.form-control(type='text')
+									.form-group.col-md-6.col-12
+										label(for='signup-email') Фамилия
+										input#signup-faname.form-control(type='text')
+								.form-row
+									.form-group.col-12
+										label(for='signup-pass') Пароль
+										.password
+											input#signup-pass.form-control(type='password')
+											.password-show
+								.form-row
+									.form-group.col-12
+										label(for='signup-retrypass') Повторить пароль
+										.password
+											input#signup-retrypass.form-control(type='password')
+											.password-show
+								.form-row
+									.form-group.col-12
+										.form-rules Нажимая “Содать учетную запись”, я подтверждаю, что ознакомился с
+											=" "
+											a(href="#") Условиями использования
+											=" "
+											| и
+											=" "
+											a(href="#") Политикой конфиденциальности.
+								.form-row
+									.form-group.col-12
+										button.btn.btn-primary Создать учетную запись
+
+					.page-enter__footer
+						| У Вас уже есть запись?
+						=" "
+						a(href="#") Войти
+
+
+		include _parts/_footer
+		include _parts/_modals
+
+		block scripts
+			script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js', integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj', crossorigin='anonymous')
+			script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js', integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo', crossorigin='anonymous')
+			script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js', integrity='sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI', crossorigin='anonymous')
+
+			script(src=`js/vendor.js?v=${Date.now()}`)
+			script(src=`js/main.js?v=${Date.now()}`)
+
+

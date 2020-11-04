@@ -29,27 +29,26 @@
 	</head>
 	<body>
 		<header class="header">
-			<!--if isAuth == true-->
-			<!--else-->
-			<!--+icon('m-search')-->
 			<div class="container">
 				<div class="row">
 					<div class="col-2 header__logo"><a href="/">
-							<svg class="icon icon-logo ">
-								<use xlink:href="images/sprites.svg#logo"></use>
-							</svg></a></div>
+									<svg class="icon icon-logo ">
+										<use xlink:href="images/sprites.svg#logo"></use>
+									</svg></a></div>
 					<div class="col-md-8 header__search" data-header-search="search">
-						<form>
-							<div class="form-group">
-								<input class="form-control inp-search form_field" id="header__search" type="text" placeholder="">
+						<form class="form">
+							<div class="form-row">
+								<div class="form-group">
+									<input class="form-control inp-search form_field" id="header__search" type="text" placeholder="">
+								</div>
 							</div>
 						</form>
 					</div>
 					<div class="col-2 header__userbar logged">
 						<div class="icon_box" data-icon="bell" data-dropdown="notice">
-							<svg class="icon icon-bell ">
-								<use xlink:href="images/sprites.svg#bell"></use>
-							</svg>
+									<svg class="icon icon-bell ">
+										<use xlink:href="images/sprites.svg#bell"></use>
+									</svg>
 							<div class="notif_quantity">1</div>
 						</div>
 						<div class="user">
@@ -58,13 +57,13 @@
 							</div>
 						</div>
 						<div class="icon_box" data-icon="services" data-dropdown="services">
-							<svg class="icon icon-menu ">
-								<use xlink:href="images/sprites.svg#menu"></use>
-							</svg>
+									<svg class="icon icon-menu ">
+										<use xlink:href="images/sprites.svg#menu"></use>
+									</svg>
 						</div><a class="post_create" href="#">
-							<svg class="icon icon-pencil ">
-								<use xlink:href="images/sprites.svg#pencil"></use>
-							</svg></a>
+									<svg class="icon icon-pencil ">
+										<use xlink:href="images/sprites.svg#pencil"></use>
+									</svg></a>
 					</div>
 				</div>
 			</div>
@@ -117,17 +116,17 @@
 								<div class="social_age">
 									<div class="social">
 										<div class="icon_box"><a class="social_link" href="#">
-												<svg class="icon icon-vk ">
-													<use xlink:href="images/sprites.svg#vk"></use>
-												</svg></a></div>
+														<svg class="icon icon-vk ">
+															<use xlink:href="images/sprites.svg#vk"></use>
+														</svg></a></div>
 										<div class="icon_box"><a class="social_link" href="#">
-												<svg class="icon icon-instagram ">
-													<use xlink:href="images/sprites.svg#instagram"></use>
-												</svg></a></div>
+														<svg class="icon icon-instagram ">
+															<use xlink:href="images/sprites.svg#instagram"></use>
+														</svg></a></div>
 										<div class="icon_box"><a class="social_link" href="#">
-												<svg class="icon icon-facebook ">
-													<use xlink:href="images/sprites.svg#facebook"></use>
-												</svg></a></div>
+														<svg class="icon icon-facebook ">
+															<use xlink:href="images/sprites.svg#facebook"></use>
+														</svg></a></div>
 									</div>
 									<div class="age">18+</div>
 								</div>
@@ -148,9 +147,9 @@
 														<div class="file-upload-list__item">
 															<!--img(src="/images/file-upload-default.jpg").img-fluid-->
 															<div class="file-upload__remove">
-																<svg class="icon icon-trash-basket ">
-																	<use xlink:href="images/sprites.svg#trash-basket"></use>
-																</svg>
+																		<svg class="icon icon-trash-basket ">
+																			<use xlink:href="images/sprites.svg#trash-basket"></use>
+																		</svg>
 															</div>
 														</div>
 													</div>
@@ -206,32 +205,87 @@
 						</div>
 						<div class="col-md-3 sidebar sidebar_right">
 							<div class="sidebar_inner sidebar_right_inner">
-								<div class="sidebar_item actual">
-									<h2>Актульаные темы для Вас</h2>
-									<ul class="actual-list">
-										<li class="actual-item"><a class="actual-link" href="#">#Анадырь</a></li>
-										<li class="actual-item"><a class="actual-link" href="#">#Экономика</a></li>
-										<li class="actual-item"><a class="actual-link" href="#">#Последние</a></li>
-										<li class="actual-item"><a class="actual-link" href="#">#События</a></li>
-										<li class="actual-item"><a class="actual-link" href="#">#Услуги жкх</a></li>
-										<li class="actual-item"><a class="actual-link" href="#">#Развлечения</a></li>
-										<li class="actual-item"><a class="actual-link" href="#">#Авто продажа</a></li>
-									</ul>
+								<div class="sidebar_item posts">
+									<div class="sidebar-title">Часто обсуждаемое</div>
+									<div class="posts_sidebar">
+										<div class="posts_sidebar__item">
+											<div class="posts_sidebar__text"> От молодёжного блога до «нового поколения» риэлторских агентств: история «Локалс»</div>
+											<div class="like_box">
+												<div class="like__list">
+													<div class="icon_box like__item">
+																<svg class="icon icon-like ">
+																	<use xlink:href="images/sprites.svg#like"></use>
+																</svg><span class="like__value">25</span>
+													</div>
+													<div class="icon_box like__item">
+																<svg class="icon icon-dislike ">
+																	<use xlink:href="images/sprites.svg#dislike"></use>
+																</svg><span class="like__value">5</span>
+													</div>
+													<div class="icon_box like__item">
+																<svg class="icon icon-comments ">
+																	<use xlink:href="images/sprites.svg#comments"></use>
+																</svg><span class="like__value">36</span>
+													</div>
+													<div class="icon_box like__item">
+																<svg class="icon icon-views ">
+																	<use xlink:href="images/sprites.svg#views"></use>
+																</svg><span class="like__value">126</span>
+													</div>
+													<div class="icon_box like__item">
+																<svg class="icon icon-bookmarks ">
+																	<use xlink:href="images/sprites.svg#bookmarks"></use>
+																</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="posts_sidebar__item">
+											<div class="posts_sidebar__text">От молодёжного блога до «нового поколения» риэлторских агентств: история «Локалс»</div>
+											<div class="like_box">
+												<div class="like__list">
+													<div class="icon_box like__item">
+																<svg class="icon icon-like ">
+																	<use xlink:href="images/sprites.svg#like"></use>
+																</svg><span class="like__value">25</span>
+													</div>
+													<div class="icon_box like__item">
+																<svg class="icon icon-dislike ">
+																	<use xlink:href="images/sprites.svg#dislike"></use>
+																</svg><span class="like__value">5</span>
+													</div>
+													<div class="icon_box like__item">
+																<svg class="icon icon-comments ">
+																	<use xlink:href="images/sprites.svg#comments"></use>
+																</svg><span class="like__value">36</span>
+													</div>
+													<div class="icon_box like__item">
+																<svg class="icon icon-views ">
+																	<use xlink:href="images/sprites.svg#views"></use>
+																</svg><span class="like__value">126</span>
+													</div>
+													<div class="icon_box like__item">
+																<svg class="icon icon-bookmarks ">
+																	<use xlink:href="images/sprites.svg#bookmarks"></use>
+																</svg>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div><a class="more" href="">Показать все</a>
 								</div>
 								<div class="sidebar_item users">
-									<h2>Новые пользователи</h2>
+									<div class="sidebar-title">Новые пользователи</div>
 									<div class="users_sidebar">
 										<div class="user">
 											<div class="user-avatar">
 												<div class="user-avatar-photo"><img src="/images/face_1.png"></div>
 											</div>
 											<div class="user-info">
-												<div class="user-name">
-													<h3>Дмитрий Иванов</h3>
-												</div>
+												<div class="user-name">Дмитрий Иванов</div>
 												<div class="user-tag">@sergeybabkin</div>
 												<div class="user-follow">
-													<div class="btn">+ Подписаться</div>
+													<div class="btn btn-small">+ Подписаться</div>
 												</div>
 											</div>
 										</div>
@@ -240,20 +294,18 @@
 												<div class="user-avatar-name" style="background-color: #D7F7F8; color: #29B2B7">МБ</div>
 											</div>
 											<div class="user-info">
-												<div class="user-name">
-													<h3>ООО “Мостбуд”</h3>
-												</div>
+												<div class="user-name">ООО “Мостбуд”</div>
 												<div class="user-tag">@mostbud</div>
 												<div class="user-follow">
-													<div class="btn">+ Подписаться</div>
+													<div class="btn btn-small">+ Подписаться</div>
 												</div>
 											</div>
 										</div>
 									</div><a class="more" href="">Показать все</a>
 									<div class="chat" data-tooltip="chat">
-										<svg class="icon icon-chat ">
-											<use xlink:href="images/sprites.svg#chat"></use>
-										</svg>
+												<svg class="icon icon-chat ">
+													<use xlink:href="images/sprites.svg#chat"></use>
+												</svg>
 									</div>
 								</div>
 								<div class="sidebar_right_inner__bg"></div>
@@ -269,7 +321,7 @@
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-		<script src="js/vendor.js?v=1604272104484"></script>
-		<script src="js/main.js?v=1604272104484"></script>
+		<script src="js/vendor.js?v=1604532049157"></script>
+		<script src="js/main.js?v=1604532049157"></script>
 	</body>
 </html>
