@@ -164,27 +164,7 @@
 		border: 1px solid #ECECEC
 		left: 25px !important
 		top: -10px !important
-	.dropdown-menu:before,
-	.dropdown-menu:after
-		right: 100%
-		top: 50%
-		border: solid transparent
-		content: ""
-		height: 0
-		width: 0
-		position: absolute
-		pointer-events: none
 
-	.dropdown-menu:after
-		border-color: rgba(255, 255, 255, 0)
-		border-right-color: #fff
-		border-width: 11px
-		margin-top: -18px
-	.dropdown-menu:before
-		border-color: rgba(236, 236, 236, 0)
-		border-right-color: #ECECEC
-		border-width: 12px
-		margin-top: -19px
 	.dropdown-item
 		font-weight: normal
 		font-size: .75rem
@@ -195,6 +175,58 @@
 			background-color: #F4F4F4
 		&:active
 			color: #333333
+
+	@media #{$laptop-above}
+		.dropdown-menu:before,
+		.dropdown-menu:after
+			right: 100%
+			top: 50%
+			border: solid transparent
+			content: ""
+			height: 0
+			width: 0
+			position: absolute
+			pointer-events: none
+
+		.dropdown-menu:after
+			border-color: rgba(255, 255, 255, 0)
+			border-right-color: #fff
+			border-width: 11px
+			margin-top: -18px
+		.dropdown-menu:before
+			border-color: rgba(236, 236, 236, 0)
+			border-right-color: #ECECEC
+			border-width: 12px
+			margin-top: -19px
+
+	@media #{$laptop}
+		.dropdown-menu.show
+			left: initial !important
+			right: 25px
+			transform: translate3d(0, 0px, 0px) !important
+		.dropdown-menu:before,
+		.dropdown-menu:after
+			left: 100%
+			top: 50%
+			border: solid transparent
+			content: ""
+			height: 0
+			width: 0
+			position: absolute
+			pointer-events: none
+
+		.dropdown-menu:after
+			border-color: rgba(255, 255, 255, 0)
+			border-left-color: #fff
+			border-width: 11px
+			margin-top: -29px
+		.dropdown-menu:before
+			border-color: rgba(236, 236, 236, 0)
+			border-left-color: #ECECEC
+			border-width: 12px
+			margin-top: -30px
+
+
 
 @media(max-width: 1440px)
 	[data-dropdown-type] .dropdown-menu.show

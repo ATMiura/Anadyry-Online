@@ -55,10 +55,10 @@
 							.nav-link_text Уведомления
 	else
 
-		nav.navbar.navbar-expand-lg.nav_main
+		nav.navbar.navbar-expand.nav_main
 			button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
 				span.navbar-toggler-icon
-			#navbarNav.collapse.navbar-collapse
+			#navbarNav.collapse.navbar-collapse(data-desktop="navbar")
 				mixin nav_link(name)
 					li.nav-item
 						a.nav-link(href='#')
@@ -66,7 +66,7 @@
 								span.nav-link_circle_inner
 							.nav-link_text=name
 
-				ul.navbar-nav.d-flex.flex-column
+				ul.navbar-nav.d-flex.flex-column(data-move="navbar")
 					+nav_link('Новости')
 					li.nav-item
 						a.nav-link(href='#').active
