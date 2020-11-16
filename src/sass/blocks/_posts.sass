@@ -12,6 +12,8 @@
 		margin-bottom: 18px
 		.tag__box
 			margin-bottom: 0
+		.dropdown
+			margin-bottom: 0
 	&__item
 		.like
 			&__user__list
@@ -30,6 +32,7 @@
 		&__title
 			font-size: 1.125rem
 			line-height: 1.688rem
+			font-weight: 600
 		&__banner
 			padding: 0
 			flex-basis: 100%
@@ -86,6 +89,10 @@
 				display: flex
 				flex-wrap: wrap
 				padding: 0
+				.post__content
+					padding: 20px 0
+					display: flex
+					flex-wrap: wrap
 				.post-info
 					margin-bottom: 50px
 					.post-info__list
@@ -115,7 +122,7 @@
 					box-shadow: none
 					.post__header
 						margin-bottom: 15px
-					.post__content
+					.post__body
 						padding-top: 0
 					.post__cinema__sessions
 						margin-top: 0
@@ -126,8 +133,8 @@
 						-webkit-box-orient: vertical
 						overflow: visible
 					.post__cinema__sessions
-						margin-top: 40px
-						@media #{$mobile-above}
+						//margin-top: 40px
+						@media #{$desktop-above}
 							max-width: 280px
 					.post__footer
 						width: 100%
@@ -139,7 +146,7 @@
 					flex-wrap: wrap
 					> .user
 						margin-bottom: 35px
-				.post__content
+				.post__body
 					padding: 30px 25px 15px 30px
 				.post__title
 					text-overflow: ellipsis
@@ -164,6 +171,7 @@
 					.post__btns
 						flex-direction: column
 						align-items: flex-start
+						flex-wrap: wrap
 						& > .user
 							margin-bottom: 35px
 		&__content
@@ -278,6 +286,7 @@
 			display: flex
 			align-items: flex-start
 			justify-content: space-between
+			flex-wrap: wrap
 
 .post
 	&__social
@@ -288,12 +297,15 @@
 			padding-left: 0
 			display: flex
 			align-items: center
+			margin-bottom: 0
 		.post__social__item
 			&:not(:last-child)
 				margin-right: 10px
 		.post__social__link
 			cursor: pointer
 			display: block
+			*
+				stroke: none !important
 		.bookmark
 			margin-left: 10px
 			.post__social__link
@@ -311,7 +323,7 @@
 		&__item
 			box-shadow: none
 		&__content
-			padding: 0
+			padding: 20px 0
 		&__header
 
 		&__body
@@ -329,6 +341,7 @@
 
 		&__reply
 			.textarea
+				margin-top: 30px
 				margin-bottom: 40px
 			&__actions
 				display: flex
@@ -412,11 +425,13 @@
 					min-width: auto
 					max-width: initial
 					height: auto
+					margin-bottom: 0
 
 
 /* Список постов */
 .post-list
 	&__list
+		margin-top: 30px
 	&__item
 		margin-bottom: 30px
 		&__inner
@@ -470,13 +485,18 @@
 			font-weight: 600
 			color: var(--color-7)
 		&__user
+			.user
+				align-items: center
+			.user-avatar
+				width: 45px
+				height: 45px
 			.user-name
-				font-size: .875rem
+				font-size: .75rem
 				line-height: 1rem
 				font-weight: 500
 				color: var(--color-7)
 		&__date
-			font-size: .875rem
+			font-size: .75rem
 			line-height: 1rem
 			color: var(--color-32)
 

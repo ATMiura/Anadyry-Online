@@ -1,3 +1,18 @@
+@media(max-width: 1620px)
+	.header__userbar
+		padding-right: 15px
+		.dropdown:not(:first-child)
+			margin-left: 1.5rem
+		.post_create
+			position: relative
+			top: 0
+			right: 0
+			width: 40px
+			height: 40px
+			margin-left: 1rem
+	.like__item
+		&:not(:last-child)
+			margin-right: 10px
 @media(max-width: 1440px)
 	.post__item
 		flex-wrap: wrap
@@ -6,16 +21,13 @@
 	.post-slider .post__content,
 	.post__list .post__content,
 	.post__detail .post__content
-		padding: 20px 15px
+		padding: 20px 15px !important
 	.post__list .post__banner,
 	.post__detail .post__banner
 		margin: 0 -15px
 		margin-bottom: 15px
 	.post__item
 		.like__user__list
-			margin-right: 10px
-	.like__item
-		&:not(:last-child)
 			margin-right: 10px
 	.post__item.columns
 		flex-wrap: wrap
@@ -30,6 +42,26 @@
 	.post__detail .post__gallery
 		margin-left: -15px
 		margin-right: -15px
+	.post__list .post__item.columns .post__banner,
+	.post__detail .post__item.columns .post__banner
+		margin-bottom: 20px
+	.post__list .post__item.columns .post__body,
+	.post__detail .post__item.columns .post__body
+		padding: 0
+
+	.detail
+		padding-left: 0
+		padding-right: 0
+
+	.post__btns
+		flex-wrap: wrap
+		> .user
+			margin-bottom: 10px
+
+	.content .wall
+		padding-left: 0
+		padding-right: 0
+
 
 
 
@@ -47,13 +79,6 @@
 		padding-right: 15px
 		.dropdown:not(:first-child)
 			margin-left: 1rem
-		.post_create
-			width: 40px
-			height: 40px
-			position: relative
-			right: 0
-			top: 0
-			margin-left: 1rem
 	.content .wall
 		padding-left: 0
 		padding-right: 0
@@ -65,11 +90,35 @@
 	.navbar.nav_main .nav-item .nav-link.active .nav-link_text
 		padding-left: 20px
 
-	.post__list .post__btns,
-	.post__detail .post__btns
+	.tag_filter__item:not(:last-child)
+		margin-right: 15px
+
+	.post-slider .post__btns,
+	.post__list .post__btns
 		flex-wrap: wrap
 		> .user
 			margin-bottom: 10px
+
+	.user-card__header,
+	.user-card__footer
+		padding: 15px
+	.user-actions__item
+		margin-bottom: 5px
+	.tag-list__item__inner
+		padding: 10px
+		padding-right: 25px
+
+	.post-list__item__footer
+		flex-direction: column
+		align-items: flex-start
+	.post-list__item__user
+		margin-bottom: 10px
+
+	.comments-item__body
+		flex-direction: column
+		justify-content: flex-start
+	.comments-item__user
+		margin-bottom: 20px
 
 @media #{$laptop-above}
 

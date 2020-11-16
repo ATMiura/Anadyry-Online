@@ -3,18 +3,18 @@ include ../_mixins/_import
 header.header
 	.container
 		.row
-			.col-3.header__logo
+			.col-lg-3.d-lg-block.d-md-none.header__logo
 				a(href="/")
 					+icon('logo')
 
-			.col-md-6.header__search(data-header-search='search')
+			.col-lg-6.col-12.header__search(data-header-search='search')
 				form.form
 					.form-row
 						.form-group
 							input#header__search.form-control.inp-search.form_field(type='text', placeholder='')
 
 			if isAuth == true
-				.col-3.header__userbar.logged
+				.col-lg-3.d-lg-flex.d-md-none.header__userbar.logged
 					.dropdown(data-dropdown-type="notice")
 						a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
 							.icon_box(data-icon='bell', data-dropdown='notice')
@@ -128,7 +128,7 @@ header.header
 					a.post_create(href='#')
 						+icon('pencil')
 			else
-				.col-3.header__userbar
+				.col-lg-3.d-lg-flex.d-md-none.header__userbar
 					a.btn.btn-primary.login(href='#') Войти
 					.dropdown(data-dropdown-type="services")
 						a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
