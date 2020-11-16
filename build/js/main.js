@@ -154,6 +154,29 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/js/_parts/_chat.js":
+/*!********************************!*\
+  !*** ./src/js/_parts/_chat.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+  $(document).on('click touch', '.chat', function () {
+    $('body').toggleClass('overflow');
+    $(this).toggleClass('active');
+    $('.chat-box').toggleClass('active');
+  });
+});
+$(window).on('load resize', function () {
+  var halfContentWidth = $('.content').outerWidth() / 2;
+  $('.chat').css({
+    'left': 'calc(50% + 100px + ' + halfContentWidth + 'px)'
+  });
+});
+
+/***/ }),
+
 /***/ "./src/js/_parts/_dropdown.js":
 /*!************************************!*\
   !*** ./src/js/_parts/_dropdown.js ***!
@@ -187,7 +210,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_masonry_layout_dist_masonry_pkgd_min_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_masonry_layout_dist_masonry_pkgd_min_js__WEBPACK_IMPORTED_MODULE_0__);
 
 $(document).ready(function () {
-  $('.post__list .post__gallery').masonry({
+  //$('.post__list .post__gallery').masonry({
+  //	itemSelector: '.post__list .post__gallery__item',
+  //	columnWidth: 224,
+  //	gutter: 5
+  //});
+  var msnry = new _node_modules_masonry_layout_dist_masonry_pkgd_min_js__WEBPACK_IMPORTED_MODULE_0___default.a('.post__list .post__gallery', {
     itemSelector: '.post__list .post__gallery__item',
     columnWidth: 224,
     gutter: 5
@@ -294,6 +322,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _parts_post_sessions_time_if_overflow__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_parts_post_sessions_time_if_overflow__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _parts_post_gallery_masonry__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./_parts/_post_gallery_masonry */ "./src/js/_parts/_post_gallery_masonry.js");
 /* harmony import */ var _parts_swiper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_parts/_swiper */ "./src/js/_parts/_swiper.js");
+/* harmony import */ var _parts_chat__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_parts/_chat */ "./src/js/_parts/_chat.js");
+/* harmony import */ var _parts_chat__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_parts_chat__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 

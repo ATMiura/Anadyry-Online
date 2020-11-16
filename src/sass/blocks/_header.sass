@@ -9,22 +9,24 @@
 .header__logo
 
 .header__search
-	margin-left: -15px
+	padding: 0
+	//margin: 0 -15px
+	//margin-left: -15px
 
 .header__userbar
 	display: flex
 	align-items: center
 	justify-content: flex-end
 	padding-right: 30px
-	.icon_box[data-icon='services'],
-	.user
-		margin-left: 2.75rem
+	.dropdown
+		&:not(:first-child)
+			margin-left: 2.75rem
 	.icon_box[data-icon='bell']
 		.notif_quantity
 			position: absolute
 			top: -2px
 			right: -10px
-	.btn
+	.login
 		max-width: 82px
 		width: 100%
 	.user

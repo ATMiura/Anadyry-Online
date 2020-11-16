@@ -29,32 +29,42 @@ block content
 						img(src="images/post_slider_img.png")
 
 					.post__content
-						.post-tag_dots
-							.tag
-								.tag__box
-									.tag__item
-										a.tag__link(href="#", style="color: #29B2B7;") # aфиша
-									.tag__item
-										a.tag__link(href="#", style="color: #923BDD;") # развлечения
-									.tag__item
-										a.tag__link(href="#", style="color: #4EBB7E;") # кино
-							.dots(data-tooltip="dots")
-								+icon('dots_v')
+						.post__header
+							.post-tag_dots
+								.tag
+									.tag__box
+										.tag__item
+											a.tag__link(href="#", style="color: #29B2B7;") # aфиша
+										.tag__item
+											a.tag__link(href="#", style="color: #923BDD;") # развлечения
+										.tag__item
+											a.tag__link(href="#", style="color: #4EBB7E;") # кино
+								.dropdown.dropright.dots(data-dropdown="dots")
+									a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+										+icon('dots_v')
+									.dropdown-menu(aria-labelledby='dropdownMenuLink')
+										.dropdown-list.dropdown-notice
+											.dropdown-item
+												a(href="#").dropdown-item__link Написать сообщение
+											.dropdown-item
+												a(href="#").dropdown-item__link Сообщить о нарушении
+						.post__body
+							.post__title  Почему стоит посмотреть закончившийся сериал «Кремниевая долина»
+						.post__footer
+							.post__btns
+								.user
+									.user-avatar
+										.user-avatar-photo
+											img(src="images/face_1.png")
+									.user-info
+										.user-portal Портал
+											= " "
+											a(href="#") Prochukotku.ru
+										.user-post-date 20 нояб. 2019 · 16м
+									.user-dots.dots(data-tooltip="dots")
+										+icon('dots_v')
 
-						.post__title  Почему стоит посмотреть закончившийся сериал «Кремниевая долина»
-						.user
-							.user-avatar
-								.user-avatar-photo
-									img(src="images/face_1.png")
-							.user-info
-								.user-portal Портал
-									= " "
-									a(href="#") Prochukotku.ru
-								.user-post-date 20 нояб. 2019 · 16м
-							.user-dots.dots(data-tooltip="dots")
-								+icon('dots_v')
-
-						include _parts/_like_box_post
+								include _parts/_like_box_post
 
 		.tag_filter
 			.tag_filter__item.active
@@ -92,8 +102,15 @@ block content
 										a.tag__link(href="#", style="color: #923BDD;") # развлечения
 									.tag__item
 										a.tag__link(href="#", style="color: #4EBB7E;") # кино
-							.dots(data-tooltip="dots")
-								+icon('dots_v')
+							.dropdown.dropright.dots(data-dropdown="dots")
+								a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+									+icon('dots_v')
+								.dropdown-menu(aria-labelledby='dropdownMenuLink')
+									.dropdown-list.dropdown-notice
+										.dropdown-item
+											a(href="#").dropdown-item__link Написать сообщение
+										.dropdown-item
+											a(href="#").dropdown-item__link Сообщить о нарушении
 						.post__title Сатира и манифест о проблемах технологий: почему стоит посмотреть закончившийся сериал «Кремниевая долина»
 					.post__body
 						.post__excerpt
@@ -114,10 +131,8 @@ block content
 									+icon('dots_v')
 							include _parts/_like_box_post
 
-		.advt
-			img.img-fluid(src="images/reklama.jpg")
-
-
+		.reklama_advt
+			img(src="images/banner_rek.jpg").img-fluid
 		.post__list
 			.post__item.colored(style="background: #2DB285;", data-color="#2DB285")
 				.post__content
@@ -127,8 +142,15 @@ block content
 								.tag__box
 									.tag__item
 										a.tag__link(href="#", style="color: #2DB285;") # Политика
-							.dots(data-tooltip="dots")
-								+icon('dots_v')
+							.dropdown.dropright.dots(data-dropdown="dots")
+								a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+									+icon('dots_v')
+								.dropdown-menu(aria-labelledby='dropdownMenuLink')
+									.dropdown-list.dropdown-notice
+										.dropdown-item
+											a(href="#").dropdown-item__link Написать сообщение
+										.dropdown-item
+											a(href="#").dropdown-item__link Сообщить о нарушении
 						.post__title Опрос: Как Вы относитесь к политике?
 					.post__body
 						.post__excerpt
@@ -176,8 +198,15 @@ block content
 												a.tag__link(href="#", style="color: #923BDD;") # развлечения
 											.tag__item
 												a.tag__link(href="#", style="color: #4EBB7E;") # кино
-									.dots(data-tooltip="dots")
-										+icon('dots_v')
+									.dropdown.dropright.dots(data-dropdown="dots")
+										a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+											+icon('dots_v')
+										.dropdown-menu(aria-labelledby='dropdownMenuLink')
+											.dropdown-list.dropdown-notice
+												.dropdown-item
+													a(href="#").dropdown-item__link Написать сообщение
+												.dropdown-item
+													a(href="#").dropdown-item__link Сообщить о нарушении
 								.post__title Мульт в кино.Выпуск №115 (0+)
 							.post__body
 								.post__excerpt
@@ -233,8 +262,15 @@ block content
 										a.tag__link(href="#", style="color: #923BDD;") # статистика
 									.tag__item
 										a.tag__link(href="#", style="color: #4EBB7E;") # зарплаты
-							.dots(data-tooltip="dots")
-								+icon('dots_v')
+							.dropdown.dropright.dots(data-dropdown="dots")
+								a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+									+icon('dots_v')
+								.dropdown-menu(aria-labelledby='dropdownMenuLink')
+									.dropdown-list.dropdown-notice
+										.dropdown-item
+											a(href="#").dropdown-item__link Написать сообщение
+										.dropdown-item
+											a(href="#").dropdown-item__link Сообщить о нарушении
 						.post__title Сатира и манифест о проблемах технологий: почему стоит посмотреть закончившийся сериал «Кремниевая долина»
 					.post__body
 						.post__excerpt
@@ -276,8 +312,15 @@ block content
 										a.tag__link(href="#", style="color: #923BDD;") # развлечения
 									.tag__item
 										a.tag__link(href="#", style="color: #4EBB7E;") # кино
-							.dots(data-tooltip="dots")
-								+icon('dots_v')
+							.dropdown.dropright.dots(data-dropdown="dots")
+								a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+									+icon('dots_v')
+								.dropdown-menu(aria-labelledby='dropdownMenuLink')
+									.dropdown-list.dropdown-notice
+										.dropdown-item
+											a(href="#").dropdown-item__link Написать сообщение
+										.dropdown-item
+											a(href="#").dropdown-item__link Сообщить о нарушении
 						.post__title Сатира и манифест о проблемах технологий: почему стоит посмотреть закончившийся сериал «Кремниевая долина»
 					.post__body
 						.post__excerpt
@@ -308,8 +351,15 @@ block content
 										a.tag__link(href="#", style="color: #923BDD;") # развлечения
 									.tag__item
 										a.tag__link(href="#", style="color: #4EBB7E;") # кино
-							.dots(data-tooltip="dots")
-								+icon('dots_v')
+							.dropdown.dropright.dots(data-dropdown="dots")
+								a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+									+icon('dots_v')
+								.dropdown-menu(aria-labelledby='dropdownMenuLink')
+									.dropdown-list.dropdown-notice
+										.dropdown-item
+											a(href="#").dropdown-item__link Написать сообщение
+										.dropdown-item
+											a(href="#").dropdown-item__link Сообщить о нарушении
 						.post__title Сатира и манифест о проблемах технологий: почему стоит посмотреть закончившийся сериал «Кремниевая долина»
 					.post__body
 						.post__excerpt

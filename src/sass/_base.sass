@@ -105,9 +105,9 @@ li
 		color: var(--color-7)
 		flex-basis: 530px
 
-
-.container
-	max-width: 1430px
+@media(min-width: 1440px)
+	.container
+		max-width: 1430px
 
 .page
 	//overflow: hidden
@@ -118,11 +118,23 @@ li
 	.wall
 		padding-left: 15px
 		padding-right: 15px
-	&.col-md-6
+
+
+@media(min-width: 1440px)
+	.sidebar,
+	.header__logo,
+	.header__userbar
+		flex: calc(25% - 30px)
+		max-width: calc(25% - 30px)
+
+@media(min-width: 1440px)
+	.content.col-md-6
 		//padding: 0
 		//padding-top: 55px
 		flex: calc(50% + 30px)
 		max-width: calc(50% + 30px)
+
+
 
 .wall
 	background: var(--color-wall)
@@ -186,27 +198,14 @@ li
 	line-height: 13px
 	text-align: center
 
-.chat
-	width: 78px
-	height: 78px
-	background: var(--color-4)
-	border-radius: 100%
-
-	cursor: pointer
-
-	display: flex
-	align-items: center
-	justify-content: center
-
-	position: absolute
-	z-index: 1
-	bottom: -100px
+.overflow
+	overflow: hidden
 
 .more
 	cursor: pointer
 
-.advt
-	margin-bottom: 40px
+.reklama_advt
+	margin: 40px 0
 
 
 

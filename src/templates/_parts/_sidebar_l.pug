@@ -94,7 +94,19 @@
 			li.nav-info__item
 				a.nav-info__link(href="#") Соглашение пользователя
 			li.nav-info__item
-				span.nav-info__link.more(data-tooltip="nav-info-more") Еще
+				.dropdown.dropup(data-dropdown-type="sidebar-more")
+					a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+						span.nav-info__link.more(data-tooltip="nav-info-more") Еще
+					.dropdown-menu(aria-labelledby='dropdownMenuLink')
+						.dropdown-list.dropdown-sidebar-more
+							.dropdown-item
+								a(href="#").dropdown-item__link Реклама
+							.dropdown-item
+								a(href="#").dropdown-item__link Контакты
+							.dropdown-item
+								a(href="#").dropdown-item__link Регистрация
+							.dropdown-item
+								a(href="#").dropdown-item__link Правовая информация
 	.social_age
 		.social
 			.icon_box
