@@ -1,7 +1,7 @@
 @media(max-width: 1620px)
 	.header__userbar
 		padding-right: 15px
-		.dropdown:not(:first-child)
+		.dropdown-wrap:not(:first-child)
 			margin-left: 1.5rem
 		.post_create
 			position: relative
@@ -77,11 +77,13 @@
 @media #{$laptop}
 	.header__userbar
 		padding-right: 15px
-		.dropdown:not(:first-child)
+		.dropdown-wrap:not(:first-child)
 			margin-left: 1rem
 	.content .wall
 		padding-left: 0
 		padding-right: 0
+	.sidebar_right_inner
+		padding-left: 0
 	.navbar .nav-item
 		font-size: .75rem
 	.navbar.nav_main .nav-item .nav-link_circle
@@ -123,6 +125,18 @@
 @media #{$laptop-above}
 
 @media #{$tablet}
+	.header__userbar
+		.user-avatar
+			width: 40px
+			height: 40px
+
+	.sidebar
+		//display: none
+	.sidebar_right
+		display: none
+	.chat
+		left: 30px !important
+		//display: none
 
 @media #{$tablet-above}
 

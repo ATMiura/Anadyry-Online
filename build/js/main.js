@@ -197,6 +197,30 @@ $(document).on('click', '.dropdown__label', function () {
 
 /***/ }),
 
+/***/ "./src/js/_parts/_mobileReplace.js":
+/*!*****************************************!*\
+  !*** ./src/js/_parts/_mobileReplace.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(window).on('load resize', function () {
+  /* проверяет все блоки с data-move и перемещает в блоки в мобилке/десктопе на основе их атрибутов */
+  if ($(window).width() < 768) {
+    $('[data-move]').each(function () {
+      var dataMoveAttr = $(this).data('move');
+      $(this).prependTo('[data-mobile="' + dataMoveAttr + '"]');
+    });
+  } else if ($(window).width() > 767) {
+    $('[data-move]').each(function () {
+      var dataMoveAttr = $(this).data('move');
+      $(this).prependTo('[data-desktop="' + dataMoveAttr + '"]');
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./src/js/_parts/_post_gallery_masonry.js":
 /*!************************************************!*\
   !*** ./src/js/_parts/_post_gallery_masonry.js ***!
@@ -324,36 +348,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _parts_swiper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_parts/_swiper */ "./src/js/_parts/_swiper.js");
 /* harmony import */ var _parts_chat__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_parts/_chat */ "./src/js/_parts/_chat.js");
 /* harmony import */ var _parts_chat__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_parts_chat__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _parts_mobileReplace__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./_parts/_mobileReplace */ "./src/js/_parts/_mobileReplace.js");
+/* harmony import */ var _parts_mobileReplace__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_parts_mobileReplace__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
 
 
 
- //import './_parts/_page';
-//import './_parts/_aside';
-//import './_parts/_menu';
-//import './_parts/_contact';
-//import './_parts/_contact-show-map';
-//import './_parts/_product';
-//import './_parts/_animate';
-//import './_parts/_modal';
-//import './_parts/_catalog';
-//import './_parts/_filter';
-//import './_parts/_helpers';
-//import './_parts/_section';
-//import './_parts/_2x';
-//import './_parts/_hero';
-//import './_parts/_countdown';
-//import './_parts/_alert';
-//import './_parts/_tab';
-//import './_parts/_mask';
-//import './_parts/_select';
-//import './_parts/_order';
-//import './_parts/_delivery';
-//import './_parts/_checkout';
-//import './_parts/_search';
-//import './_parts/_header-tooltip';
+
+
 
 /***/ }),
 

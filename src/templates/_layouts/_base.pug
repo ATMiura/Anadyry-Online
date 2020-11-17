@@ -50,30 +50,30 @@ html(class=html.classList)&attributes(html.attrs)
 
 							if psotDetail == true
 								if withoutRightSide == true
-									.col-md-8.content
+									.col-lg-8.col-md-9.col-12.content
 										block content
 								else
-									.col-md-6.content
+									.col-lg-6.col-md-9.col-12.content
 										block content
 							else
 								if withoutRightSide == true
 									if withoutRightSideSmall == true
-										.col-md-6.content
+										.col-lg-6.col-md-9.col-12.content
 											block content
 									else if userRules == true
-										.col-md-8
+										.col-lg-8.col-md-9.col-12
 											block content
 									else
-										.col-md-8.content
+										.col-lg-8.col-md-9.col-12.content
 											block content
 								else
-									.col-md-6.content
+									.col-lg-6.col-md-9.col-12.content
 										block content
 
 							if withoutRightSide == true
 
 							else
-								.col-md-3.sidebar.sidebar_right
+								.col-lg-3.sidebar.sidebar_right
 									include ../_parts/_sidebar_r
 
 			include ../_parts/_footer
