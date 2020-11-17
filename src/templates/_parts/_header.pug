@@ -139,7 +139,8 @@ header.header
 						+icon('pencil')
 			else
 				.col-md-3.d-md-flex.d-sm-none.header__userbar
-					a.btn.btn-primary.login(href='#') Войти
+					.login-box(data-desktop="login")
+						a.btn.btn-primary.login(href='#', data-move="login") Войти
 					.dropdown-wrap(data-desktop="services")
 						.dropdown(data-dropdown-type="services", data-move="services")
 							a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
@@ -171,7 +172,10 @@ header.header
 			.col-12.header-mobile
 				.header-mobile-item(data-mobile="services")
 				.header-mobile-item(data-mobile="logo")
-				.header-mobile-item(data-mobile="user")
+				if isAuth == true
+					.header-mobile-item(data-mobile="user")
+				else
+					.header-mobile-item(data-mobile="login")
 
 
 

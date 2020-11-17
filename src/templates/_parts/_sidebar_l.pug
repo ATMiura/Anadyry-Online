@@ -1,4 +1,4 @@
-.sidebar_inner.sidebar_left_inner
+.sidebar_inner.sidebar_left_inner(data-desktop="navbar")
 
 	if adminPanel == true
 		if commentList == true
@@ -55,10 +55,10 @@
 							.nav-link_text Уведомления
 	else
 
-		nav.navbar.navbar-expand.nav_main
+		nav.navbar.navbar-expand.nav_main(data-move="navbar")
 			button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
 				span.navbar-toggler-icon
-			#navbarNav.collapse.navbar-collapse(data-desktop="navbar")
+			#navbarNav.collapse.navbar-collapse
 				mixin nav_link(name)
 					li.nav-item
 						a.nav-link(href='#')
@@ -66,7 +66,7 @@
 								span.nav-link_circle_inner
 							.nav-link_text=name
 
-				ul.navbar-nav.d-flex.flex-column(data-move="navbar")
+				ul.navbar-nav.d-flex.flex-column
 					+nav_link('Новости')
 					li.nav-item
 						a.nav-link(href='#').active

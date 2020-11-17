@@ -44,7 +44,8 @@
 							</div>
 						</form>
 					</div>
-					<div class="col-md-3 d-md-flex d-sm-none header__userbar"><a class="btn btn-primary login" href="#">Войти</a>
+					<div class="col-md-3 d-md-flex d-sm-none header__userbar">
+						<div class="login-box" data-desktop="login"><a class="btn btn-primary login" href="#" data-move="login">Войти</a></div>
 						<div class="dropdown-wrap" data-desktop="services">
 							<div class="dropdown" data-dropdown-type="services" data-move="services"><a class="dropdown-toggle" id="dropdownMenuLink" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									<div class="icon_box" data-icon="services">
@@ -76,7 +77,7 @@
 					<div class="col-12 header-mobile">
 						<div class="header-mobile-item" data-mobile="services"></div>
 						<div class="header-mobile-item" data-mobile="logo"></div>
-						<div class="header-mobile-item" data-mobile="user"></div>
+						<div class="header-mobile-item" data-mobile="login"></div>
 					</div>
 				</div>
 			</div>
@@ -86,11 +87,11 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-3 sidebar sidebar_left">
-							<div class="sidebar_inner sidebar_left_inner">
-								<nav class="navbar navbar-expand nav_main">
+							<div class="sidebar_inner sidebar_left_inner" data-desktop="navbar">
+								<nav class="navbar navbar-expand nav_main" data-move="navbar">
 									<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-									<div class="collapse navbar-collapse" id="navbarNav" data-desktop="navbar">
-										<ul class="navbar-nav d-flex flex-column" data-move="navbar">
+									<div class="collapse navbar-collapse" id="navbarNav">
+										<ul class="navbar-nav d-flex flex-column">
 																					<li class="nav-item"><a class="nav-link" href="#"><span class="nav-link_circle"><span class="nav-link_circle_inner"></span></span>
 																							<div class="nav-link_text">Новости</div></a></li>
 											<li class="nav-item"><a class="nav-link active" href="#"><span class="nav-link_circle"><span class="nav-link_circle_inner"></span></span>
@@ -1079,11 +1080,14 @@
 		<div class="mobile">
 			<div class="mobile-content">
 				<!--.mobile-item(data-mobile="services")-->
-				<div class="mobile-item" data-mobile="user-menu"></div>
+				<!--.mobile-item(data-mobile="user-menu")-->
 				<div class="mobile-item" data-mobile="navbar"></div>
 				<div class="mobile-item" data-mobile="search"></div>
 				<div class="mobile-item" data-mobile="chat"></div>
 				<div class="mobile-item" data-mobile="notice"></div>
+			</div>
+			<div class="mobile-nav"><a class="mobile-link" data-mobile-nav="navbar"></a><a class="mobile-link" data-mobile-nav="search"></a><a class="mobile-link" data-mobile-nav="post-create"></a>
+				<!--a.mobile-item(data-mobile-nav="user-menu")--><a class="mobile-link" data-mobile-nav="chat"></a><a class="mobile-link" data-mobile-nav="notice"></a>
 			</div>
 		</div>
 		<div class="chat" data-tooltip="chat">
@@ -1375,7 +1379,7 @@
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-		<script src="js/vendor.js?v=1605561368671"></script>
-		<script src="js/main.js?v=1605561368671"></script>
+		<script src="js/vendor.js?v=1605604609293"></script>
+		<script src="js/main.js?v=1605604609293"></script>
 	</body>
 </html>
