@@ -69,10 +69,10 @@
 
 
 @media #{$desktop-above}
-	.post-slider .post__banner
-
-		flex-basis: 47.446%
-		max-width: 47.446%
+	.post-slider .post__banner,
+	.post-slider .post__content
+		flex-basis: 50%
+		max-width: 50%
 
 @media #{$laptop}
 	.header__userbar
@@ -134,6 +134,9 @@
 	.chat
 		left: 30px !important
 		//display: none
+
+	.post-list__item__excerpt
+		line-height: 1.2rem
 
 @media #{$tablet-above}
 

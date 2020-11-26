@@ -1,48 +1,50 @@
-.header-mobile
-	display: flex
-	align-items: center
-	justify-content: space-between
-	.header-mobile-item
-		.user-avatar
-			width: 40px
-			height: 40px
-	[data-mobile="logo"]
-		.icon-logo
-			width: 71px
-			height: 21px
+@media #{$mobile}
 
-
-.mobile
-	position: fixed
-	z-index: 999
-	bottom: 0
-	width: 100%
-	.mobile-content
-		display: none
-		&.active
-			display: block
-			height: 100vh
-			width: 100%
-			position: fixed
-			top: 50px
-			left: 0
-			padding: 30px 40px
-			background: #fff
-	.mobile-nav
+	.header-mobile
 		display: flex
 		align-items: center
 		justify-content: space-between
-		background-color: #FFFFFF
-		box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.1)
-		height: 50px
-		padding: 10px 30px
-		position: relative
-		z-index: 1
-	.mobile-item
-		display: none
-		&.active
-			display: block
-	.mobile-link
+		.header-mobile-item
+			.user-avatar
+				width: 40px
+				height: 40px
+		[data-mobile="logo"]
+			.icon-logo
+				width: 71px
+				height: 21px
+
+
+	.mobile
+		position: fixed
+		z-index: 999
+		bottom: 0
+		width: 100%
+		.mobile-content
+			display: none
+			&.active
+				display: block
+				height: 100vh
+				width: 100%
+				position: fixed
+				top: 50px
+				left: 0
+				padding: 30px 40px
+				background: #fff
+		.mobile-nav
+			display: flex
+			align-items: center
+			justify-content: space-between
+			background-color: #FFFFFF
+			box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.1)
+			height: 50px
+			padding: 10px 30px
+			position: relative
+			z-index: 1
+		.mobile-item
+			display: none
+			&.active
+				display: block
+		.mobile-link
 
 [data-mobile-nav]
 	background-repeat: no-repeat
