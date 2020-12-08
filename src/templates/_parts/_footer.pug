@@ -5,19 +5,21 @@ footer.footer
 
 .mobile
 	.mobile-content
-		//.mobile-item(data-mobile="services")
 		//.mobile-item(data-mobile="user-menu")
+
+
+		.mobile-item(data-mobile="services")
 		.mobile-item(data-mobile="navbar")
 		.mobile-item(data-mobile="search")
-		.mobile-item(data-mobile="chat")
-		.mobile-item(data-mobile="notice")
+		//.mobile-item(data-mobile="notice")
+		.mobile-item(data-mobile="chat-box")
 	.mobile-nav
 		a.mobile-link(data-mobile-nav="navbar")
 		a.mobile-link(data-mobile-nav="search")
-		a.mobile-link(data-mobile-nav="post-create")
+		a.mobile-link(href="", data-mobile-nav="post-create")
 		//a.mobile-item(data-mobile-nav="user-menu")
-		a.mobile-link(data-mobile-nav="chat")
-		a.mobile-link(data-mobile-nav="notice")
+		a.mobile-link(data-mobile-nav="chat-box")
+		.mobile-link(data-mobile-nav="notice", data-mobile="notice")
 
 
 
@@ -26,213 +28,214 @@ footer.footer
 
 .chat(data-tooltip="chat")
 	.chat-notice 3
-.chat-box
-	.chat-dialog
-		.chat-box-header
-			button.chat-box-back
-			.chat-box-user
-				.user
-					.user-avatar
-						.user-avatar-photo
-							img(src='/images/face_1.png')
-						.user-status.is-online
-					.user-info
-						.user-name Дмитрий Иванов
-						.user-status__text В сети
-			.chat-box-close
-		.chat-dialog-body
-			.chat-history
-				.chat-msg-wrap.chat-outgoing-msg
-					.chat-msg
-						.chat-msg-user
-							.user
-								.user-avatar
-									.user-avatar-photo
-										img(src="/images/face_1.png")
-						.chat-msg-text Здравствуйте, очень понравился Ваш пост. Подписался на Вас, с радостью буду следить за новыми постами.
-						.chat-msg-date Я 16ч назад
-				.chat-msg-wrap.chat-incoming-msg
-					.chat-msg
-						.chat-msg-user
-							.user
-								.user-avatar
-									.user-avatar-name(style="background-color: #D7F0E2; color: #5FB284") ТГ
-						.chat-msg-text Здравствуйте, спасибо большое. Очень приятно, буду стараться писать чаще.
-						.chat-msg-date Тарас Григорьев 16ч назад
-			.chat-dialog-message
-				label.chat-dialog-message__label
-					textarea(type="text", placeholder="Введите сообщение...").chat-dialog-message__input
-				button(type="submit").chat-dialog-message__send
-	.chat-people
-		.chat-box-header
-			.chat-box-header__title Диалоги
-			.chat-box-search
-				label.chat-box-search__label
-					input(type="text").chat-box-search__input
-		.chat-people-list
-			.chat-people-item
-				.chat-people-item__user
-					.user
-						.user-avatar
-							.user-avatar-name(style="background-color: #D7F7F8; color: #29B2B7") МБ
-							.user-status.is-offline
-						.user-info
-							.user-name Михайил Белов
-							.user-message
-					.chat-people-item-status
-						.chat-people-item-status__time 16ч назад
-						.chat-people-item-status-msg.empty
-
-				.chat-people-dots
-					.dropdown.dropright.dots(data-dropdown="dots")
-						a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-							+icon('dots_v')
-						.dropdown-menu(aria-labelledby='dropdownMenuLink')
-							.dropdown-list.dropdown-notice
-								.dropdown-item
-									a(href="#").dropdown-item__link Написать сообщение
-								.dropdown-item
-									a(href="#").dropdown-item__link Сообщить о нарушении
-
-			.chat-people-item
-				.chat-people-item__user
-					.user
-						.user-avatar
-							.user-avatar-name(style="background-color: #D0EDDD; color: #1AA758") ТГ
-							.user-status.is-online
-						.user-info
-							.user-name Тарас Григорьев
-							.user-message Здравствуйте, очень понравился Ваш пост.
-					.chat-people-item-status
-						.chat-people-item-status__time 2 мин
-						.chat-people-item-status-msg.empty
-
-				.chat-people-dots
-					.dropdown.dropright.dots(data-dropdown="dots")
-						a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-							+icon('dots_v')
-						.dropdown-menu(aria-labelledby='dropdownMenuLink')
-							.dropdown-list.dropdown-notice
-								.dropdown-item
-									a(href="#").dropdown-item__link Написать сообщение
-								.dropdown-item
-									a(href="#").dropdown-item__link Сообщить о нарушении
-
-			.chat-people-item
-				.chat-people-item__user
-					.user
-						.user-avatar
-							.user-avatar-name(style="background-color: #C7E0F8; color: #758CA7") СВ
-							.user-status.is-online
-						.user-info
-							.user-name Сергей Волков
-							.user-message Здравствуйте, очень понравился Ваш пост.
-					.chat-people-item-status
-						.chat-people-item-status__time 2 мин
-						.chat-people-item-status-msg.empty
-
-				.chat-people-dots
-					.dropdown.dropright.dots(data-dropdown="dots")
-						a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-							+icon('dots_v')
-						.dropdown-menu(aria-labelledby='dropdownMenuLink')
-							.dropdown-list.dropdown-notice
-								.dropdown-item
-									a(href="#").dropdown-item__link Написать сообщение
-								.dropdown-item
-									a(href="#").dropdown-item__link Сообщить о нарушении
-
-			.chat-people-item
-				.chat-people-item__user
-					.user
-						.user-avatar
-							.user-avatar-name(style="background-color: #FEDCDC; color: #C56A6A") АГ
-							.user-status.is-online
-						.user-info
-							.user-name Сергей Волков
-							.user-message Здравствуйте, очень понравился Ваш пост.
-					.chat-people-item-status
-						.chat-people-item-status__time 1 год назад
-						.chat-people-item-status-msg.notempty 1
-
-				.chat-people-dots
-					.dropdown.dropright.dots(data-dropdown="dots")
-						a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-							+icon('dots_v')
-						.dropdown-menu(aria-labelledby='dropdownMenuLink')
-							.dropdown-list.dropdown-notice
-								.dropdown-item
-									a(href="#").dropdown-item__link Написать сообщение
-								.dropdown-item
-									a(href="#").dropdown-item__link Сообщить о нарушении
-
-			.chat-people-item
-				.chat-people-item__user
+.chat-box(data-desktop="chat-box")
+	.chat-box__inner(data-move="chat-box")
+		.chat-dialog
+			.chat-box-header
+				button.chat-box-back
+				.chat-box-user
 					.user
 						.user-avatar
 							.user-avatar-photo
-								img(src="/images/face_1.png")
+								img(src='/images/face_1.png')
 							.user-status.is-online
 						.user-info
 							.user-name Дмитрий Иванов
-							.user-message Здравствуйте, очень понравился Ваш пост.
-					.chat-people-item-status
-						.chat-people-item-status__time 1 мин
-						.chat-people-item-status-msg.notempty 1
+							.user-status__text В сети
+				.chat-box-close
+			.chat-dialog-body
+				.chat-history
+					.chat-msg-wrap.chat-outgoing-msg
+						.chat-msg
+							.chat-msg-user
+								.user
+									.user-avatar
+										.user-avatar-photo
+											img(src="/images/face_1.png")
+							.chat-msg-text Здравствуйте, очень понравился Ваш пост. Подписался на Вас, с радостью буду следить за новыми постами.
+							.chat-msg-date Я 16ч назад
+					.chat-msg-wrap.chat-incoming-msg
+						.chat-msg
+							.chat-msg-user
+								.user
+									.user-avatar
+										.user-avatar-name(style="background-color: #D7F0E2; color: #5FB284") ТГ
+							.chat-msg-text Здравствуйте, спасибо большое. Очень приятно, буду стараться писать чаще.
+							.chat-msg-date Тарас Григорьев 16ч назад
+				.chat-dialog-message
+					label.chat-dialog-message__label
+						textarea(type="text", placeholder="Введите сообщение...").chat-dialog-message__input
+					button(type="submit").chat-dialog-message__send
+		.chat-people
+			.chat-box-header
+				.chat-box-header__title Диалоги
+				.chat-box-search
+					label.chat-box-search__label
+						input(type="text").chat-box-search__input
+			.chat-people-list
+				.chat-people-item
+					.chat-people-item__user
+						.user
+							.user-avatar
+								.user-avatar-name(style="background-color: #D7F7F8; color: #29B2B7") МБ
+								.user-status.is-offline
+							.user-info
+								.user-name Михайил Белов
+								.user-message
+						.chat-people-item-status
+							.chat-people-item-status__time 16ч назад
+							.chat-people-item-status-msg.empty
 
-				.chat-people-dots
-					.dropdown.dropright.dots(data-dropdown="dots")
-						a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-							+icon('dots_v')
-						.dropdown-menu(aria-labelledby='dropdownMenuLink')
-							.dropdown-list.dropdown-notice
-								.dropdown-item
-									a(href="#").dropdown-item__link Написать сообщение
-								.dropdown-item
-									a(href="#").dropdown-item__link Сообщить о нарушении
+					.chat-people-dots
+						.dropdown.dropright.dots(data-dropdown="dots")
+							a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+								+icon('dots_v')
+							.dropdown-menu(aria-labelledby='dropdownMenuLink')
+								.dropdown-list.dropdown-notice
+									.dropdown-item
+										a(href="#").dropdown-item__link Написать сообщение
+									.dropdown-item
+										a(href="#").dropdown-item__link Сообщить о нарушении
 
-			.chat-people-item
-				.chat-people-item__user
-					.user
-						.user-avatar
-							.user-avatar-name(style="background-color: #D0EDDD; color: #1AA758") ТГ
-							.user-status.is-online
-						.user-info
-							.user-name Сергей Волков
-							.user-message Здравствуйте, очень понравился Ваш пост.
-					.chat-people-item-status
-						.chat-people-item-status__time 16ч назад
+				.chat-people-item
+					.chat-people-item__user
+						.user
+							.user-avatar
+								.user-avatar-name(style="background-color: #D0EDDD; color: #1AA758") ТГ
+								.user-status.is-online
+							.user-info
+								.user-name Тарас Григорьев
+								.user-message Здравствуйте, очень понравился Ваш пост.
+						.chat-people-item-status
+							.chat-people-item-status__time 2 мин
+							.chat-people-item-status-msg.empty
 
-				.chat-people-dots
-					.dropdown.dropright.dots(data-dropdown="dots")
-						a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-							+icon('dots_v')
-						.dropdown-menu(aria-labelledby='dropdownMenuLink')
-							.dropdown-list.dropdown-notice
-								.dropdown-item
-									a(href="#").dropdown-item__link Написать сообщение
-								.dropdown-item
-									a(href="#").dropdown-item__link Сообщить о нарушении
-			.chat-people-item
-				.chat-people-item__user
-					.user
-						.user-avatar
-							.user-avatar-name(style="background-color: #D0EDDD; color: #1AA758") ТГ
-							.user-status.is-online
-						.user-info
-							.user-name Сергей Волков
-							.user-message Здравствуйте, очень понравился Ваш пост.
-					.chat-people-item-status
-						.chat-people-item-status__time 16ч назад
+					.chat-people-dots
+						.dropdown.dropright.dots(data-dropdown="dots")
+							a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+								+icon('dots_v')
+							.dropdown-menu(aria-labelledby='dropdownMenuLink')
+								.dropdown-list.dropdown-notice
+									.dropdown-item
+										a(href="#").dropdown-item__link Написать сообщение
+									.dropdown-item
+										a(href="#").dropdown-item__link Сообщить о нарушении
 
-				.chat-people-dots
-					.dropdown.dropright.dots(data-dropdown="dots")
-						a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-							+icon('dots_v')
-						.dropdown-menu(aria-labelledby='dropdownMenuLink')
-							.dropdown-list.dropdown-notice
-								.dropdown-item
-									a(href="#").dropdown-item__link Написать сообщение
-								.dropdown-item
-									a(href="#").dropdown-item__link Сообщить о нарушении
+				.chat-people-item
+					.chat-people-item__user
+						.user
+							.user-avatar
+								.user-avatar-name(style="background-color: #C7E0F8; color: #758CA7") СВ
+								.user-status.is-online
+							.user-info
+								.user-name Сергей Волков
+								.user-message Здравствуйте, очень понравился Ваш пост.
+						.chat-people-item-status
+							.chat-people-item-status__time 2 мин
+							.chat-people-item-status-msg.empty
+
+					.chat-people-dots
+						.dropdown.dropright.dots(data-dropdown="dots")
+							a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+								+icon('dots_v')
+							.dropdown-menu(aria-labelledby='dropdownMenuLink')
+								.dropdown-list.dropdown-notice
+									.dropdown-item
+										a(href="#").dropdown-item__link Написать сообщение
+									.dropdown-item
+										a(href="#").dropdown-item__link Сообщить о нарушении
+
+				.chat-people-item
+					.chat-people-item__user
+						.user
+							.user-avatar
+								.user-avatar-name(style="background-color: #FEDCDC; color: #C56A6A") АГ
+								.user-status.is-online
+							.user-info
+								.user-name Сергей Волков
+								.user-message Здравствуйте, очень понравился Ваш пост.
+						.chat-people-item-status
+							.chat-people-item-status__time 1 год назад
+							.chat-people-item-status-msg.notempty 1
+
+					.chat-people-dots
+						.dropdown.dropright.dots(data-dropdown="dots")
+							a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+								+icon('dots_v')
+							.dropdown-menu(aria-labelledby='dropdownMenuLink')
+								.dropdown-list.dropdown-notice
+									.dropdown-item
+										a(href="#").dropdown-item__link Написать сообщение
+									.dropdown-item
+										a(href="#").dropdown-item__link Сообщить о нарушении
+
+				.chat-people-item
+					.chat-people-item__user
+						.user
+							.user-avatar
+								.user-avatar-photo
+									img(src="/images/face_1.png")
+								.user-status.is-online
+							.user-info
+								.user-name Дмитрий Иванов
+								.user-message Здравствуйте, очень понравился Ваш пост.
+						.chat-people-item-status
+							.chat-people-item-status__time 1 мин
+							.chat-people-item-status-msg.notempty 1
+
+					.chat-people-dots
+						.dropdown.dropright.dots(data-dropdown="dots")
+							a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+								+icon('dots_v')
+							.dropdown-menu(aria-labelledby='dropdownMenuLink')
+								.dropdown-list.dropdown-notice
+									.dropdown-item
+										a(href="#").dropdown-item__link Написать сообщение
+									.dropdown-item
+										a(href="#").dropdown-item__link Сообщить о нарушении
+
+				.chat-people-item
+					.chat-people-item__user
+						.user
+							.user-avatar
+								.user-avatar-name(style="background-color: #D0EDDD; color: #1AA758") ТГ
+								.user-status.is-online
+							.user-info
+								.user-name Сергей Волков
+								.user-message Здравствуйте, очень понравился Ваш пост.
+						.chat-people-item-status
+							.chat-people-item-status__time 16ч назад
+
+					.chat-people-dots
+						.dropdown.dropright.dots(data-dropdown="dots")
+							a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+								+icon('dots_v')
+							.dropdown-menu(aria-labelledby='dropdownMenuLink')
+								.dropdown-list.dropdown-notice
+									.dropdown-item
+										a(href="#").dropdown-item__link Написать сообщение
+									.dropdown-item
+										a(href="#").dropdown-item__link Сообщить о нарушении
+				.chat-people-item
+					.chat-people-item__user
+						.user
+							.user-avatar
+								.user-avatar-name(style="background-color: #D0EDDD; color: #1AA758") ТГ
+								.user-status.is-online
+							.user-info
+								.user-name Сергей Волков
+								.user-message Здравствуйте, очень понравился Ваш пост.
+						.chat-people-item-status
+							.chat-people-item-status__time 16ч назад
+
+					.chat-people-dots
+						.dropdown.dropright.dots(data-dropdown="dots")
+							a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+								+icon('dots_v')
+							.dropdown-menu(aria-labelledby='dropdownMenuLink')
+								.dropdown-list.dropdown-notice
+									.dropdown-item
+										a(href="#").dropdown-item__link Написать сообщение
+									.dropdown-item
+										a(href="#").dropdown-item__link Сообщить о нарушении
 

@@ -50,20 +50,20 @@ header.header
 
 
 					.dropdown-wrap(data-desktop="user-menu")
-						.dropdown(data-dropdown-type="user-menu", data-desktop="user-menu")
+						.dropdown(data-dropdown-type="user-menu", data-move="user-menu")
 							a#dropdownMenuLink.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-								.user-box(data-desktop="user")
+								.user-box
 									append vars
 										-
 											var userHasImg = false
 
 									if userHasImg == true
-										.user(data-move="user")
+										.user
 											.user-avatar
 												.user-avatar-photo
 													img(src="/images/face_1.png")
 									else
-										.user(data-move="user")
+										.user
 											.user-avatar
 												.user-avatar-name(style="background-color: #D7F0E2; color: #5FB284") АЛ
 							.dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownMenuLink')
@@ -173,7 +173,7 @@ header.header
 				.header-mobile-item(data-mobile="services")
 				.header-mobile-item(data-mobile="logo")
 				if isAuth == true
-					.header-mobile-item(data-mobile="user")
+					.header-mobile-item(data-mobile="user-menu")
 				else
 					.header-mobile-item(data-mobile="login")
 

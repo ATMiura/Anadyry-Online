@@ -39,14 +39,18 @@
 	width: 100%
 	z-index: 9999999
 	background: rgba(0, 0, 0, 0.7)
-	display: none
-	align-items: center
-	justify-content: center
+	.chat-box__inner
+		display: none
+		align-items: center
+		justify-content: center
+		width: 100%
 	&.active
 		position: fixed
 		display: flex
 		top: 0
 		left: 0
+		.chat-box__inner
+			display: flex
 	.user
 	.user-name
 		font-size: .875rem

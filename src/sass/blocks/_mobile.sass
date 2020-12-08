@@ -1,45 +1,79 @@
-.header-mobile
-	display: flex
-	align-items: center
-	justify-content: space-between
-	.header-mobile-item
-		.user-avatar
-			width: 40px
-			height: 40px
-	[data-mobile="logo"]
-		.icon-logo
-			width: 71px
-			height: 21px
+@media #{$mobile}
 
-
-.mobile
-	position: fixed
-	z-index: 999
-	bottom: 0
-	width: 100%
-	.mobile-content
-		display: none
-		&.active
-			display: block
-			height: 100vh
-			width: 100%
-			position: fixed
-			top: 50px
-			left: 0
-			padding: 30px 40px
-			background: #fff
-	.mobile-nav
+	.header-mobile
 		display: flex
 		align-items: center
 		justify-content: space-between
-		background-color: #FFFFFF
-		box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.1)
-		height: 50px
-		padding: 10px 30px
-		position: relative
-		z-index: 1
-	.mobile-item
-	.mobile-link
+		.header-mobile-item
+			.user-avatar
+				width: 40px
+				height: 40px
+		[data-mobile="logo"]
+			.icon-logo
+				width: 71px
+				height: 21px
+
+
+	.mobile
+		position: fixed
+		z-index: 9999
+		bottom: 0
+		width: 100%
+		.mobile-content
+			display: none
+			&.active
+				display: block
+				height: calc(100vh - 100px)
+				width: 100%
+				position: fixed
+				top: 50px
+				left: 0
+				background: #fff
+		.mobile-nav
+			display: flex
+			align-items: center
+			justify-content: space-between
+			background-color: #FFFFFF
+			box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.1)
+			height: 50px
+			padding: 10px 30px
+			position: relative
+			z-index: 1
+		.mobile-item
+			display: none
+			overflow: auto
+			position: relative
+			padding: 30px 40px
+			height: 100%
+			overflow: auto
+			background-color: #fff
+			&.chat-box
+				padding: 0
+			&.active
+				display: block
+		.mobile-link
+
+.mobile-link,
+.header-mobile
+	[data-dropdown-type]
+		.dropdown-menu
+			position: fixed !important
+			transform: translate3d(0, 0, 0) !important
+			left: 0px !important
+			top: 50px !important
+			width: 100%
+			height: calc(100% - 100px)
+			border-radius: 0
+			box-shadow: none
+			border: 0
+			margin-top: 1px
+			box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1)
+		.btn
+			display: inline-block
+
+[data-dropdown-type] .dropdown-list
+	overflow: auto
+	max-height: 100%
 
 [data-mobile-nav]
 	background-repeat: no-repeat
@@ -62,12 +96,12 @@
 	width: 19px
 	height: 19px
 
-[data-mobile-nav="chat"]
+[data-mobile-nav="chat-box"]
 	background-image: url("data:image/svg+xml,%3Csvg width='19' height='19' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.714 16.3656C18.6956 16.3551 16.9909 15.3878 15.7805 14.0504C16.6366 12.6904 17.0872 11.1294 17.0872 9.50842C17.0872 7.22634 16.1984 5.0808 14.5847 3.46712C12.9711 1.85359 10.8255 0.964844 8.54358 0.964844C6.26149 0.964844 4.11596 1.85359 2.50242 3.46712C0.888742 5.0808 0 7.22634 0 9.50842C0 11.7904 0.888742 13.9359 2.50242 15.5496C4.11596 17.1633 6.26149 18.0519 8.54358 18.0519C10.0001 18.0519 11.4265 17.6819 12.6906 16.9793C15.1817 18.3642 18.4527 17.4349 18.5962 17.393C18.8129 17.3297 18.9706 17.1427 18.9963 16.9184C19.0221 16.694 18.9109 16.4763 18.714 16.3656ZM13.0019 15.8576C12.8209 15.7393 12.5878 15.7358 12.4031 15.8485C11.2437 16.5559 9.90909 16.9299 8.54358 16.9299C4.45139 16.9299 1.12198 13.6006 1.12198 9.50842C1.12198 5.41609 4.45139 2.08682 8.54358 2.08682C12.6358 2.08682 15.965 5.41609 15.965 9.50842C15.965 11.0441 15.4999 12.5179 14.6195 13.7704C14.4756 13.9752 14.4847 14.2507 14.6421 14.4454C15.3387 15.3078 16.2374 16.0424 16.9531 16.5565C15.8366 16.6782 14.2312 16.66 13.0019 15.8576Z' fill='%23737373'/%3E%3Cpath d='M12.3468 11.4409H4.74019C4.43027 11.4409 4.1792 11.6921 4.1792 12.0019C4.1792 12.3117 4.43027 12.5629 4.74019 12.5629H12.3468C12.6565 12.5629 12.9077 12.3117 12.9077 12.0019C12.9077 11.6921 12.6565 11.4409 12.3468 11.4409Z' fill='%23737373'/%3E%3Cpath d='M12.3468 8.94727H4.74019C4.43027 8.94727 4.1792 9.19848 4.1792 9.5084C4.1792 9.81817 4.43027 10.0694 4.74019 10.0694H12.3468C12.6565 10.0694 12.9077 9.81817 12.9077 9.5084C12.9077 9.19848 12.6565 8.94727 12.3468 8.94727Z' fill='%23737373'/%3E%3Cpath d='M12.3468 6.4541H4.74019C4.43027 6.4541 4.1792 6.70532 4.1792 7.01509C4.1792 7.32502 4.43027 7.57608 4.74019 7.57608H12.3468C12.6565 7.57608 12.9077 7.32502 12.9077 7.01509C12.9077 6.70532 12.6565 6.4541 12.3468 6.4541Z' fill='%23737373'/%3E%3C/svg%3E%0A")
 	width: 19px
 	height: 19px
 
-[data-mobile-nav="notice"]
+//[data-mobile-nav="notice"]
 	background-image: url("data:image/svg+xml,%3Csvg width='14' height='18' viewBox='0 0 14 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.96471 16.3013C7.33788 16.3008 7.69562 16.1523 7.95946 15.8884C8.22329 15.6245 8.37167 15.2667 8.37202 14.8936L9.17676 14.8936C9.17676 15.184 9.11954 15.4717 9.00837 15.7401C8.89721 16.0084 8.73427 16.2523 8.52886 16.4577C8.32345 16.6631 8.0796 16.8261 7.81122 16.9372C7.54284 17.0484 7.2552 17.1056 6.96471 17.1056C6.67421 17.1056 6.38657 17.0484 6.11819 16.9372C5.84981 16.8261 5.60596 16.6631 5.40055 16.4577C5.19514 16.2523 5.0322 16.0084 4.92104 15.7401C4.80987 15.4717 4.75265 15.184 4.75265 14.8936L5.55739 14.8936C5.55775 15.2667 5.70612 15.6245 5.96995 15.8884C6.23379 16.1523 6.59154 16.3008 6.96471 16.3013V16.3013Z' fill='%23737373'/%3E%3Cpath d='M1.24879 15H12.7511C13.4244 15 13.9102 14.6102 13.9888 14.0068C14.067 13.4023 13.7307 12.99 13.1754 12.3672C11.8471 10.8786 11.7529 9.85307 11.6514 7.4721C11.5641 5.42298 10.4235 3.94576 8.63216 3.39847V1.60473C8.63216 1.17913 8.4602 0.770959 8.15409 0.470014C7.84799 0.169069 7.43282 0 6.99993 0C6.56703 0 6.15187 0.169069 5.84576 0.470014C5.53966 0.770959 5.36769 1.17913 5.36769 1.60473V3.39847C3.57632 3.94575 2.4358 5.423 2.34847 7.47219C2.24697 9.85307 2.15278 10.8786 0.824246 12.3673C0.269174 12.99 -0.0671076 13.4023 0.0112865 14.007C0.0896806 14.6102 0.575441 15 1.24879 15ZM6.1765 1.60473C6.1765 1.39002 6.26326 1.18411 6.41768 1.03229C6.5721 0.880472 6.78154 0.79518 6.99993 0.79518C7.21831 0.79518 7.42775 0.880472 7.58218 1.03229C7.7366 1.18411 7.82335 1.39002 7.82335 1.60473V3.22144C7.27735 3.1423 6.7225 3.1423 6.1765 3.22144V1.60473ZM1.43224 12.8916C2.93533 11.2076 3.05223 9.95519 3.15649 7.50548C3.26807 4.88941 5.21505 3.95726 6.99993 3.95726C8.7848 3.95726 10.7318 4.88941 10.8434 7.50539C10.9476 9.95519 11.0645 11.2075 12.5674 12.8915C13.1002 13.489 13.2159 13.6787 13.1865 13.906C13.1606 14.1043 13.0141 14.2048 12.7511 14.2048H1.24879C0.985771 14.2048 0.839253 14.1043 0.813581 13.9062C0.783963 13.6787 0.899675 13.489 1.43224 12.8916Z' fill='%23737373'/%3E%3C/svg%3E%0A")
 	width: 15px
 	height: 18px

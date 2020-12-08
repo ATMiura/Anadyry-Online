@@ -12,7 +12,11 @@
 	padding: 0
 	//margin: 0 -15px
 	//margin-left: -15px
-
+.icon_box[data-icon='bell']
+	.notif_quantity
+		position: absolute
+		top: -2px
+		right: -10px
 .header__userbar
 	display: flex
 	align-items: center
@@ -21,11 +25,7 @@
 	.dropdown-wrap
 		&:not(:first-child)
 			margin-left: 2.75rem
-	.icon_box[data-icon='bell']
-		.notif_quantity
-			position: absolute
-			top: -2px
-			right: -10px
+
 	.login
 		max-width: 82px
 		width: 100%

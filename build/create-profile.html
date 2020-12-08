@@ -101,211 +101,27 @@
 		</footer>
 		<div class="mobile">
 			<div class="mobile-content">
-				<!--.mobile-item(data-mobile="services")-->
 				<!--.mobile-item(data-mobile="user-menu")-->
+				<div class="mobile-item" data-mobile="services"></div>
 				<div class="mobile-item" data-mobile="navbar"></div>
 				<div class="mobile-item" data-mobile="search"></div>
-				<div class="mobile-item" data-mobile="chat"></div>
-				<div class="mobile-item" data-mobile="notice"></div>
+				<!--.mobile-item(data-mobile="notice")-->
+				<div class="mobile-item" data-mobile="chat-box"></div>
 			</div>
-			<div class="mobile-nav"><a class="mobile-link" data-mobile-nav="navbar"></a><a class="mobile-link" data-mobile-nav="search"></a><a class="mobile-link" data-mobile-nav="post-create"></a>
-				<!--a.mobile-item(data-mobile-nav="user-menu")--><a class="mobile-link" data-mobile-nav="chat"></a><a class="mobile-link" data-mobile-nav="notice"></a>
+			<div class="mobile-nav"><a class="mobile-link" data-mobile-nav="navbar"></a><a class="mobile-link" data-mobile-nav="search"></a><a class="mobile-link" href="" data-mobile-nav="post-create"></a>
+				<!--a.mobile-item(data-mobile-nav="user-menu")--><a class="mobile-link" data-mobile-nav="chat-box"></a>
+				<div class="mobile-link" data-mobile-nav="notice" data-mobile="notice"></div>
 			</div>
 		</div>
 		<div class="chat" data-tooltip="chat">
 			<div class="chat-notice">3</div>
 		</div>
-		<div class="chat-box">
-			<div class="chat-dialog">
-				<div class="chat-box-header">
-					<button class="chat-box-back"></button>
-					<div class="chat-box-user">
-						<div class="user">
-							<div class="user-avatar">
-								<div class="user-avatar-photo"><img src="/images/face_1.png"></div>
-								<div class="user-status is-online"></div>
-							</div>
-							<div class="user-info">
-								<div class="user-name">Дмитрий Иванов</div>
-								<div class="user-status__text">В сети</div>
-							</div>
-						</div>
-					</div>
-					<div class="chat-box-close"></div>
-				</div>
-				<div class="chat-dialog-body">
-					<div class="chat-history">
-						<div class="chat-msg-wrap chat-outgoing-msg">
-							<div class="chat-msg">
-								<div class="chat-msg-user">
-									<div class="user">
-										<div class="user-avatar">
-											<div class="user-avatar-photo"><img src="/images/face_1.png"></div>
-										</div>
-									</div>
-								</div>
-								<div class="chat-msg-text">Здравствуйте, очень понравился Ваш пост. Подписался на Вас, с радостью буду следить за новыми постами.</div>
-								<div class="chat-msg-date">Я 16ч назад</div>
-							</div>
-						</div>
-						<div class="chat-msg-wrap chat-incoming-msg">
-							<div class="chat-msg">
-								<div class="chat-msg-user">
-									<div class="user">
-										<div class="user-avatar">
-											<div class="user-avatar-name" style="background-color: #D7F0E2; color: #5FB284">ТГ</div>
-										</div>
-									</div>
-								</div>
-								<div class="chat-msg-text">Здравствуйте, спасибо большое. Очень приятно, буду стараться писать чаще.</div>
-								<div class="chat-msg-date">Тарас Григорьев 16ч назад</div>
-							</div>
-						</div>
-					</div>
-					<div class="chat-dialog-message">
-						<label class="chat-dialog-message__label">
-							<textarea class="chat-dialog-message__input" type="text" placeholder="Введите сообщение..."></textarea>
-						</label>
-						<button class="chat-dialog-message__send" type="submit"></button>
-					</div>
-				</div>
-			</div>
-			<div class="chat-people">
-				<div class="chat-box-header">
-					<div class="chat-box-header__title">Диалоги</div>
-					<div class="chat-box-search">
-						<label class="chat-box-search__label">
-							<input class="chat-box-search__input" type="text">
-						</label>
-					</div>
-				</div>
-				<div class="chat-people-list">
-					<div class="chat-people-item">
-						<div class="chat-people-item__user">
-							<div class="user">
-								<div class="user-avatar">
-									<div class="user-avatar-name" style="background-color: #D7F7F8; color: #29B2B7">МБ</div>
-									<div class="user-status is-offline"></div>
-								</div>
-								<div class="user-info">
-									<div class="user-name">Михайил Белов</div>
-									<div class="user-message"></div>
-								</div>
-							</div>
-							<div class="chat-people-item-status">
-								<div class="chat-people-item-status__time">16ч назад</div>
-								<div class="chat-people-item-status-msg empty"></div>
-							</div>
-						</div>
-						<div class="chat-people-dots">
-							<div class="dropdown dropright dots" data-dropdown="dots"><a class="dropdown-toggle" id="dropdownMenuLink" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<svg class="icon icon-dots_v ">
-												<use xlink:href="images/sprites.svg#dots_v"></use>
-											</svg></a>
-								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-									<div class="dropdown-list dropdown-notice">
-										<div class="dropdown-item"><a class="dropdown-item__link" href="#">Написать сообщение</a></div>
-										<div class="dropdown-item"><a class="dropdown-item__link" href="#">Сообщить о нарушении</a></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="chat-people-item">
-						<div class="chat-people-item__user">
-							<div class="user">
-								<div class="user-avatar">
-									<div class="user-avatar-name" style="background-color: #D0EDDD; color: #1AA758">ТГ</div>
-									<div class="user-status is-online"></div>
-								</div>
-								<div class="user-info">
-									<div class="user-name">Тарас Григорьев</div>
-									<div class="user-message">Здравствуйте, очень понравился Ваш пост.</div>
-								</div>
-							</div>
-							<div class="chat-people-item-status">
-								<div class="chat-people-item-status__time">2 мин</div>
-								<div class="chat-people-item-status-msg empty"></div>
-							</div>
-						</div>
-						<div class="chat-people-dots">
-							<div class="dropdown dropright dots" data-dropdown="dots"><a class="dropdown-toggle" id="dropdownMenuLink" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<svg class="icon icon-dots_v ">
-												<use xlink:href="images/sprites.svg#dots_v"></use>
-											</svg></a>
-								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-									<div class="dropdown-list dropdown-notice">
-										<div class="dropdown-item"><a class="dropdown-item__link" href="#">Написать сообщение</a></div>
-										<div class="dropdown-item"><a class="dropdown-item__link" href="#">Сообщить о нарушении</a></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="chat-people-item">
-						<div class="chat-people-item__user">
-							<div class="user">
-								<div class="user-avatar">
-									<div class="user-avatar-name" style="background-color: #C7E0F8; color: #758CA7">СВ</div>
-									<div class="user-status is-online"></div>
-								</div>
-								<div class="user-info">
-									<div class="user-name">Сергей Волков</div>
-									<div class="user-message">Здравствуйте, очень понравился Ваш пост.</div>
-								</div>
-							</div>
-							<div class="chat-people-item-status">
-								<div class="chat-people-item-status__time">2 мин</div>
-								<div class="chat-people-item-status-msg empty"></div>
-							</div>
-						</div>
-						<div class="chat-people-dots">
-							<div class="dropdown dropright dots" data-dropdown="dots"><a class="dropdown-toggle" id="dropdownMenuLink" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<svg class="icon icon-dots_v ">
-												<use xlink:href="images/sprites.svg#dots_v"></use>
-											</svg></a>
-								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-									<div class="dropdown-list dropdown-notice">
-										<div class="dropdown-item"><a class="dropdown-item__link" href="#">Написать сообщение</a></div>
-										<div class="dropdown-item"><a class="dropdown-item__link" href="#">Сообщить о нарушении</a></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="chat-people-item">
-						<div class="chat-people-item__user">
-							<div class="user">
-								<div class="user-avatar">
-									<div class="user-avatar-name" style="background-color: #FEDCDC; color: #C56A6A">АГ</div>
-									<div class="user-status is-online"></div>
-								</div>
-								<div class="user-info">
-									<div class="user-name">Сергей Волков</div>
-									<div class="user-message">Здравствуйте, очень понравился Ваш пост.</div>
-								</div>
-							</div>
-							<div class="chat-people-item-status">
-								<div class="chat-people-item-status__time">1 год назад</div>
-								<div class="chat-people-item-status-msg notempty">1</div>
-							</div>
-						</div>
-						<div class="chat-people-dots">
-							<div class="dropdown dropright dots" data-dropdown="dots"><a class="dropdown-toggle" id="dropdownMenuLink" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<svg class="icon icon-dots_v ">
-												<use xlink:href="images/sprites.svg#dots_v"></use>
-											</svg></a>
-								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-									<div class="dropdown-list dropdown-notice">
-										<div class="dropdown-item"><a class="dropdown-item__link" href="#">Написать сообщение</a></div>
-										<div class="dropdown-item"><a class="dropdown-item__link" href="#">Сообщить о нарушении</a></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="chat-people-item">
-						<div class="chat-people-item__user">
+		<div class="chat-box" data-desktop="chat-box">
+			<div class="chat-box__inner" data-move="chat-box">
+				<div class="chat-dialog">
+					<div class="chat-box-header">
+						<button class="chat-box-back"></button>
+						<div class="chat-box-user">
 							<div class="user">
 								<div class="user-avatar">
 									<div class="user-avatar-photo"><img src="/images/face_1.png"></div>
@@ -313,83 +129,270 @@
 								</div>
 								<div class="user-info">
 									<div class="user-name">Дмитрий Иванов</div>
-									<div class="user-message">Здравствуйте, очень понравился Ваш пост.</div>
+									<div class="user-status__text">В сети</div>
 								</div>
 							</div>
-							<div class="chat-people-item-status">
-								<div class="chat-people-item-status__time">1 мин</div>
-								<div class="chat-people-item-status-msg notempty">1</div>
+						</div>
+						<div class="chat-box-close"></div>
+					</div>
+					<div class="chat-dialog-body">
+						<div class="chat-history">
+							<div class="chat-msg-wrap chat-outgoing-msg">
+								<div class="chat-msg">
+									<div class="chat-msg-user">
+										<div class="user">
+											<div class="user-avatar">
+												<div class="user-avatar-photo"><img src="/images/face_1.png"></div>
+											</div>
+										</div>
+									</div>
+									<div class="chat-msg-text">Здравствуйте, очень понравился Ваш пост. Подписался на Вас, с радостью буду следить за новыми постами.</div>
+									<div class="chat-msg-date">Я 16ч назад</div>
+								</div>
+							</div>
+							<div class="chat-msg-wrap chat-incoming-msg">
+								<div class="chat-msg">
+									<div class="chat-msg-user">
+										<div class="user">
+											<div class="user-avatar">
+												<div class="user-avatar-name" style="background-color: #D7F0E2; color: #5FB284">ТГ</div>
+											</div>
+										</div>
+									</div>
+									<div class="chat-msg-text">Здравствуйте, спасибо большое. Очень приятно, буду стараться писать чаще.</div>
+									<div class="chat-msg-date">Тарас Григорьев 16ч назад</div>
+								</div>
 							</div>
 						</div>
-						<div class="chat-people-dots">
-							<div class="dropdown dropright dots" data-dropdown="dots"><a class="dropdown-toggle" id="dropdownMenuLink" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<svg class="icon icon-dots_v ">
-												<use xlink:href="images/sprites.svg#dots_v"></use>
-											</svg></a>
-								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-									<div class="dropdown-list dropdown-notice">
-										<div class="dropdown-item"><a class="dropdown-item__link" href="#">Написать сообщение</a></div>
-										<div class="dropdown-item"><a class="dropdown-item__link" href="#">Сообщить о нарушении</a></div>
+						<div class="chat-dialog-message">
+							<label class="chat-dialog-message__label">
+								<textarea class="chat-dialog-message__input" type="text" placeholder="Введите сообщение..."></textarea>
+							</label>
+							<button class="chat-dialog-message__send" type="submit"></button>
+						</div>
+					</div>
+				</div>
+				<div class="chat-people">
+					<div class="chat-box-header">
+						<div class="chat-box-header__title">Диалоги</div>
+						<div class="chat-box-search">
+							<label class="chat-box-search__label">
+								<input class="chat-box-search__input" type="text">
+							</label>
+						</div>
+					</div>
+					<div class="chat-people-list">
+						<div class="chat-people-item">
+							<div class="chat-people-item__user">
+								<div class="user">
+									<div class="user-avatar">
+										<div class="user-avatar-name" style="background-color: #D7F7F8; color: #29B2B7">МБ</div>
+										<div class="user-status is-offline"></div>
+									</div>
+									<div class="user-info">
+										<div class="user-name">Михайил Белов</div>
+										<div class="user-message"></div>
+									</div>
+								</div>
+								<div class="chat-people-item-status">
+									<div class="chat-people-item-status__time">16ч назад</div>
+									<div class="chat-people-item-status-msg empty"></div>
+								</div>
+							</div>
+							<div class="chat-people-dots">
+								<div class="dropdown dropright dots" data-dropdown="dots"><a class="dropdown-toggle" id="dropdownMenuLink" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												<svg class="icon icon-dots_v ">
+													<use xlink:href="images/sprites.svg#dots_v"></use>
+												</svg></a>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										<div class="dropdown-list dropdown-notice">
+											<div class="dropdown-item"><a class="dropdown-item__link" href="#">Написать сообщение</a></div>
+											<div class="dropdown-item"><a class="dropdown-item__link" href="#">Сообщить о нарушении</a></div>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="chat-people-item">
-						<div class="chat-people-item__user">
-							<div class="user">
-								<div class="user-avatar">
-									<div class="user-avatar-name" style="background-color: #D0EDDD; color: #1AA758">ТГ</div>
-									<div class="user-status is-online"></div>
+						<div class="chat-people-item">
+							<div class="chat-people-item__user">
+								<div class="user">
+									<div class="user-avatar">
+										<div class="user-avatar-name" style="background-color: #D0EDDD; color: #1AA758">ТГ</div>
+										<div class="user-status is-online"></div>
+									</div>
+									<div class="user-info">
+										<div class="user-name">Тарас Григорьев</div>
+										<div class="user-message">Здравствуйте, очень понравился Ваш пост.</div>
+									</div>
 								</div>
-								<div class="user-info">
-									<div class="user-name">Сергей Волков</div>
-									<div class="user-message">Здравствуйте, очень понравился Ваш пост.</div>
+								<div class="chat-people-item-status">
+									<div class="chat-people-item-status__time">2 мин</div>
+									<div class="chat-people-item-status-msg empty"></div>
 								</div>
 							</div>
-							<div class="chat-people-item-status">
-								<div class="chat-people-item-status__time">16ч назад</div>
-							</div>
-						</div>
-						<div class="chat-people-dots">
-							<div class="dropdown dropright dots" data-dropdown="dots"><a class="dropdown-toggle" id="dropdownMenuLink" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<svg class="icon icon-dots_v ">
-												<use xlink:href="images/sprites.svg#dots_v"></use>
-											</svg></a>
-								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-									<div class="dropdown-list dropdown-notice">
-										<div class="dropdown-item"><a class="dropdown-item__link" href="#">Написать сообщение</a></div>
-										<div class="dropdown-item"><a class="dropdown-item__link" href="#">Сообщить о нарушении</a></div>
+							<div class="chat-people-dots">
+								<div class="dropdown dropright dots" data-dropdown="dots"><a class="dropdown-toggle" id="dropdownMenuLink" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												<svg class="icon icon-dots_v ">
+													<use xlink:href="images/sprites.svg#dots_v"></use>
+												</svg></a>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										<div class="dropdown-list dropdown-notice">
+											<div class="dropdown-item"><a class="dropdown-item__link" href="#">Написать сообщение</a></div>
+											<div class="dropdown-item"><a class="dropdown-item__link" href="#">Сообщить о нарушении</a></div>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="chat-people-item">
-						<div class="chat-people-item__user">
-							<div class="user">
-								<div class="user-avatar">
-									<div class="user-avatar-name" style="background-color: #D0EDDD; color: #1AA758">ТГ</div>
-									<div class="user-status is-online"></div>
+						<div class="chat-people-item">
+							<div class="chat-people-item__user">
+								<div class="user">
+									<div class="user-avatar">
+										<div class="user-avatar-name" style="background-color: #C7E0F8; color: #758CA7">СВ</div>
+										<div class="user-status is-online"></div>
+									</div>
+									<div class="user-info">
+										<div class="user-name">Сергей Волков</div>
+										<div class="user-message">Здравствуйте, очень понравился Ваш пост.</div>
+									</div>
 								</div>
-								<div class="user-info">
-									<div class="user-name">Сергей Волков</div>
-									<div class="user-message">Здравствуйте, очень понравился Ваш пост.</div>
+								<div class="chat-people-item-status">
+									<div class="chat-people-item-status__time">2 мин</div>
+									<div class="chat-people-item-status-msg empty"></div>
 								</div>
 							</div>
-							<div class="chat-people-item-status">
-								<div class="chat-people-item-status__time">16ч назад</div>
+							<div class="chat-people-dots">
+								<div class="dropdown dropright dots" data-dropdown="dots"><a class="dropdown-toggle" id="dropdownMenuLink" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												<svg class="icon icon-dots_v ">
+													<use xlink:href="images/sprites.svg#dots_v"></use>
+												</svg></a>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										<div class="dropdown-list dropdown-notice">
+											<div class="dropdown-item"><a class="dropdown-item__link" href="#">Написать сообщение</a></div>
+											<div class="dropdown-item"><a class="dropdown-item__link" href="#">Сообщить о нарушении</a></div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="chat-people-dots">
-							<div class="dropdown dropright dots" data-dropdown="dots"><a class="dropdown-toggle" id="dropdownMenuLink" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<svg class="icon icon-dots_v ">
-												<use xlink:href="images/sprites.svg#dots_v"></use>
-											</svg></a>
-								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-									<div class="dropdown-list dropdown-notice">
-										<div class="dropdown-item"><a class="dropdown-item__link" href="#">Написать сообщение</a></div>
-										<div class="dropdown-item"><a class="dropdown-item__link" href="#">Сообщить о нарушении</a></div>
+						<div class="chat-people-item">
+							<div class="chat-people-item__user">
+								<div class="user">
+									<div class="user-avatar">
+										<div class="user-avatar-name" style="background-color: #FEDCDC; color: #C56A6A">АГ</div>
+										<div class="user-status is-online"></div>
+									</div>
+									<div class="user-info">
+										<div class="user-name">Сергей Волков</div>
+										<div class="user-message">Здравствуйте, очень понравился Ваш пост.</div>
+									</div>
+								</div>
+								<div class="chat-people-item-status">
+									<div class="chat-people-item-status__time">1 год назад</div>
+									<div class="chat-people-item-status-msg notempty">1</div>
+								</div>
+							</div>
+							<div class="chat-people-dots">
+								<div class="dropdown dropright dots" data-dropdown="dots"><a class="dropdown-toggle" id="dropdownMenuLink" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												<svg class="icon icon-dots_v ">
+													<use xlink:href="images/sprites.svg#dots_v"></use>
+												</svg></a>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										<div class="dropdown-list dropdown-notice">
+											<div class="dropdown-item"><a class="dropdown-item__link" href="#">Написать сообщение</a></div>
+											<div class="dropdown-item"><a class="dropdown-item__link" href="#">Сообщить о нарушении</a></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="chat-people-item">
+							<div class="chat-people-item__user">
+								<div class="user">
+									<div class="user-avatar">
+										<div class="user-avatar-photo"><img src="/images/face_1.png"></div>
+										<div class="user-status is-online"></div>
+									</div>
+									<div class="user-info">
+										<div class="user-name">Дмитрий Иванов</div>
+										<div class="user-message">Здравствуйте, очень понравился Ваш пост.</div>
+									</div>
+								</div>
+								<div class="chat-people-item-status">
+									<div class="chat-people-item-status__time">1 мин</div>
+									<div class="chat-people-item-status-msg notempty">1</div>
+								</div>
+							</div>
+							<div class="chat-people-dots">
+								<div class="dropdown dropright dots" data-dropdown="dots"><a class="dropdown-toggle" id="dropdownMenuLink" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												<svg class="icon icon-dots_v ">
+													<use xlink:href="images/sprites.svg#dots_v"></use>
+												</svg></a>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										<div class="dropdown-list dropdown-notice">
+											<div class="dropdown-item"><a class="dropdown-item__link" href="#">Написать сообщение</a></div>
+											<div class="dropdown-item"><a class="dropdown-item__link" href="#">Сообщить о нарушении</a></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="chat-people-item">
+							<div class="chat-people-item__user">
+								<div class="user">
+									<div class="user-avatar">
+										<div class="user-avatar-name" style="background-color: #D0EDDD; color: #1AA758">ТГ</div>
+										<div class="user-status is-online"></div>
+									</div>
+									<div class="user-info">
+										<div class="user-name">Сергей Волков</div>
+										<div class="user-message">Здравствуйте, очень понравился Ваш пост.</div>
+									</div>
+								</div>
+								<div class="chat-people-item-status">
+									<div class="chat-people-item-status__time">16ч назад</div>
+								</div>
+							</div>
+							<div class="chat-people-dots">
+								<div class="dropdown dropright dots" data-dropdown="dots"><a class="dropdown-toggle" id="dropdownMenuLink" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												<svg class="icon icon-dots_v ">
+													<use xlink:href="images/sprites.svg#dots_v"></use>
+												</svg></a>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										<div class="dropdown-list dropdown-notice">
+											<div class="dropdown-item"><a class="dropdown-item__link" href="#">Написать сообщение</a></div>
+											<div class="dropdown-item"><a class="dropdown-item__link" href="#">Сообщить о нарушении</a></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="chat-people-item">
+							<div class="chat-people-item__user">
+								<div class="user">
+									<div class="user-avatar">
+										<div class="user-avatar-name" style="background-color: #D0EDDD; color: #1AA758">ТГ</div>
+										<div class="user-status is-online"></div>
+									</div>
+									<div class="user-info">
+										<div class="user-name">Сергей Волков</div>
+										<div class="user-message">Здравствуйте, очень понравился Ваш пост.</div>
+									</div>
+								</div>
+								<div class="chat-people-item-status">
+									<div class="chat-people-item-status__time">16ч назад</div>
+								</div>
+							</div>
+							<div class="chat-people-dots">
+								<div class="dropdown dropright dots" data-dropdown="dots"><a class="dropdown-toggle" id="dropdownMenuLink" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												<svg class="icon icon-dots_v ">
+													<use xlink:href="images/sprites.svg#dots_v"></use>
+												</svg></a>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										<div class="dropdown-list dropdown-notice">
+											<div class="dropdown-item"><a class="dropdown-item__link" href="#">Написать сообщение</a></div>
+											<div class="dropdown-item"><a class="dropdown-item__link" href="#">Сообщить о нарушении</a></div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -401,7 +404,7 @@
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-		<script src="js/vendor.js?v=1605604606295"></script>
-		<script src="js/main.js?v=1605604606295"></script>
+		<script src="js/vendor.js?v=1607412903825"></script>
+		<script src="js/main.js?v=1607412903825"></script>
 	</body>
 </html>
